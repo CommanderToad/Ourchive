@@ -1,0 +1,18 @@
+<Alloy>
+	<Window id="menuWin">
+		<View id="menuView">
+			<View id="titleView">
+				<Label id="title">Menu</Label>
+				<Button id="closeBtn" onClick="closeWindow">X</Button>
+			</View>
+			<Button class="Btn" id="homeBtn" onClick="homeWindow">Home</Button>
+			<Button class="Btn">My Ourchive</Button>
+			<Button class="Btn" id="photoBtn" onClick="addPhoto">Photo</Button>
+			<Button class="Btn">Video</Button>
+			<Button class="Btn" id="textBtn" onClick="addText">Text</Button>
+			<Button class="Btn">Audio</Button>
+			<Button class="Btn" id="eventBtn" onClick="addEvent">New Event</Button>
+			<Button class="Btn">Settings</Button>
+		</View>
+	</Window>
+</Alloy>

@@ -1,0 +1,29 @@
+<Alloy>
+	<Window id="homeWin">
+		<View id="homeView">
+			<View id="titleBar">
+				<Button id="menuBtn" onClick="openMenu">menu</Button>
+				<Label id="title">Add a Moment</Label>
+			</View>
+			<View id="addBox">
+				<View class="buttonRow">
+					<Button class="leftBtn" onClick="addPhoto">Photo</Button>
+					<Button class="rightBtn">Video</Button>
+				</View>
+				<View class="buttonRow">
+					<Button class="leftBtn" onClick="addText">Text</Button>
+					<Button class="rightBtn">Audio</Button>
+				</View>
+				<View class="buttonRow">
+					<Button class="leftBtn">MyStream</Button>
+				</View>
+			</View>
+			<View id="tableHeader">
+				<Label id="tableTitle">Events</Label>
+				<Button id="addEvent" onClick="addEvent">New +</Button>
+			</View>
+			<TableView id="events">
+			</TableView>
+		</View>
+	</Window>
+</Alloy>

@@ -1,0 +1,64 @@
+"#homeWin": {
+	backgroundColor:"white",
+},
+"#homeView": {
+	backgroundColor:"white",
+	layout: "vertical",
+}
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+} 
+"#titleBar": {
+	backgroundColor:"gray",
+	height: "90px",
+	width: "100%",
+	layout:"horizontal"
+}
+"#menuBtn":{
+	left:"10px",
+	top:"40px"
+}
+"#title":{
+	left:"100px",
+	top:"40px"
+}
+"#addBox": {
+	height: "750px",
+	layout: "vertical",
+	width: "100%",
+	backgroundColor:"yellow",
+}
+".buttonRow":{
+	layout:"horizontal",
+	height:"250px",
+	backgroundColor:"white",
+}
+".leftBtn":{
+	top:"100px",
+	width:"50%"
+}
+".rightBtn":{
+	top:"100px",
+	width:"50%"
+}
+"#events": {
+	bottom: 0,
+	height: '286px',
+	width: Ti.UI.FILL,
+	backgroundColor:"gray",
+}
+"#tableHeader":{
+	layout:"horizontal",
+	width:"100%",
+	height:"90px",
+	backgroundColor:"gray"
+}
+"#tableTitle":{
+	left:"10px",
+	
+}
+"#addEvent":{
+	left:"400px"
+}
