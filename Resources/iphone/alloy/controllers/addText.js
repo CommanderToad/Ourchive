@@ -16,16 +16,21 @@ function Controller() {
     $.__views.addTextWin && $.addTopLevelView($.__views.addTextWin);
     focusTextField ? $.__views.addTextWin.addEventListener("open", focusTextField) : __defers["$.__views.addTextWin!open!focusTextField"] = true;
     $.__views.addTextView = Ti.UI.createView({
-        backgroundColor: "white",
+        backgroundColor: "gray",
         layout: "vertical",
         id: "addTextView"
     });
     $.__views.addTextWin.add($.__views.addTextView);
-    $.__views.textMoment = Ti.UI.createTextArea({
-        id: "textMoment",
+    $.__views.itemField = Ti.UI.createTextArea({
+        left: "10px",
+        right: "10px",
+        top: "10px",
+        width: "620px",
+        height: "300px",
+        id: "itemField",
         hintText: "New Moment"
     });
-    $.__views.addTextView.add($.__views.textMoment);
+    $.__views.addTextView.add($.__views.itemField);
     $.__views.submitBtn = Ti.UI.createButton({
         top: "50px",
         width: "50%",
@@ -44,6 +49,7 @@ function Controller() {
     $.__views.addTextView.add($.__views.cancelBtn);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    focusTextField();
     __defers["$.__views.addTextWin!open!focusTextField"] && $.__views.addTextWin.addEventListener("open", focusTextField);
     _.extend($, exports);
 }

@@ -1,5 +1,5 @@
 "#addTextView": {
-	backgroundColor:"white",
+	backgroundColor:"gray",
 	layout: "vertical",
 }
 "#titleBar": {
