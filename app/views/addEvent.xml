@@ -1,21 +1,22 @@
 <Alloy>
-	<View id="addEvent" onOpen="focusTextField">
-		<View id="titleBar">
-			<Button id="menuBtn" onClick="openMenu">menu</Button>
-			<Label id="title">Add a Moment</Label>
-		</View>
+	<View id="addEvent">
 		<View id="addEventView">
-			<TextField class="singleLineText" id="eventTitle" hintText="Title"></TextField>
-			<TextField class="singleLineText" id="eventLocation" hintText="Location"></TextField>
-			<TextArea id="eventDescription" hintText="Description"></TextArea>
-			<View id="tagView">
+			<TextField class="singleLineText" hintText="Title"></TextField>
+			<TextField class="singleLineText" hintText="Location"></TextField>
+			<TextArea id="eventDescription"></TextArea>
+			<View id="tagLabel">
 				<Label>Tags</Label>
-				<Label id="tagsDescription">For all moments in this event</Label>
+				<Label id="tagDesc">For all moments in this event</Label>
 			</View>
-			<TextField class="singleLineText" id="eventTags"></TextField>
-			<View id="submitBtnView">
-				<Button class="btn" id="submitBtn">Submit</Button>
-				<Button class="btn" id="cancelBtn" onClick="closeWindow">Cancel</Button>
+			<TextField class="singleLineText"></TextField>
+			<View class="tagRow">
+				<Button class="tagYellow">Tag</Button>
+				<Button class="tagYellow">Tag</Button>
+				<Button class="tagGray">Tag</Button>
+			</View>
+			<View class="btnRow">
+				<ImageView class="leftBtn" image = "images/icon-check.png"></ImageView>
+				<ImageView class="rightBtn" image = "images/icon-x.png"></ImageView>
 			</View>
 		</View>
 	</View>

@@ -10,15 +10,9 @@ function Controller() {
         id: "view3"
     });
     $.__views.view3 && $.addTopLevelView($.__views.view3);
-<<<<<<< HEAD
-    var __alloyId24 = [];
+    var __alloyId45 = [];
     $.__views.timap = Ti.Map.createView({
-        annotations: __alloyId24,
-=======
-    var __alloyId26 = [];
-    $.__views.timap = Ti.Map.createView({
-        annotations: __alloyId26,
->>>>>>> FETCH_HEAD
+        annotations: __alloyId45,
         ns: Ti.Map,
         id: "timap"
     });
