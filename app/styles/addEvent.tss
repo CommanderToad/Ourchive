@@ -1,64 +1,96 @@
-"#addEventWin":{
-	layout:"vertical"
+"#addEvent":{
+	layout:"vertical",
+	width: "100%",
+	height: "100%",
+	backgroundColor: "gray",
 }
+
 "#addEventView":{
 	layout:"vertical",
 	backgroundColor: "gray",
 	width:"100%",
 	height:"1046px"
 }
-"#titleBar": {
-	backgroundColor:"gray",
-	height: "90px",
-	width: "100%",
-	layout:"horizontal"
-}
-"#menuBtn":{
-	left:"10px",
-	top:"40px"
-}
-"#title":{
-	left:"100px",
-	top:"40px"
-}
+
 ".singleLineText":{
 	height:"90px",
 	width:"86%",
 	backgroundColor:"white",
-	top:"10px"
+	top:"15px"
 }
 "#eventDescription":{
-	height:"180px",
+	height:"220px",
 	width:"86%",
 	backgroundColor:"white",
-	top:"10px",
+	top:"15px",
+	bottom: "15px",
 }
-"#tagView":{
+"#tagLabel":{
 	layout:"horizontal",
 	height:"40px",
 	width:"86%",
 }
-"#tagsDescription":{
-	left:"250px",
+"#tagDesc":{
+	left:"200px",
 	font: {
         fontFamily:'Helvetica',
-        fontSize: '8dp',
+        fontSize: '9dp',
         fontStyle: 'italic',
         fontWeight: 'normal',
     },	
 }
-"#submitBtnView":{
-	top:"20px",
-	width:"87%",
-	layout:"horizontal"
+
+".tagRow": {
+	top: "15px",
+	layout:"horizontal",
+	height: "50px",
+	width: "86%",
 }
-".btn":{
-	width:"50%"
+
+".tagYellow": {
+	left: "4%",
+	height: "50px",
+	width: "28%",
+	backgroundColor: "#7A6F30",
+	color: "white",
+	font: {
+        fontFamily:'Helvetica',
+        fontSize: '12px',
+        fontWeight: 'normal',
+    },	
 }
-"#submitBtn":{
-	backgroundColor:"green"
+
+".tagGray": {
+	left: "4%",
+	height: "50px",
+	width: "28%",
+	backgroundColor: "#545451",
+	color: "white",
+	font: {
+        fontFamily:'Helvetica',
+        fontSize: '12px',
+        fontWeight: 'normal',
+    },	
 }
-"#cancelBtn":{
-	backgroundColor:"red"
+
+".btnRow":{
+	top: "10px",
+	layout: "absolute",
+	height: "236px",
+	width: "100%",
+}
+
+".leftBtn":{
+	top:"10px",
+	left:"15%",
+	height:"176px",
+	width:"176px",
+}
+
+".rightBtn":{
+	top:"10px",
+	right: "15%",
+	height:"176px",
+	width:"176px",
 }
 

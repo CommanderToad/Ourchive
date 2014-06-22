@@ -10,6 +10,8 @@ function closeWindow() {
 	Alloy.Globals.homeWin.open();
 	$.addEventWin.close();
 }
+
+/*
 $.submitBtn.addEventListener('click', function(_e) {
 
     var eventModel = Alloy.createModel("event", {
@@ -27,4 +29,4 @@ $.submitBtn.addEventListener('click', function(_e) {
 
     // close window
     $.addEventWin.close();
-});
+});*/
