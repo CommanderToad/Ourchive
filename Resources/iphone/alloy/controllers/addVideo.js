@@ -23,13 +23,6 @@ function Controller() {
             videoQuality: Titanium.Media.QUALITY_HIGH
         });
     }
-    function openMenu() {
-        Alloy.createController("menu").getView().open();
-    }
-    function closeWindow() {
-        Alloy.Globals.homeWin.open();
-        $.addVideoWin.close();
-    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "addVideo";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -37,36 +30,10 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    var __defers = {};
-    $.__views.addVideoWin = Ti.UI.createWindow({
-        layout: "vertical",
-        id: "addVideoWin"
+    $.__views.addVideo = Ti.UI.createView({
+        id: "addVideo"
     });
-    $.__views.addVideoWin && $.addTopLevelView($.__views.addVideoWin);
-    openVideoCamera ? $.__views.addVideoWin.addEventListener("open", openVideoCamera) : __defers["$.__views.addVideoWin!open!openVideoCamera"] = true;
-    $.__views.titleBar = Ti.UI.createView({
-        backgroundColor: "gray",
-        height: "90px",
-        width: "100%",
-        layout: "horizontal",
-        id: "titleBar"
-    });
-    $.__views.addVideoWin.add($.__views.titleBar);
-    $.__views.menuBtn = Ti.UI.createButton({
-        left: "10px",
-        top: "40px",
-        title: "menu",
-        id: "menuBtn"
-    });
-    $.__views.titleBar.add($.__views.menuBtn);
-    openMenu ? $.__views.menuBtn.addEventListener("click", openMenu) : __defers["$.__views.menuBtn!click!openMenu"] = true;
-    $.__views.title = Ti.UI.createLabel({
-        left: "100px",
-        top: "40px",
-        text: "Edit Details",
-        id: "title"
-    });
-    $.__views.titleBar.add($.__views.title);
+    $.__views.addVideo && $.addTopLevelView($.__views.addVideo);
     $.__views.addVideoView = Ti.UI.createView({
         layout: "vertical",
         backgroundColor: "gray",
@@ -74,7 +41,7 @@ function Controller() {
         height: "1046px",
         id: "addVideoView"
     });
-    $.__views.addVideoWin.add($.__views.addVideoView);
+    $.__views.addVideo.add($.__views.addVideoView);
     $.__views.videoThumbnail = Ti.UI.createImageView({
         id: "videoThumbnail"
     });
@@ -141,12 +108,9 @@ function Controller() {
         id: "cancelBtn"
     });
     $.__views.submitBtnView.add($.__views.cancelBtn);
-    closeWindow ? $.__views.cancelBtn.addEventListener("click", closeWindow) : __defers["$.__views.cancelBtn!click!closeWindow"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
-    __defers["$.__views.addVideoWin!open!openVideoCamera"] && $.__views.addVideoWin.addEventListener("open", openVideoCamera);
-    __defers["$.__views.menuBtn!click!openMenu"] && $.__views.menuBtn.addEventListener("click", openMenu);
-    __defers["$.__views.cancelBtn!click!closeWindow"] && $.__views.cancelBtn.addEventListener("click", closeWindow);
+    openVideoCamera(e);
     _.extend($, exports);
 }
 

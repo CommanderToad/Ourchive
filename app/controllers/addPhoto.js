@@ -1,4 +1,3 @@
-Alloy.Globals.previous = $.addPhotoWin;
 function openCamera() {
     var cameraOptions = {
         success : function(event) {
@@ -37,10 +36,4 @@ function openCamera() {
     }
 
 };
-function openMenu() {
-	Alloy.createController("menu").getView().open();
-}
-function closeWindow() {
-	Alloy.Globals.homeWin.open();
-	$.addPhotoWin.close();
-}
+openCamera();

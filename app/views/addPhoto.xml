@@ -1,9 +1,5 @@
 <Alloy>
-	<Window id="addPhotoWin" onOpen="openCamera">
-		<View id="titleBar">
-			<Button id="menuBtn" onClick="openMenu">menu</Button>
-			<Label id="title">Edit Details</Label>
-		</View>
+	<View id="addPhoto" onOpen="openCamera">
 		<View id="addPhotoView">
 			<ImageView id="photo"></ImageView>
 			<TextArea id="eventDescription" hintText="Description"></TextArea>
@@ -14,9 +10,9 @@
 			<TextField class="singleLineText" id="eventTags"></TextField>
 			<View id="submitBtnView">
 				<Button class="btn" id="submitBtn">Submit</Button>
-				<Button class="btn" id="cancelBtn" onClick="closeWindow">Cancel</Button>
+				<Button class="btn" id="cancelBtn">Cancel</Button>
 			</View>
 		</View>
-	</Window>
+	</View>
 </Alloy>
 

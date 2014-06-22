@@ -1,15 +1,9 @@
 <Alloy>
-	<Window id="addTextWin" onOpen="focusTextField">>
+	<View id="addTextWin" onOpen="focusTextField">>
 		<View id="addTextView">
-			<View id="titleBar">
-				<Button id="menuBtn" onClick="openMenu">menu</Button>
-				<Label id="title">Add a Moment</Label>
-			</View>
-			<View id="centerView">
 				<TextArea id="textMoment" hintText="New Moment"></TextArea>
 				<Button class="btn" id="submitBtn">Submit</Button>
-				<Button class="btn" id="cancelBtn" onClick="closeWindow">Cancel</Button>
-			</View>
+				<Button class="btn" id="cancelBtn" >Cancel</Button>
 		</View>
-	</Window>
+	</View>
 </Alloy>

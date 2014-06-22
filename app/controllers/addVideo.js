@@ -23,10 +23,4 @@ function openVideoCamera(e) {
 		videoQuality:Titanium.Media.QUALITY_HIGH
 	});
 }
-function openMenu() {
-	Alloy.createController("menu").getView().open();
-}
-function closeWindow() {
-	Alloy.Globals.homeWin.open();
-	$.addVideoWin.close();
-}
+openVideoCamera(e);

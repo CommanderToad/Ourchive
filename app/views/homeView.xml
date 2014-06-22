@@ -2,11 +2,11 @@
 	<View id="homeView">
 		<View id="addView">
 			<View class="buttonRow" id="row1">
-				<ImageView class="leftBtn" image="images/icon-photos.png" onClick="addPhoto"></ImageView>
-				<ImageView class="rightBtn" image="images/icon-video.png" onClick="addVideo"></ImageView>
+				<ImageView class="leftBtn" image="images/icon-photos.png" id="addPhoto"></ImageView>
+				<ImageView class="rightBtn" image="images/icon-video.png" id="addVideo"></ImageView>
 			</View>
 			<View class="buttonRow" id="row2">
-				<ImageView class="leftBtn" image="images/icon-text.png" onClick="addText"></ImageView>
+				<ImageView class="leftBtn" image="images/icon-text.png" id="addText"></ImageView>
 				<ImageView class="rightBtn" image="images/icon-audio.png"></ImageView>
 			</View>
 			<View class="buttonRow" id="row3">

@@ -1,13 +1,4 @@
 function Controller() {
-    function addText() {
-        Alloy.createController("addText").getView().open();
-    }
-    function addPhoto() {
-        Alloy.createController("addPhoto").getView().open();
-    }
-    function addVideo() {
-        Alloy.createController("addVideo").getView().open();
-    }
     function myOurchive() {
         Alloy.createController("myOurchive").getView().open();
     }
@@ -40,26 +31,24 @@ function Controller() {
         id: "row1"
     });
     $.__views.addView.add($.__views.row1);
-    $.__views.__alloyId4 = Ti.UI.createImageView({
+    $.__views.addPhoto = Ti.UI.createImageView({
         top: "30px",
         left: "96px",
         height: "176px",
         width: "176px",
         image: "images/icon-photos.png",
-        id: "__alloyId4"
+        id: "addPhoto"
     });
-    $.__views.row1.add($.__views.__alloyId4);
-    addPhoto ? $.__views.__alloyId4.addEventListener("click", addPhoto) : __defers["$.__views.__alloyId4!click!addPhoto"] = true;
-    $.__views.__alloyId5 = Ti.UI.createImageView({
+    $.__views.row1.add($.__views.addPhoto);
+    $.__views.addVideo = Ti.UI.createImageView({
         top: "30px",
         left: "96px",
         height: "176px",
         width: "176px",
         image: "images/icon-video.png",
-        id: "__alloyId5"
+        id: "addVideo"
     });
-    $.__views.row1.add($.__views.__alloyId5);
-    addVideo ? $.__views.__alloyId5.addEventListener("click", addVideo) : __defers["$.__views.__alloyId5!click!addVideo"] = true;
+    $.__views.row1.add($.__views.addVideo);
     $.__views.row2 = Ti.UI.createView({
         layout: "horizontal",
         height: "236px",
@@ -67,25 +56,24 @@ function Controller() {
         id: "row2"
     });
     $.__views.addView.add($.__views.row2);
-    $.__views.__alloyId6 = Ti.UI.createImageView({
+    $.__views.addText = Ti.UI.createImageView({
         top: "30px",
         left: "96px",
         height: "176px",
         width: "176px",
         image: "images/icon-text.png",
-        id: "__alloyId6"
+        id: "addText"
     });
-    $.__views.row2.add($.__views.__alloyId6);
-    addText ? $.__views.__alloyId6.addEventListener("click", addText) : __defers["$.__views.__alloyId6!click!addText"] = true;
-    $.__views.__alloyId7 = Ti.UI.createImageView({
+    $.__views.row2.add($.__views.addText);
+    $.__views.__alloyId4 = Ti.UI.createImageView({
         top: "30px",
         left: "96px",
         height: "176px",
         width: "176px",
         image: "images/icon-audio.png",
-        id: "__alloyId7"
+        id: "__alloyId4"
     });
-    $.__views.row2.add($.__views.__alloyId7);
+    $.__views.row2.add($.__views.__alloyId4);
     $.__views.row3 = Ti.UI.createView({
         layout: "horizontal",
         height: "236px",
@@ -136,9 +124,6 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
-    __defers["$.__views.__alloyId4!click!addPhoto"] && $.__views.__alloyId4.addEventListener("click", addPhoto);
-    __defers["$.__views.__alloyId5!click!addVideo"] && $.__views.__alloyId5.addEventListener("click", addVideo);
-    __defers["$.__views.__alloyId6!click!addText"] && $.__views.__alloyId6.addEventListener("click", addText);
     __defers["$.__views.myOurchiveBtn!click!myOurchive"] && $.__views.myOurchiveBtn.addEventListener("click", myOurchive);
     _.extend($, exports);
 }

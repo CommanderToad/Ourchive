@@ -22,13 +22,6 @@ function Controller() {
         };
         Ti.Media.isCameraSupported ? Ti.Media.showCamera(cameraOptions) : Ti.Media.openPhotoGallery(cameraOptions);
     }
-    function openMenu() {
-        Alloy.createController("menu").getView().open();
-    }
-    function closeWindow() {
-        Alloy.Globals.homeWin.open();
-        $.addPhotoWin.close();
-    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "addPhoto";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -37,35 +30,11 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.addPhotoWin = Ti.UI.createWindow({
-        layout: "vertical",
-        id: "addPhotoWin"
+    $.__views.addPhoto = Ti.UI.createView({
+        id: "addPhoto"
     });
-    $.__views.addPhotoWin && $.addTopLevelView($.__views.addPhotoWin);
-    openCamera ? $.__views.addPhotoWin.addEventListener("open", openCamera) : __defers["$.__views.addPhotoWin!open!openCamera"] = true;
-    $.__views.titleBar = Ti.UI.createView({
-        backgroundColor: "gray",
-        height: "90px",
-        width: "100%",
-        layout: "horizontal",
-        id: "titleBar"
-    });
-    $.__views.addPhotoWin.add($.__views.titleBar);
-    $.__views.menuBtn = Ti.UI.createButton({
-        left: "10px",
-        top: "40px",
-        title: "menu",
-        id: "menuBtn"
-    });
-    $.__views.titleBar.add($.__views.menuBtn);
-    openMenu ? $.__views.menuBtn.addEventListener("click", openMenu) : __defers["$.__views.menuBtn!click!openMenu"] = true;
-    $.__views.title = Ti.UI.createLabel({
-        left: "100px",
-        top: "40px",
-        text: "Edit Details",
-        id: "title"
-    });
-    $.__views.titleBar.add($.__views.title);
+    $.__views.addPhoto && $.addTopLevelView($.__views.addPhoto);
+    openCamera ? $.__views.addPhoto.addEventListener("open", openCamera) : __defers["$.__views.addPhoto!open!openCamera"] = true;
     $.__views.addPhotoView = Ti.UI.createView({
         layout: "vertical",
         backgroundColor: "gray",
@@ -73,7 +42,7 @@ function Controller() {
         height: "1046px",
         id: "addPhotoView"
     });
-    $.__views.addPhotoWin.add($.__views.addPhotoView);
+    $.__views.addPhoto.add($.__views.addPhotoView);
     $.__views.photo = Ti.UI.createImageView({
         left: "20px",
         height: "40%",
@@ -143,13 +112,10 @@ function Controller() {
         id: "cancelBtn"
     });
     $.__views.submitBtnView.add($.__views.cancelBtn);
-    closeWindow ? $.__views.cancelBtn.addEventListener("click", closeWindow) : __defers["$.__views.cancelBtn!click!closeWindow"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
-    Alloy.Globals.previous = $.addPhotoWin;
-    __defers["$.__views.addPhotoWin!open!openCamera"] && $.__views.addPhotoWin.addEventListener("open", openCamera);
-    __defers["$.__views.menuBtn!click!openMenu"] && $.__views.menuBtn.addEventListener("click", openMenu);
-    __defers["$.__views.cancelBtn!click!closeWindow"] && $.__views.cancelBtn.addEventListener("click", closeWindow);
+    openCamera();
+    __defers["$.__views.addPhoto!open!openCamera"] && $.__views.addPhoto.addEventListener("open", openCamera);
     _.extend($, exports);
 }
 
