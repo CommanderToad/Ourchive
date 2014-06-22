@@ -90,15 +90,15 @@ function Controller() {
         id: "eventBtn"
     });
     $.__views.menuView.add($.__views.eventBtn);
-    $.__views.__alloyId6 = Ti.UI.createButton({
+    $.__views.__alloyId17 = Ti.UI.createButton({
         height: "95px",
         width: "90%",
         backgroundColor: "white",
         top: "10px",
         title: "All Events",
-        id: "__alloyId6"
+        id: "__alloyId17"
     });
-    $.__views.menuView.add($.__views.__alloyId6);
+    $.__views.menuView.add($.__views.__alloyId17);
     $.__views.settingsBtn = Ti.UI.createButton({
         height: "95px",
         width: "90%",

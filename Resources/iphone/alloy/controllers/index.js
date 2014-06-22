@@ -1,8 +1,4 @@
 function Controller() {
-    function openFunction() {
-        Alloy.Globals.homeWin = $.homeWin;
-        Alloy.Globals.previous = $.homeWin;
-    }
     function rowSelect(e) {
         var obj = e.source;
         if (currentView.id != obj.id) {
@@ -18,13 +14,11 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    var __defers = {};
     $.__views.homeWin = Ti.UI.createWindow({
         layout: "vertical",
         id: "homeWin"
     });
     $.__views.homeWin && $.addTopLevelView($.__views.homeWin);
-    openFunction ? $.__views.homeWin.addEventListener("open", openFunction) : __defers["$.__views.homeWin!open!openFunction"] = true;
     $.__views.ds = Alloy.createWidget("ds.slideMenu", "widget", {
         id: "ds",
         __parentSymbol: $.__views.homeWin
@@ -44,7 +38,6 @@ function Controller() {
     });
     var currentView = Alloy.createController("homeView").getView();
     $.ds.contentview.add(currentView);
-    __defers["$.__views.homeWin!open!openFunction"] && $.__views.homeWin.addEventListener("open", openFunction);
     _.extend($, exports);
 }
 

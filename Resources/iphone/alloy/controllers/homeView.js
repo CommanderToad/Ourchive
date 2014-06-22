@@ -65,15 +65,15 @@ function Controller() {
         id: "addText"
     });
     $.__views.row2.add($.__views.addText);
-    $.__views.__alloyId4 = Ti.UI.createImageView({
+    $.__views.__alloyId15 = Ti.UI.createImageView({
         top: "30px",
         left: "96px",
         height: "176px",
         width: "176px",
         image: "images/icon-audio.png",
-        id: "__alloyId4"
+        id: "__alloyId15"
     });
-    $.__views.row2.add($.__views.__alloyId4);
+    $.__views.row2.add($.__views.__alloyId15);
     $.__views.row3 = Ti.UI.createView({
         layout: "horizontal",
         height: "236px",

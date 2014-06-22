@@ -1,9 +1,19 @@
 <Alloy>
-	<View id="addTextWin" onOpen="focusTextField">>
-		<View id="addTextView">
-				<TextArea id="itemField" hintText="New Moment"></TextArea>
-				<Button class="btn" id="submitBtn">Submit</Button>
-				<Button class="btn" id="cancelBtn" >Cancel</Button>
+	<View id="addText">
+		<TextArea id="itemField" hintText="New Moment"></TextArea>
+		<View class="eventRow">
+			<Button class="eventYellow">Event</Button>
+			<Button class="eventYellow">Event</Button>
+			<Button class="eventGray">Event</Button>
+		</View>
+		<View class="eventRow">
+			<Button class="eventGray">Event</Button>
+			<Button class="eventGray">Event</Button>
+			<Button class="eventGray">Event</Button>
+		</View>
+		<View class="btnRow">
+			<ImageView class="leftBtn" image = "images/icon-check.png"></ImageView>
+			<ImageView class="rightBtn" image = "images/icon-x.png"></ImageView>
 		</View>
 	</View>
 </Alloy>

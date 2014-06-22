@@ -62,11 +62,11 @@ function Controller() {
         id: "tagView"
     });
     $.__views.addVideoView.add($.__views.tagView);
-    $.__views.__alloyId3 = Ti.UI.createLabel({
+    $.__views.__alloyId14 = Ti.UI.createLabel({
         text: "Tags",
-        id: "__alloyId3"
+        id: "__alloyId14"
     });
-    $.__views.tagView.add($.__views.__alloyId3);
+    $.__views.tagView.add($.__views.__alloyId14);
     $.__views.tagsDescription = Ti.UI.createLabel({
         left: "250px",
         font: {

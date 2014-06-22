@@ -1,7 +1,10 @@
-"#addTextView": {
-	backgroundColor:"gray",
+"#addText": {
 	layout: "vertical",
+	height: "100%",
+	backgroundColor: "gray",
 }
+
+
 "#titleBar": {
 	backgroundColor:"gray",
 	height: "90px",
@@ -15,12 +18,6 @@
 "#title":{
 	left:"100px",
 	top:"40px"
-}
-"#centerView":{
-	layout:"horizontal",
-	backgroundColor: "gray",
-	height:"1046px",
-	width:"100%"
 }
 "#itemField":{
 	left:"10px",
@@ -38,6 +35,58 @@
 }
 "#cancelBtn":{
 	backgroundColor:"red"
+}
+
+".eventRow": {
+	top: "15px",
+	layout:"horizontal",
+	height: "50px",
+}
+
+".eventYellow": {
+	left: "4%",
+	height: "50px",
+	width: "28%",
+	backgroundColor: "#7A6F30",
+	color: "white",
+	font: {
+        fontFamily:'Helvetica',
+        fontSize: '12px',
+        fontWeight: 'normal',
+    },	
+}
+
+".eventGray": {
+	left: "4%",
+	height: "50px",
+	width: "28%",
+	backgroundColor: "#545451",
+	color: "white",
+	font: {
+        fontFamily:'Helvetica',
+        fontSize: '12px',
+        fontWeight: 'normal',
+    },	
+}
+
+".btnRow":{
+	top: "10px",
+	layout: "horizontal",
+	height: "236px",
+}
+
+".leftBtn":{
+	top:"20px",
+	left:"96px",
+	height:"176px",
+	width:"176px",
+}
+
+".rightBtn":{
+	top:"30px",
+	left:"96px",
+	height:"176px",
+	width:"176px",
 }
 
 
