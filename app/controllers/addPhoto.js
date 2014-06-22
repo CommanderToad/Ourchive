@@ -9,9 +9,10 @@ function openCamera() {
         },
         cancel : function() {
         	Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
-			currentView = Alloy.createController("homeView").getView();
+			var	currentView = Alloy.createController("homeView").getView();
 			Alloy.Globals.contentview.add(currentView);
-      	      // cancel and close view
+        	Alloy.Globals.title.setText("Add a Moment");
+            // cancel and close window
         },
         error : function(error) {
             var a = Ti.UI.createAlertDialog({

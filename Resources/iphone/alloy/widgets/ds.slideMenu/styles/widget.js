@@ -6,15 +6,7 @@ function WPATH(s) {
 
 module.exports = [ {
     isApi: true,
-    priority: 1000.0006,
-    key: "setWidthView",
-    style: {
-        left: "2%",
-        width: "96%"
-    }
-}, {
-    isApi: true,
-    priority: 1000.001,
+    priority: 1000.0009,
     key: "Label",
     style: {
         width: Ti.UI.SIZE,
@@ -23,7 +15,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0015,
+    priority: 10000.0014,
     key: "Btn",
     style: {
         height: "7%",
@@ -33,7 +25,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0016,
+    priority: 10000.0015,
     key: "menuText",
     style: {
         left: "3%",
@@ -86,26 +78,25 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0007,
+    priority: 100000.0006,
     key: "contentview",
     style: {
         top: "135px",
-        left: 10,
         right: 0,
-        width: 300,
+        width: 320,
         height: Ti.UI.Fill,
         backgroundColor: "white"
     }
 }, {
     isId: true,
-    priority: 100000.0008,
+    priority: 100000.0007,
     key: "shadowview",
     style: {
         backgroundColor: "white"
     }
 }, {
     isId: true,
-    priority: 100000.0009,
+    priority: 100000.0008,
     key: "leftButton",
     style: {
         backgroundImage: "none",
@@ -118,10 +109,10 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0011,
+    priority: 100000.001,
     key: "title",
     style: {
-        left: "180px",
+        left: "160px",
         top: "60px",
         font: {
             fontFamily: "Helvetica",
@@ -132,7 +123,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0012,
+    priority: 100000.0011,
     key: "menuView",
     style: {
         layout: "vertical",
@@ -140,14 +131,14 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0013,
+    priority: 100000.0012,
     key: "menuTitle",
     style: {
         top: "60px"
     }
 }, {
     isId: true,
-    priority: 100000.0014,
+    priority: 100000.0013,
     key: "titleView",
     style: {
         layout: "horizontal",

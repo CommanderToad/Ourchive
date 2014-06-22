@@ -10,12 +10,18 @@ function Controller() {
             },
             error: function() {
                 alert("There was an error");
-                Alloy.Globals.homeWin.open();
-                $.addVideoWin.close();
+                Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
+                var currentView = Alloy.createController("homeView").getView();
+                Alloy.Globals.contentview.add(currentView);
+                Alloy.Globals.title.setText("Add a Moment");
+                Alloy.Globals.currentView = currentView;
             },
             cancel: function() {
-                Alloy.Globals.homeWin.open();
-                $.addVideoWin.close();
+                Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
+                var currentView = Alloy.createController("homeView").getView();
+                Alloy.Globals.contentview.add(currentView);
+                Alloy.Globals.title.setText("Add a Moment");
+                Alloy.Globals.currentView = currentView;
             },
             allowEditing: true,
             saveToPhotoGallery: true,
@@ -62,11 +68,19 @@ function Controller() {
         id: "tagView"
     });
     $.__views.addVideoView.add($.__views.tagView);
+<<<<<<< HEAD
+    $.__views.__alloyId23 = Ti.UI.createLabel({
+        text: "Tags",
+        id: "__alloyId23"
+    });
+    $.__views.tagView.add($.__views.__alloyId23);
+=======
     $.__views.__alloyId33 = Ti.UI.createLabel({
         text: "Tags",
         id: "__alloyId33"
     });
     $.__views.tagView.add($.__views.__alloyId33);
+>>>>>>> FETCH_HEAD
     $.__views.tagsDescription = Ti.UI.createLabel({
         left: "250px",
         font: {

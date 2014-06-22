@@ -25,16 +25,10 @@
 	width : 320,
 	zIndex: "3",
 },
-"setWidthView":{
-	left:"2%",
-	width:"96%"
-}
-
 "#contentview": {
 	top : "135px",
-	left : 10,
 	right: 0,
-	width: 300,
+	width: 320,
 	height : Ti.UI.Fill,
 	backgroundColor : 'white'
 },
@@ -57,7 +51,7 @@
 	color: "#000"
 } 
 "#title":{
-	left:"180px",
+	left:"160px",
 	top:"60px",
 	font: {
         fontFamily:'Helvetica',

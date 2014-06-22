@@ -10,12 +10,18 @@ function openVideoCamera(e) {
 		},
 		error: function() {
 			alert("There was an error");
-			Alloy.Globals.homeWin.open();
-			$.addVideoWin.close();
+			Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
+			var	currentView = Alloy.createController("homeView").getView();
+			Alloy.Globals.contentview.add(currentView);
+        	Alloy.Globals.title.setText("Add a Moment");
+        	Alloy.Globals.currentView = currentView;
 		},
 		cancel: function() {
-			Alloy.Globals.homeWin.open();
-			$.addVideoWin.close();
+			Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
+			var	currentView = Alloy.createController("homeView").getView();
+			Alloy.Globals.contentview.add(currentView);
+        	Alloy.Globals.title.setText("Add a Moment");
+        	Alloy.Globals.currentView = currentView;
 		},
 		allowEditing:true,
 		saveToPhotoGallery:true,

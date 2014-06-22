@@ -65,15 +65,25 @@ function Controller() {
         id: "addText"
     });
     $.__views.row2.add($.__views.addText);
+<<<<<<< HEAD
+    $.__views.__alloyId24 = Ti.UI.createImageView({
+=======
     $.__views.__alloyId34 = Ti.UI.createImageView({
+>>>>>>> FETCH_HEAD
         top: "30px",
         left: "96px",
         height: "176px",
         width: "176px",
         image: "images/icon-audio.png",
+<<<<<<< HEAD
+        id: "__alloyId24"
+    });
+    $.__views.row2.add($.__views.__alloyId24);
+=======
         id: "__alloyId34"
     });
     $.__views.row2.add($.__views.__alloyId34);
+>>>>>>> FETCH_HEAD
     $.__views.row3 = Ti.UI.createView({
         layout: "horizontal",
         height: "236px",
