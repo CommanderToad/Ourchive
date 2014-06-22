@@ -18,7 +18,6 @@ function Controller() {
         layout: "vertical",
         backgroundColor: "gray",
         width: "100%",
-        height: "1046px",
         id: "addEventView"
     });
     $.__views.addEvent.add($.__views.addEventView);
