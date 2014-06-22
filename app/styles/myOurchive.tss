@@ -1,0 +1,64 @@
+"#myOurchiveWin":{
+	layout:"vertical"
+}
+"#addEventView":{
+	layout:"vertical",
+	backgroundColor: "gray",
+	width:"100%",
+	height:"1046px"
+}
+"#titleBar": {
+	backgroundColor:"gray",
+	height: "90px",
+	width: "100%",
+	layout:"horizontal"
+}
+"#menuBtn":{
+	left:"10px",
+	top:"40px"
+}
+"#title":{
+	left:"100px",
+	top:"40px"
+}
+".singleLineText":{
+	height:"90px",
+	width:"86%",
+	backgroundColor:"white",
+	top:"10px"
+}
+"#eventDescription":{
+	height:"180px",
+	width:"86%",
+	backgroundColor:"white",
+	top:"10px",
+}
+"#tagView":{
+	layout:"horizontal",
+	height:"40px",
+	width:"86%",
+}
+"#tagsDescription":{
+	left:"250px",
+	font: {
+        fontFamily:'Helvetica',
+        fontSize: '8dp',
+        fontStyle: 'italic',
+        fontWeight: 'normal',
+    },	
+}
+"#submitBtnView":{
+	top:"20px",
+	width:"87%",
+	layout:"horizontal"
+}
+".btn":{
+	width:"50%"
+}
+"#submitBtn":{
+	backgroundColor:"green"
+}
+"#cancelBtn":{
+	backgroundColor:"red"
+}
+

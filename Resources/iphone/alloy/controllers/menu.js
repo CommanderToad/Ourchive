@@ -1,23 +1,39 @@
 function Controller() {
     function closeWindow() {
-        Alloy.Globals.previous.open();
-        $.menuWin.close();
+        if (Alloy.Globals.previous != $.addPhotoWin) {
+            Alloy.Globals.previous.open();
+            $.menuWin.close();
+        } else $.menuWin.close();
     }
     function homeWindow() {
-        Alloy.Globals.homeWin.open();
-        $.menuWin.close();
+        if (Alloy.Globals.previous == Alloy.Globals.homeWin) $.menuWin.close(); else {
+            Alloy.Globals.homeWin.open();
+            $.menuWin.close();
+        }
     }
     function addText() {
         Alloy.createController("addText").getView().open();
-        menuWin.close();
+        $.menuWin.close();
     }
     function addPhoto() {
         Alloy.createController("addPhoto").getView().open();
-        menuWin.close();
+        $.menuWin.close();
     }
     function addEvent() {
         Alloy.createController("addEvent").getView().open();
-        menuWin.close();
+        $.menuWin.close();
+    }
+    function addVideo() {
+        Alloy.createController("addVideo").getView().open();
+        $.menuWin.close();
+    }
+    function myOurchive() {
+        Alloy.createController("myOurchive").getView().open();
+        $.menuWin.close();
+    }
+    function settings() {
+        Alloy.createController("settings").getView().open();
+        $.menuWin.close();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "menu";
@@ -53,7 +69,8 @@ function Controller() {
     });
     $.__views.titleView.add($.__views.title);
     $.__views.closeBtn = Ti.UI.createButton({
-        right: "0px",
+        left: "400px",
+        color: "red",
         title: "X",
         id: "closeBtn"
     });
@@ -69,15 +86,16 @@ function Controller() {
     });
     $.__views.menuView.add($.__views.homeBtn);
     homeWindow ? $.__views.homeBtn.addEventListener("click", homeWindow) : __defers["$.__views.homeBtn!click!homeWindow"] = true;
-    $.__views.__alloyId9 = Ti.UI.createButton({
+    $.__views.myBtn = Ti.UI.createButton({
         height: "95px",
         width: "90%",
         backgroundColor: "white",
         top: "10px",
         title: "My Ourchive",
-        id: "__alloyId9"
+        id: "myBtn"
     });
-    $.__views.menuView.add($.__views.__alloyId9);
+    $.__views.menuView.add($.__views.myBtn);
+    myOurchive ? $.__views.myBtn.addEventListener("click", myOurchive) : __defers["$.__views.myBtn!click!myOurchive"] = true;
     $.__views.photoBtn = Ti.UI.createButton({
         height: "95px",
         width: "90%",
@@ -88,15 +106,16 @@ function Controller() {
     });
     $.__views.menuView.add($.__views.photoBtn);
     addPhoto ? $.__views.photoBtn.addEventListener("click", addPhoto) : __defers["$.__views.photoBtn!click!addPhoto"] = true;
-    $.__views.__alloyId10 = Ti.UI.createButton({
+    $.__views.videoBtn = Ti.UI.createButton({
         height: "95px",
         width: "90%",
         backgroundColor: "white",
         top: "10px",
         title: "Video",
-        id: "__alloyId10"
+        id: "videoBtn"
     });
-    $.__views.menuView.add($.__views.__alloyId10);
+    $.__views.menuView.add($.__views.videoBtn);
+    addVideo ? $.__views.videoBtn.addEventListener("click", addVideo) : __defers["$.__views.videoBtn!click!addVideo"] = true;
     $.__views.textBtn = Ti.UI.createButton({
         height: "95px",
         width: "90%",
@@ -107,15 +126,15 @@ function Controller() {
     });
     $.__views.menuView.add($.__views.textBtn);
     addText ? $.__views.textBtn.addEventListener("click", addText) : __defers["$.__views.textBtn!click!addText"] = true;
-    $.__views.__alloyId11 = Ti.UI.createButton({
+    $.__views.audioBtn = Ti.UI.createButton({
         height: "95px",
         width: "90%",
         backgroundColor: "white",
         top: "10px",
         title: "Audio",
-        id: "__alloyId11"
+        id: "audioBtn"
     });
-    $.__views.menuView.add($.__views.__alloyId11);
+    $.__views.menuView.add($.__views.audioBtn);
     $.__views.eventBtn = Ti.UI.createButton({
         height: "95px",
         width: "90%",
@@ -126,23 +145,36 @@ function Controller() {
     });
     $.__views.menuView.add($.__views.eventBtn);
     addEvent ? $.__views.eventBtn.addEventListener("click", addEvent) : __defers["$.__views.eventBtn!click!addEvent"] = true;
-    $.__views.__alloyId12 = Ti.UI.createButton({
+    $.__views.__alloyId8 = Ti.UI.createButton({
+        height: "95px",
+        width: "90%",
+        backgroundColor: "white",
+        top: "10px",
+        title: "All Events",
+        id: "__alloyId8"
+    });
+    $.__views.menuView.add($.__views.__alloyId8);
+    $.__views.settingsBtn = Ti.UI.createButton({
         height: "95px",
         width: "90%",
         backgroundColor: "white",
         top: "10px",
         title: "Settings",
-        id: "__alloyId12"
+        id: "settingsBtn"
     });
-    $.__views.menuView.add($.__views.__alloyId12);
+    $.__views.menuView.add($.__views.settingsBtn);
+    settings ? $.__views.settingsBtn.addEventListener("click", settings) : __defers["$.__views.settingsBtn!click!settings"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
-    var menuWin = Alloy.Globals.menuWin = $.menuWin;
+    Alloy.Globals.menuWin = $.menuWin;
     __defers["$.__views.closeBtn!click!closeWindow"] && $.__views.closeBtn.addEventListener("click", closeWindow);
     __defers["$.__views.homeBtn!click!homeWindow"] && $.__views.homeBtn.addEventListener("click", homeWindow);
+    __defers["$.__views.myBtn!click!myOurchive"] && $.__views.myBtn.addEventListener("click", myOurchive);
     __defers["$.__views.photoBtn!click!addPhoto"] && $.__views.photoBtn.addEventListener("click", addPhoto);
+    __defers["$.__views.videoBtn!click!addVideo"] && $.__views.videoBtn.addEventListener("click", addVideo);
     __defers["$.__views.textBtn!click!addText"] && $.__views.textBtn.addEventListener("click", addText);
     __defers["$.__views.eventBtn!click!addEvent"] && $.__views.eventBtn.addEventListener("click", addEvent);
+    __defers["$.__views.settingsBtn!click!settings"] && $.__views.settingsBtn.addEventListener("click", settings);
     _.extend($, exports);
 }
 

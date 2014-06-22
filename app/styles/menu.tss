@@ -14,7 +14,8 @@
 	left:"20px"
 }
 "#closeBtn":{
-	right:"0px"
+	left:"400px",
+	color:"red"
 }
 ".Btn":{
 	height:"95px",

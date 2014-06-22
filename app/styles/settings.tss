@@ -1,0 +1,43 @@
+"#settingsView": {
+	backgroundColor:"white",
+	layout: "vertical",
+}
+"#titleBar": {
+	backgroundColor:"gray",
+	height: "90px",
+	width: "100%",
+	layout:"horizontal"
+}
+"#menuBtn":{
+	left:"10px",
+	top:"40px"
+}
+"#title":{
+	left:"100px",
+	top:"40px"
+}
+"#centerView":{
+	layout:"horizontal",
+	backgroundColor: "gray",
+	height:"1046px",
+	width:"100%"
+}
+"#itemField":{
+	left:"10px",
+	right:"10px",
+	top: "10px",
+	width:"620px",
+	height:"300px"
+}
+".btn":{
+	top:"50px",
+	width:"50%"
+}
+"#submitBtn":{
+	backgroundColor:"green"
+}
+"#cancelBtn":{
+	backgroundColor:"red"
+}
+
+

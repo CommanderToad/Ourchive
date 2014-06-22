@@ -3,10 +3,10 @@
     <id>com.liabus.ourchive</id>
     <name>Ourchive</name>
     <version>1.0</version>
-    <publisher>jillmeyers</publisher>
-    <url>http://</url>
+    <publisher>Liabus</publisher>
+    <url>http://liabus.com</url>
     <description>not specified</description>
-    <copyright>2014 by jillmeyers</copyright>
+    <copyright>2014 by Liabus</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>

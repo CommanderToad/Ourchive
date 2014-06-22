@@ -1,8 +1,8 @@
-#appname: Ourchive
-#publisher: jillmeyers
-#url: http://
-#image: appicon.png
-#appid: com.liabus.ourchive
-#desc: undefined
-#type: ipad
-#guid: 48c4a9ea-7d50-4441-9fd4-8eca65e88edf
+#appname:Ourchive
+#publisher:Liabus
+#url:http://liabus.com
+#image:appicon.png
+#appid:com.liabus.ourchive
+#desc:not specified
+#type:ipad
+#guid:48c4a9ea-7d50-4441-9fd4-8eca65e88edf

@@ -1,0 +1,30 @@
+<Alloy>
+	<View id="containerview">
+		<View id="leftMenu">
+			<View id="menuView">
+				<View id="titleView">
+					<Label id="menuTitle">Menu</Label>
+				</View>
+				<Button class="Btn" id="homeView" >Home</Button>
+				<Button class="Btn" id="myBtn" >My Ourchive</Button>
+				<Button class="Btn" id="addPhoto" >Photo</Button>
+				<Button class="Btn" id="addVideo" >Video</Button>
+				<Button class="Btn" id="addText" >Text</Button>
+				<Button class="Btn" id="addAudio">Audio</Button>
+				<Button class="Btn" id="addEvent">New Event</Button>
+				<Button class="Btn">All Events</Button>
+				<Button class="Btn" id="settingsBtn" >Settings</Button>
+			</View>
+		</View>
+		<View id="movableview">
+			<View id="shadowview">
+				<View id="navview">
+					<Button id="leftButton"></Button>
+					<Label id="title">Add a Moment</Label>
+				</View>
+				<View id="contentview"></View>
+				
+			</View>
+		</View>
+	</View>
+</Alloy>

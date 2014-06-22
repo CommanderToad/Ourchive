@@ -1,29 +1,38 @@
 <Alloy>
-	<Window id="homeWin">
+	<Window id="homeWin" onOpen="openFunction">
+		<Require type="widget" src="ds.slideMenu" id="ds"/>
+		<!--
+		<View id="iphoneStatusBar"></View>
 		<View id="homeView">
 			<View id="titleBar">
 				<Button id="menuBtn" onClick="openMenu">menu</Button>
 				<Label id="title">Add a Moment</Label>
 			</View>
-			<View id="addBox">
-				<View class="buttonRow">
-					<Button class="leftBtn" onClick="addPhoto">Photo</Button>
-					<Button class="rightBtn">Video</Button>
+			<View id="addView">
+				<View class="buttonRow" id="row1">
+					<ImageView class="leftBtn" image="images/icon-photos.png" onClick="addPhoto"></ImageView>
+					<ImageView class="rightBtn" image="images/icon-video.png" onClick="addVideo"></ImageView>
 				</View>
-				<View class="buttonRow">
-					<Button class="leftBtn" onClick="addText">Text</Button>
-					<Button class="rightBtn">Audio</Button>
+				<View class="buttonRow" id="row2">
+					<ImageView class="leftBtn" image="images/icon-text.png" onClick="addText"></ImageView>
+					<ImageView class="rightBtn" image="images/icon-audio.png"></ImageView>
 				</View>
-				<View class="buttonRow">
-					<Button class="leftBtn">MyStream</Button>
+				<View class="buttonRow" id="row3">
+					<Button class="leftBtn" id="myStreamBtn" onClick="myOurchive">MyStream</Button>
 				</View>
 			</View>
 			<View id="tableHeader">
 				<Label id="tableTitle">Events</Label>
 				<Button id="addEvent" onClick="addEvent">New +</Button>
 			</View>
-			<TableView id="events">
+			<TableView id="events" >
+				<TableViewRow>
+					<View>
+						
+					</View>
+				</TableViewRow>
 			</TableView>
 		</View>
+		-->
 	</Window>
 </Alloy>

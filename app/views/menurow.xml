@@ -1,0 +1,16 @@
+<Alloy>
+  	<View id="menuView">
+			<View id="titleView">
+				<Label id="menuTitle">Menu</Label>
+			</View>
+			<Button class="Btn" id="homeBtn" >Home</Button>
+			<Button class="Btn" id="myBtn" >My Ourchive</Button>
+			<Button class="Btn" id="photoBtn" >Photo</Button>
+			<Button class="Btn" id="videoBtn" >Video</Button>
+			<Button class="Btn" id="textBtn" >Text</Button>
+			<Button class="Btn" id="audioBtn">Audio</Button>
+			<Button class="Btn" id="eventBtn" >New Event</Button>
+			<Button class="Btn">All Events</Button>
+			<Button class="Btn" id="settingsBtn" >Settings</Button>
+	</View>
+</Alloy>

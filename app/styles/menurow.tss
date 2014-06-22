@@ -1,0 +1,22 @@
+
+"#menuView":{
+	layout:"vertical",
+	backgroundColor:"gray"
+},
+"#menuTitle":{
+	left:"10px"
+}
+"#titleView":{
+	top:"30px",
+	layout:"horizontal",
+	height:"95px",
+	width:"90%",
+	left:"20px"
+}
+".Btn":{
+	height:"95px",
+	width:"90%",
+	backgroundColor:"white",
+	top:"10px",
+}
+

@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="addEventWin" onOpen="focusTextField">
+	<View id="addEvent" onOpen="focusTextField">
 		<View id="titleBar">
 			<Button id="menuBtn" onClick="openMenu">menu</Button>
 			<Label id="title">Add a Moment</Label>
@@ -18,5 +18,5 @@
 				<Button class="btn" id="cancelBtn" onClick="closeWindow">Cancel</Button>
 			</View>
 		</View>
-	</Window>
+	</View>
 </Alloy>

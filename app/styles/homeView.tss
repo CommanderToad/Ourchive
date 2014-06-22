@@ -1,0 +1,64 @@
+
+"#homeView": {
+	backgroundColor:"white",
+	layout: "vertical",
+}
+
+"#addView": {
+	height: "706px",
+	layout: "vertical",
+	width: "100%",
+	backgroundColor:"white",
+}
+".buttonRow":{
+	layout:"horizontal",
+	height:"236px",
+	backgroundColor:"white",
+}
+".leftBtn":{
+	top:"30px",
+	left:"96px",
+	height:"176px",
+	width:"176px",
+}
+".rightBtn":{
+	top:"30px",
+	left:"96px",
+	height:"176px",
+	width:"176px",
+}
+"#row1":{
+	backgroundColor:"white"
+}
+"#row2":{
+	backgroundColor:"white"
+}
+"#row3":{
+	backgroundColor:"white"
+}
+"#events": {
+	bottom: "4px",
+	height: '224px',
+	width: Ti.UI.FILL,
+	backgroundColor:"gray",
+}
+"#tableHeader":{
+	layout:"horizontal",
+	width:"100%",
+	height:"70px",
+	backgroundColor:"gray"
+}
+"#tableTitle":{
+	left:"10px",
+}
+"#addEvent":{
+	left:"400px"
+}
+"#myOurchiveBtn": {
+	left:"96px",
+	top:"40px",
+	borderRadius:"5px",
+	height: "100px",
+	width: "448px",
+	backgroundColor:"gray",
+}

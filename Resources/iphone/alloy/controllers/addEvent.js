@@ -7,7 +7,7 @@ function Controller() {
         $.eventTitle.focus();
     }
     function closeWindow() {
-        Alloy.Globals.previous.open();
+        Alloy.Globals.homeWin.open();
         $.addEventWin.close();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
@@ -18,12 +18,11 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.addEventWin = Ti.UI.createWindow({
-        layout: "vertical",
-        id: "addEventWin"
+    $.__views.addEvent = Ti.UI.createView({
+        id: "addEvent"
     });
-    $.__views.addEventWin && $.addTopLevelView($.__views.addEventWin);
-    focusTextField ? $.__views.addEventWin.addEventListener("open", focusTextField) : __defers["$.__views.addEventWin!open!focusTextField"] = true;
+    $.__views.addEvent && $.addTopLevelView($.__views.addEvent);
+    focusTextField ? $.__views.addEvent.addEventListener("open", focusTextField) : __defers["$.__views.addEvent!open!focusTextField"] = true;
     $.__views.titleBar = Ti.UI.createView({
         backgroundColor: "gray",
         height: "90px",
@@ -31,7 +30,7 @@ function Controller() {
         layout: "horizontal",
         id: "titleBar"
     });
-    $.__views.addEventWin.add($.__views.titleBar);
+    $.__views.addEvent.add($.__views.titleBar);
     $.__views.menuBtn = Ti.UI.createButton({
         left: "10px",
         top: "40px",
@@ -54,7 +53,7 @@ function Controller() {
         height: "1046px",
         id: "addEventView"
     });
-    $.__views.addEventWin.add($.__views.addEventView);
+    $.__views.addEvent.add($.__views.addEventView);
     $.__views.eventTitle = Ti.UI.createTextField({
         height: "90px",
         width: "86%",
@@ -89,11 +88,11 @@ function Controller() {
         id: "tagView"
     });
     $.__views.addEventView.add($.__views.tagView);
-    $.__views.__alloyId0 = Ti.UI.createLabel({
+    $.__views.__alloyId1 = Ti.UI.createLabel({
         text: "Tags",
-        id: "__alloyId0"
+        id: "__alloyId1"
     });
-    $.__views.tagView.add($.__views.__alloyId0);
+    $.__views.tagView.add($.__views.__alloyId1);
     $.__views.tagsDescription = Ti.UI.createLabel({
         left: "250px",
         font: {
@@ -139,7 +138,18 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     Alloy.Globals.previous = $.addEventWin;
-    __defers["$.__views.addEventWin!open!focusTextField"] && $.__views.addEventWin.addEventListener("open", focusTextField);
+    $.submitBtn.addEventListener("click", function() {
+        var eventModel = Alloy.createModel("event", {
+            title: $.eventTitle.value,
+            location: $.eventLocation.value,
+            description: $.eventDescription.value,
+            tags: $.eventTags.value
+        });
+        eventModel.save();
+        Alloy.Collections.Moments.fetch();
+        $.addEventWin.close();
+    });
+    __defers["$.__views.addEvent!open!focusTextField"] && $.__views.addEvent.addEventListener("open", focusTextField);
     __defers["$.__views.menuBtn!click!openMenu"] && $.__views.menuBtn.addEventListener("click", openMenu);
     __defers["$.__views.cancelBtn!click!closeWindow"] && $.__views.cancelBtn.addEventListener("click", closeWindow);
     _.extend($, exports);

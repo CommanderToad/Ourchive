@@ -1,27 +1,16 @@
-Alloy.Globals.previous = $.homeWin;
+Alloy.Globals.previous = $.addPhotoWin;
 function openCamera() {
     var cameraOptions = {
         success : function(event) {
-            var image = event.media;
+            var takenPicture = event.media;
 
             // set image on window
-            $.image.image = image;
-
-            //save for future use
-            var f = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, 'photo' + args.data.get("id") + '.png');
-            f.write(image);
-
-            // update the model and save
-            var fugitiveModel = args.data;
-            fugitiveModel.set("url", f.nativePath);
-            fugitiveModel.save();
-
-            // force tables to update
-            Alloy.Collections.Fugitive.fetch();
+            $.photo.image = takenPicture;
 
         },
         cancel : function() {
         	$.addPhotoWin.close();
+        	Alloy.Globals.homeWin.open();
             // cancel and close window
         },
         error : function(error) {
@@ -48,3 +37,10 @@ function openCamera() {
     }
 
 };
+function openMenu() {
+	Alloy.createController("menu").getView().open();
+}
+function closeWindow() {
+	Alloy.Globals.homeWin.open();
+	$.addPhotoWin.close();
+}

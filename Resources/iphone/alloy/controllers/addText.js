@@ -7,7 +7,7 @@ function Controller() {
         $.itemField.focus();
     }
     function closeWindow() {
-        Alloy.Globals.previous.open();
+        Alloy.Globals.homeWin.open();
         $.addTextWin.close();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
@@ -60,16 +60,11 @@ function Controller() {
         id: "centerView"
     });
     $.__views.addTextView.add($.__views.centerView);
-    $.__views.itemField = Ti.UI.createTextArea({
-        left: "10px",
-        right: "10px",
-        top: "10px",
-        width: "620px",
-        height: "300px",
-        id: "itemField",
+    $.__views.textMoment = Ti.UI.createTextArea({
+        id: "textMoment",
         hintText: "New Moment"
     });
-    $.__views.centerView.add($.__views.itemField);
+    $.__views.centerView.add($.__views.textMoment);
     $.__views.submitBtn = Ti.UI.createButton({
         top: "50px",
         width: "50%",
@@ -90,6 +85,14 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     Alloy.Globals.previous = $.addTextWin;
+    $.submitBtn.addEventListener("click", function() {
+        var textModel = Alloy.createModel("text", {
+            text: $.textMoment.value
+        });
+        textModel.save();
+        Alloy.Collections.Moments.fetch();
+        $.addTextWin.close();
+    });
     __defers["$.__views.addTextWin!open!focusTextField"] && $.__views.addTextWin.addEventListener("open", focusTextField);
     __defers["$.__views.menuBtn!click!openMenu"] && $.__views.menuBtn.addEventListener("click", openMenu);
     __defers["$.__views.cancelBtn!click!closeWindow"] && $.__views.cancelBtn.addEventListener("click", closeWindow);

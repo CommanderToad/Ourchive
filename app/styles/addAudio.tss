@@ -1,0 +1,40 @@
+"#addAudioView":{
+	backgroundColor:"white",
+	layout:"vertical"
+}
+"#iphoneStatusBar":{
+	backgroundColor:"gray",
+	height:"40px",
+	width:"100%"
+}
+"#titleBar": {
+	backgroundColor:"gray",
+	height: "90px",
+	width: "100%",
+	layout:"horizontal"
+}
+"#menuBtn":{
+	left:"10px",
+	top:"40px"
+}
+"#title":{
+	left:"100px",
+	top:"30px",
+	font: {
+        fontFamily:'Helvetica',
+        fontSize: '20dp',
+        fontStyle: 'italic',
+        fontWeight: 'normal',
+    },	
+}
+"#audioPlayerView":{
+	height:"700px",
+	width:"100%",
+	backgroundColor:"white"
+}
+"#recordBtn":{
+	height:"300px",
+	width:"300px",
+	left:"200px"
+	
+}

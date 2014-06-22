@@ -6,7 +6,7 @@
 				<Label id="title">Add a Moment</Label>
 			</View>
 			<View id="centerView">
-				<TextArea id="itemField" hintText="New Moment"></TextArea>
+				<TextArea id="textMoment" hintText="New Moment"></TextArea>
 				<Button class="btn" id="submitBtn">Submit</Button>
 				<Button class="btn" id="cancelBtn" onClick="closeWindow">Cancel</Button>
 			</View>

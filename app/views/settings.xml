@@ -1,0 +1,15 @@
+<Alloy>
+	<Window id="settingsWin" onOpen="focusTextField">>
+		<View id="settingsView">
+			<View id="titleBar">
+				<Button id="menuBtn" onClick="openMenu">menu</Button>
+				<Label id="title">Add a Moment</Label>
+			</View>
+			<View id="centerView">
+				<TextArea id="itemField" hintText="New Moment"></TextArea>
+				<Button class="btn" id="submitBtn">Submit</Button>
+				<Button class="btn" id="cancelBtn" onClick="closeWindow">Cancel</Button>
+			</View>
+		</View>
+	</Window>
+</Alloy>

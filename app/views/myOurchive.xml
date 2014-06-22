@@ -1,0 +1,22 @@
+<Alloy>
+	<Window id="myOurchiveWin" onOpen="focusTextField">
+		<View id="titleBar">
+			<Button id="menuBtn" onClick="openMenu">menu</Button>
+			<Label id="title">Add a Moment</Label>
+		</View>
+		<View id="addEventView">
+			<TextField class="singleLineText" id="eventTitle" hintText="Title"></TextField>
+			<TextField class="singleLineText" id="eventLocation" hintText="Location"></TextField>
+			<TextArea id="eventDescription" hintText="Description"></TextArea>
+			<View id="tagView">
+				<Label>Tags</Label>
+				<Label id="tagsDescription">For all moments in this event</Label>
+			</View>
+			<TextField class="singleLineText" id="eventTags"></TextField>
+			<View id="submitBtnView">
+				<Button class="btn" id="submitBtn">Submit</Button>
+				<Button class="btn" id="cancelBtn" onClick="closeWindow">Cancel</Button>
+			</View>
+		</View>
+	</Window>
+</Alloy>

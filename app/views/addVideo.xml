@@ -1,0 +1,21 @@
+<Alloy>
+	<Window id="addVideoWin" onOpen="openVideoCamera">
+		<View id="titleBar">
+			<Button id="menuBtn" onClick="openMenu">menu</Button>
+			<Label id="title">Edit Details</Label>
+		</View>
+		<View id="addVideoView">
+			<ImageView id="videoThumbnail"></ImageView>
+			<TextArea id="eventDescription" hintText="Description"></TextArea>
+			<View id="tagView">
+				<Label>Tags</Label>
+				<Label id="tagsDescription">Photo Description</Label>
+			</View>
+			<TextField class="singleLineText" id="eventTags"></TextField>
+			<View id="submitBtnView">
+				<Button class="btn" id="submitBtn">Submit</Button>
+				<Button class="btn" id="cancelBtn" onClick="closeWindow">Cancel</Button>
+			</View>
+		</View>
+	</Window>
+</Alloy>
