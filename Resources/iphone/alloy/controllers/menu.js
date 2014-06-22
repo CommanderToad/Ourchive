@@ -145,15 +145,15 @@ function Controller() {
     });
     $.__views.menuView.add($.__views.eventBtn);
     addEvent ? $.__views.eventBtn.addEventListener("click", addEvent) : __defers["$.__views.eventBtn!click!addEvent"] = true;
-    $.__views.__alloyId5 = Ti.UI.createButton({
+    $.__views.__alloyId14 = Ti.UI.createButton({
         height: "95px",
         width: "90%",
         backgroundColor: "white",
         top: "10px",
         title: "All Events",
-        id: "__alloyId5"
+        id: "__alloyId14"
     });
-    $.__views.menuView.add($.__views.__alloyId5);
+    $.__views.menuView.add($.__views.__alloyId14);
     $.__views.settingsBtn = Ti.UI.createButton({
         height: "95px",
         width: "90%",

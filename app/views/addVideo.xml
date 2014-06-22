@@ -5,7 +5,7 @@
 			<TextArea id="eventDescription" hintText="Description"></TextArea>
 			<View id="tagView">
 				<Label>Tags</Label>
-				<Label id="tagsDescription">Photo Description</Label>
+				<Label id="tagsDescription">Video Description</Label>
 			</View>
 			<TextField class="singleLineText" id="eventTags"></TextField>
 			<View id="submitBtnView">

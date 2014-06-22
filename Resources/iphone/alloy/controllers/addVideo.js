@@ -62,11 +62,11 @@ function Controller() {
         id: "tagView"
     });
     $.__views.addVideoView.add($.__views.tagView);
-    $.__views.__alloyId3 = Ti.UI.createLabel({
+    $.__views.__alloyId12 = Ti.UI.createLabel({
         text: "Tags",
-        id: "__alloyId3"
+        id: "__alloyId12"
     });
-    $.__views.tagView.add($.__views.__alloyId3);
+    $.__views.tagView.add($.__views.__alloyId12);
     $.__views.tagsDescription = Ti.UI.createLabel({
         left: "250px",
         font: {
@@ -75,7 +75,7 @@ function Controller() {
             fontStyle: "italic",
             fontWeight: "normal"
         },
-        text: "Photo Description",
+        text: "Video Description",
         id: "tagsDescription"
     });
     $.__views.tagView.add($.__views.tagsDescription);
@@ -110,7 +110,7 @@ function Controller() {
     $.__views.submitBtnView.add($.__views.cancelBtn);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    openVideoCamera(e);
+    openVideoCamera();
     _.extend($, exports);
 }
 

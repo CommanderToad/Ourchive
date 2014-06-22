@@ -15,10 +15,9 @@
 	left: 0,
 	right: 0,
 	width : 320,
-	height : "500px",
-	backgroundColor:"gray"
+	height : "135px",
+	backgroundColor:"#BDBDBD"
 },
-
 "#movableview": {
 	top: 0,
 	left: 0,
@@ -26,18 +25,21 @@
 	width : 320,
 	zIndex: "3",
 },
+"setWidthView":{
+	left:"2%",
+	width:"96%"
+}
+
 "#contentview": {
 	top : "135px",
-	left : 0,
+	left : 10,
 	right: 0,
-	width: 320,
+	width: 300,
 	height : Ti.UI.Fill,
 	backgroundColor : 'white'
 },
 "#shadowview": {
-	shadowColor:"black",
-    	shadowOffset:{x:"0",y:"0"},
-    	shadowRadius:"2.5"
+	backgroundColor:"white",
 },
 "#leftButton": {
 	backgroundImage : 'none',
@@ -68,31 +70,30 @@
 //Menu styling
 "#menuView":{
 	layout:"vertical",
-	backgroundColor:"gray"
+	backgroundColor:"gray",
 },
 "#menuTitle":{
-	top:"40px",
-	left:"10px",
-	font: {
-        fontFamily:'Helvetica',
-        fontSize: '25dp',
-        fontStyle: 'italic',
-        fontWeight: 'normal',
-    },	
-
+	top:"60px"
 }
 "#titleView":{
-	top:"30px",
 	layout:"horizontal",
-	height:"95px",
+	height:"135px",
 	width:"90%",
 	left:"20px"
 }
 ".Btn":{
-	height:"95px",
+	height:"7%",
 	width:"90%",
-	backgroundColor:"white",
-	top:"10px",
+	backgroundColor:"#424242",
+	top:"1%",
 }
-
+".menuText":{
+	left:"3%",
+	color:"white",
+	font: {
+        fontFamily:'Helvetica',
+        fontSize: '14dp',
+        fontWeight: 'normal',
+    },	
+}
 

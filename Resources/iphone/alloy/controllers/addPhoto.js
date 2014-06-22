@@ -6,8 +6,9 @@ function Controller() {
                 $.photo.image = takenPicture;
             },
             cancel: function() {
-                $.addPhotoWin.close();
-                Alloy.Globals.homeWin.open();
+                Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
+                currentView = Alloy.createController("homeView").getView();
+                Alloy.Globals.contentview.add(currentView);
             },
             error: function(error) {
                 var a = Ti.UI.createAlertDialog({
@@ -66,11 +67,11 @@ function Controller() {
         id: "tagView"
     });
     $.__views.addPhotoView.add($.__views.tagView);
-    $.__views.__alloyId2 = Ti.UI.createLabel({
+    $.__views.__alloyId11 = Ti.UI.createLabel({
         text: "Tags",
-        id: "__alloyId2"
+        id: "__alloyId11"
     });
-    $.__views.tagView.add($.__views.__alloyId2);
+    $.__views.tagView.add($.__views.__alloyId11);
     $.__views.tagsDescription = Ti.UI.createLabel({
         left: "250px",
         font: {

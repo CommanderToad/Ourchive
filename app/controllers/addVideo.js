@@ -23,4 +23,4 @@ function openVideoCamera(e) {
 		videoQuality:Titanium.Media.QUALITY_HIGH
 	});
 }
-openVideoCamera(e);
+openVideoCamera();

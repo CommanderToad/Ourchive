@@ -8,9 +8,10 @@ function openCamera() {
 
         },
         cancel : function() {
-        	$.addPhotoWin.close();
-        	Alloy.Globals.homeWin.open();
-            // cancel and close window
+        	Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
+			currentView = Alloy.createController("homeView").getView();
+			Alloy.Globals.contentview.add(currentView);
+      	      // cancel and close view
         },
         error : function(error) {
             var a = Ti.UI.createAlertDialog({

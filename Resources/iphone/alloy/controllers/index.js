@@ -7,8 +7,10 @@ function Controller() {
         var obj = e.source;
         if (currentView.id != obj.id) {
             $.ds.contentview.remove(currentView);
+            animation.popIn(currentView.id, obj.id, 500);
             currentView = Alloy.createController(obj.id).getView();
             $.ds.contentview.add(currentView);
+            Alloy.Globals.currentView = currentView;
         }
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
@@ -32,9 +34,9 @@ function Controller() {
     $.__views.ds.setParent($.__views.homeWin);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    var animation = require("alloy/animation");
     $.homeWin.open();
-    Alloy.Globals.homeWin = $.homeWin;
-    Alloy.Globals.previous = $.homeWin;
+    Alloy.Globals.contentview = $.ds.contentview;
     $.ds.menuView.addEventListener("click", function(e) {
         rowSelect(e);
         $.ds.toggleLeftSlider();

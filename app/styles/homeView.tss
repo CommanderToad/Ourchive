@@ -49,10 +49,12 @@
 	backgroundColor:"gray"
 }
 "#tableTitle":{
-	left:"10px",
+	left:"2%",
+	color:"white"
 }
 "#addEvent":{
-	left:"400px"
+	left:"380px",
+	color:"white"
 }
 "#myOurchiveBtn": {
 	left:"96px",
@@ -60,5 +62,5 @@
 	borderRadius:"5px",
 	height: "100px",
 	width: "448px",
-	backgroundColor:"gray",
+	backgroundColor:"white",
 }

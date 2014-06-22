@@ -1,8 +1,7 @@
+var animation = require('alloy/animation');
 
 $.homeWin.open();
-Alloy.Globals.homeWin = $.homeWin;
-Alloy.Globals.previous = $.homeWin;
-
+Alloy.Globals.contentview = $.ds.contentview;
 
 function openFunction() {
 	Alloy.Globals.homeWin = $.homeWin;
@@ -14,6 +13,7 @@ function rowSelect(e) {
 		$.ds.contentview.remove(currentView);
 		currentView = Alloy.createController(obj.id).getView();
 		$.ds.contentview.add(currentView);
+		Alloy.Globals.currentView = currentView;
 	}
 }
 //manage menu views

@@ -3,17 +3,17 @@
 		<View id="leftMenu">
 			<View id="menuView">
 				<View id="titleView">
-					<Label id="menuTitle">Menu</Label>
+					<Label class="menuText" id="menuTitle">Menu</Label>
 				</View>
-				<Button class="Btn" id="homeView" >Home</Button>
-				<Button class="Btn" id="myBtn" >My Ourchive</Button>
-				<Button class="Btn" id="addPhoto" >Photo</Button>
-				<Button class="Btn" id="addVideo" >Video</Button>
-				<Button class="Btn" id="addText" >Text</Button>
-				<Button class="Btn" id="addAudio">Audio</Button>
-				<Button class="Btn" id="addEvent">New Event</Button>
-				<Button class="Btn">All Events</Button>
-				<Button class="Btn" id="settingsBtn" >Settings</Button>
+				<Button class="Btn" id="homeView" ><Label class="menuText">Home</Label></Button>
+				<Button class="Btn" id="myBtn" ><Label class="menuText">My Ourchive</Label></Button>
+				<Button class="Btn" id="addPhoto" ><Label class="menuText">Photo</Label></Button>
+				<Button class="Btn" id="addVideo" ><Label class="menuText">Video</Label></Button>
+				<Button class="Btn" id="addText" ><Label class="menuText">Text</Label></Button>
+				<Button class="Btn" id="addAudio"><Label class="menuText">Audio</Label></Button>
+				<Button class="Btn" id="addEvent"><Label class="menuText">New Event</Label></Button>
+				<Button class="Btn"><Label class="menuText">All Events</Label></Button>
+				<Button class="Btn" id="settingsBtn" ><Label class="menuText">Settings</Label></Button>
 			</View>
 		</View>
 		<View id="movableview">
@@ -23,7 +23,6 @@
 					<Label id="title">Add a Moment</Label>
 				</View>
 				<View id="contentview"></View>
-				
 			</View>
 		</View>
 	</View>

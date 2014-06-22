@@ -6,7 +6,15 @@ function WPATH(s) {
 
 module.exports = [ {
     isApi: true,
-    priority: 1000.0009,
+    priority: 1000.0006,
+    key: "setWidthView",
+    style: {
+        left: "2%",
+        width: "96%"
+    }
+}, {
+    isApi: true,
+    priority: 1000.001,
     key: "Label",
     style: {
         width: Ti.UI.SIZE,
@@ -15,13 +23,26 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0014,
+    priority: 10000.0015,
     key: "Btn",
     style: {
-        height: "95px",
+        height: "7%",
         width: "90%",
-        backgroundColor: "white",
-        top: "10px"
+        backgroundColor: "#424242",
+        top: "1%"
+    }
+}, {
+    isClass: true,
+    priority: 10000.0016,
+    key: "menuText",
+    style: {
+        left: "3%",
+        color: "white",
+        font: {
+            fontFamily: "Helvetica",
+            fontSize: "14dp",
+            fontWeight: "normal"
+        }
     }
 }, {
     isId: true,
@@ -49,8 +70,8 @@ module.exports = [ {
         left: 0,
         right: 0,
         width: 320,
-        height: "500px",
-        backgroundColor: "gray"
+        height: "135px",
+        backgroundColor: "#BDBDBD"
     }
 }, {
     isId: true,
@@ -65,31 +86,26 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0006,
+    priority: 100000.0007,
     key: "contentview",
     style: {
         top: "135px",
-        left: 0,
+        left: 10,
         right: 0,
-        width: 320,
+        width: 300,
         height: Ti.UI.Fill,
         backgroundColor: "white"
     }
 }, {
     isId: true,
-    priority: 100000.0007,
+    priority: 100000.0008,
     key: "shadowview",
     style: {
-        shadowColor: "black",
-        shadowOffset: {
-            x: "0",
-            y: "0"
-        },
-        shadowRadius: "2.5"
+        backgroundColor: "white"
     }
 }, {
     isId: true,
-    priority: 100000.0008,
+    priority: 100000.0009,
     key: "leftButton",
     style: {
         backgroundImage: "none",
@@ -102,7 +118,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.001,
+    priority: 100000.0011,
     key: "title",
     style: {
         left: "180px",
@@ -116,7 +132,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0011,
+    priority: 100000.0012,
     key: "menuView",
     style: {
         layout: "vertical",
@@ -124,26 +140,18 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0012,
+    priority: 100000.0013,
     key: "menuTitle",
     style: {
-        top: "40px",
-        left: "10px",
-        font: {
-            fontFamily: "Helvetica",
-            fontSize: "25dp",
-            fontStyle: "italic",
-            fontWeight: "normal"
-        }
+        top: "60px"
     }
 }, {
     isId: true,
-    priority: 100000.0013,
+    priority: 100000.0014,
     key: "titleView",
     style: {
-        top: "30px",
         layout: "horizontal",
-        height: "95px",
+        height: "135px",
         width: "90%",
         left: "20px"
     }
