@@ -7,8 +7,9 @@ function Controller() {
             },
             cancel: function() {
                 Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
-                currentView = Alloy.createController("homeView").getView();
+                var currentView = Alloy.createController("homeView").getView();
                 Alloy.Globals.contentview.add(currentView);
+                Alloy.Globals.title.setText("Add a Moment");
             },
             error: function(error) {
                 var a = Ti.UI.createAlertDialog({

@@ -66,7 +66,7 @@ $.movableview.addEventListener('touchmove', function(e) {
 		//Animate to the next left value (looks pretty):
 		$.movableview.animate({
         	left : newLeft,
-	        duration : 12
+	        duration : 7
 	    });
 	}
 	else {

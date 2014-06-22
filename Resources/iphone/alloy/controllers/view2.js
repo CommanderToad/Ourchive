@@ -10,102 +10,54 @@ function Controller() {
         id: "view2"
     });
     $.__views.view2 && $.addTopLevelView($.__views.view2);
-<<<<<<< HEAD
-    var __alloyId17 = [];
-=======
-    var __alloyId19 = [];
->>>>>>> FETCH_HEAD
+    var __alloyId28 = [];
     $.__views.sectionFruit = Ti.UI.createTableViewSection({
         id: "sectionFruit",
         headerTitle: "Fruit"
     });
-<<<<<<< HEAD
-    __alloyId17.push($.__views.sectionFruit);
-    $.__views.__alloyId18 = Ti.UI.createTableViewRow({
+    __alloyId28.push($.__views.sectionFruit);
+    $.__views.__alloyId29 = Ti.UI.createTableViewRow({
         title: "Apple",
-        id: "__alloyId18"
+        id: "__alloyId29"
     });
-    $.__views.sectionFruit.add($.__views.__alloyId18);
-    $.__views.__alloyId19 = Ti.UI.createTableViewRow({
+    $.__views.sectionFruit.add($.__views.__alloyId29);
+    $.__views.__alloyId30 = Ti.UI.createTableViewRow({
         title: "Bananas",
-        id: "__alloyId19"
+        id: "__alloyId30"
     });
-    $.__views.sectionFruit.add($.__views.__alloyId19);
-=======
-    __alloyId19.push($.__views.sectionFruit);
-    $.__views.__alloyId20 = Ti.UI.createTableViewRow({
-        title: "Apple",
-        id: "__alloyId20"
-    });
-    $.__views.sectionFruit.add($.__views.__alloyId20);
-    $.__views.__alloyId21 = Ti.UI.createTableViewRow({
-        title: "Bananas",
-        id: "__alloyId21"
-    });
-    $.__views.sectionFruit.add($.__views.__alloyId21);
->>>>>>> FETCH_HEAD
+    $.__views.sectionFruit.add($.__views.__alloyId30);
     $.__views.sectionVeg = Ti.UI.createTableViewSection({
         id: "sectionVeg",
         headerTitle: "Vegetables"
     });
-<<<<<<< HEAD
-    __alloyId17.push($.__views.sectionVeg);
-    $.__views.__alloyId20 = Ti.UI.createTableViewRow({
+    __alloyId28.push($.__views.sectionVeg);
+    $.__views.__alloyId31 = Ti.UI.createTableViewRow({
         title: "Carrots",
-        id: "__alloyId20"
+        id: "__alloyId31"
     });
-    $.__views.sectionVeg.add($.__views.__alloyId20);
-    $.__views.__alloyId21 = Ti.UI.createTableViewRow({
+    $.__views.sectionVeg.add($.__views.__alloyId31);
+    $.__views.__alloyId32 = Ti.UI.createTableViewRow({
         title: "Potatoes",
-        id: "__alloyId21"
+        id: "__alloyId32"
     });
-    $.__views.sectionVeg.add($.__views.__alloyId21);
-=======
-    __alloyId19.push($.__views.sectionVeg);
-    $.__views.__alloyId22 = Ti.UI.createTableViewRow({
-        title: "Carrots",
-        id: "__alloyId22"
-    });
-    $.__views.sectionVeg.add($.__views.__alloyId22);
-    $.__views.__alloyId23 = Ti.UI.createTableViewRow({
-        title: "Potatoes",
-        id: "__alloyId23"
-    });
-    $.__views.sectionVeg.add($.__views.__alloyId23);
->>>>>>> FETCH_HEAD
+    $.__views.sectionVeg.add($.__views.__alloyId32);
     $.__views.sectionFish = Ti.UI.createTableViewSection({
         id: "sectionFish",
         headerTitle: "Fish"
     });
-<<<<<<< HEAD
-    __alloyId17.push($.__views.sectionFish);
-    $.__views.__alloyId22 = Ti.UI.createTableViewRow({
+    __alloyId28.push($.__views.sectionFish);
+    $.__views.__alloyId33 = Ti.UI.createTableViewRow({
         title: "Cod",
-        id: "__alloyId22"
+        id: "__alloyId33"
     });
-    $.__views.sectionFish.add($.__views.__alloyId22);
-    $.__views.__alloyId23 = Ti.UI.createTableViewRow({
+    $.__views.sectionFish.add($.__views.__alloyId33);
+    $.__views.__alloyId34 = Ti.UI.createTableViewRow({
         title: "Haddock",
-        id: "__alloyId23"
+        id: "__alloyId34"
     });
-    $.__views.sectionFish.add($.__views.__alloyId23);
+    $.__views.sectionFish.add($.__views.__alloyId34);
     $.__views.table = Ti.UI.createTableView({
-        data: __alloyId17,
-=======
-    __alloyId19.push($.__views.sectionFish);
-    $.__views.__alloyId24 = Ti.UI.createTableViewRow({
-        title: "Cod",
-        id: "__alloyId24"
-    });
-    $.__views.sectionFish.add($.__views.__alloyId24);
-    $.__views.__alloyId25 = Ti.UI.createTableViewRow({
-        title: "Haddock",
-        id: "__alloyId25"
-    });
-    $.__views.sectionFish.add($.__views.__alloyId25);
-    $.__views.table = Ti.UI.createTableView({
-        data: __alloyId19,
->>>>>>> FETCH_HEAD
+        data: __alloyId28,
         id: "table"
     });
     $.__views.view2.add($.__views.table);

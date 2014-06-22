@@ -145,25 +145,15 @@ function Controller() {
     });
     $.__views.menuView.add($.__views.eventBtn);
     addEvent ? $.__views.eventBtn.addEventListener("click", addEvent) : __defers["$.__views.eventBtn!click!addEvent"] = true;
-<<<<<<< HEAD
-    $.__views.__alloyId14 = Ti.UI.createButton({
-=======
-    $.__views.__alloyId16 = Ti.UI.createButton({
->>>>>>> FETCH_HEAD
+    $.__views.__alloyId25 = Ti.UI.createButton({
         height: "95px",
         width: "90%",
         backgroundColor: "white",
         top: "10px",
         title: "All Events",
-<<<<<<< HEAD
-        id: "__alloyId14"
+        id: "__alloyId25"
     });
-    $.__views.menuView.add($.__views.__alloyId14);
-=======
-        id: "__alloyId16"
-    });
-    $.__views.menuView.add($.__views.__alloyId16);
->>>>>>> FETCH_HEAD
+    $.__views.menuView.add($.__views.__alloyId25);
     $.__views.settingsBtn = Ti.UI.createButton({
         height: "95px",
         width: "90%",

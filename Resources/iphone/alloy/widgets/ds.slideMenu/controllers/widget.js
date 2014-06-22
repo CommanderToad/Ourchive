@@ -294,7 +294,7 @@ function Controller() {
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "#000",
-        left: "180px",
+        left: "160px",
         top: "60px",
         font: {
             fontFamily: "Helvetica",
@@ -308,9 +308,8 @@ function Controller() {
     $.__views.navview.add($.__views.title);
     $.__views.contentview = Ti.UI.createView({
         top: "135px",
-        left: 10,
         right: 0,
-        width: 300,
+        width: 320,
         height: Ti.UI.Fill,
         backgroundColor: "white",
         id: "contentview"
@@ -371,7 +370,7 @@ function Controller() {
         var newLeft = coords.x - touchStartX;
         touchRightStarted && 180 >= newLeft && newLeft >= 0 || touchLeftStarted && 0 >= newLeft && newLeft >= -180 ? $.movableview.animate({
             left: newLeft,
-            duration: 12
+            duration: 7
         }) : touchRightStarted && 0 > newLeft || touchLeftStarted && newLeft > 0 ? $.movableview.left = 0 : touchRightStarted && newLeft > 180 ? $.movableview.left = 180 : touchLeftStarted && -180 > newLeft && ($.movableview.left = -180);
         if (newLeft > 5 && !touchLeftStarted && !touchRightStarted) {
             touchRightStarted = true;

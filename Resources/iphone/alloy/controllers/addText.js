@@ -26,14 +26,14 @@ function Controller() {
         hintText: "New Moment"
     });
     $.__views.addText.add($.__views.itemField);
-    $.__views.__alloyId3 = Ti.UI.createView({
+    $.__views.__alloyId12 = Ti.UI.createView({
         top: "15px",
         layout: "horizontal",
         height: "50px",
-        id: "__alloyId3"
+        id: "__alloyId12"
     });
-    $.__views.addText.add($.__views.__alloyId3);
-    $.__views.__alloyId4 = Ti.UI.createButton({
+    $.__views.addText.add($.__views.__alloyId12);
+    $.__views.__alloyId13 = Ti.UI.createButton({
         left: "4%",
         height: "50px",
         width: "28%",
@@ -45,10 +45,10 @@ function Controller() {
             fontWeight: "normal"
         },
         title: "Event",
-        id: "__alloyId4"
+        id: "__alloyId13"
     });
-    $.__views.__alloyId3.add($.__views.__alloyId4);
-    $.__views.__alloyId5 = Ti.UI.createButton({
+    $.__views.__alloyId12.add($.__views.__alloyId13);
+    $.__views.__alloyId14 = Ti.UI.createButton({
         left: "4%",
         height: "50px",
         width: "28%",
@@ -60,10 +60,10 @@ function Controller() {
             fontWeight: "normal"
         },
         title: "Event",
-        id: "__alloyId5"
+        id: "__alloyId14"
     });
-    $.__views.__alloyId3.add($.__views.__alloyId5);
-    $.__views.__alloyId6 = Ti.UI.createButton({
+    $.__views.__alloyId12.add($.__views.__alloyId14);
+    $.__views.__alloyId15 = Ti.UI.createButton({
         left: "4%",
         height: "50px",
         width: "28%",
@@ -75,17 +75,17 @@ function Controller() {
             fontWeight: "normal"
         },
         title: "Event",
-        id: "__alloyId6"
+        id: "__alloyId15"
     });
-    $.__views.__alloyId3.add($.__views.__alloyId6);
-    $.__views.__alloyId7 = Ti.UI.createView({
+    $.__views.__alloyId12.add($.__views.__alloyId15);
+    $.__views.__alloyId16 = Ti.UI.createView({
         top: "15px",
         layout: "horizontal",
         height: "50px",
-        id: "__alloyId7"
+        id: "__alloyId16"
     });
-    $.__views.addText.add($.__views.__alloyId7);
-    $.__views.__alloyId8 = Ti.UI.createButton({
+    $.__views.addText.add($.__views.__alloyId16);
+    $.__views.__alloyId17 = Ti.UI.createButton({
         left: "4%",
         height: "50px",
         width: "28%",
@@ -97,10 +97,10 @@ function Controller() {
             fontWeight: "normal"
         },
         title: "Event",
-        id: "__alloyId8"
+        id: "__alloyId17"
     });
-    $.__views.__alloyId7.add($.__views.__alloyId8);
-    $.__views.__alloyId9 = Ti.UI.createButton({
+    $.__views.__alloyId16.add($.__views.__alloyId17);
+    $.__views.__alloyId18 = Ti.UI.createButton({
         left: "4%",
         height: "50px",
         width: "28%",
@@ -112,10 +112,10 @@ function Controller() {
             fontWeight: "normal"
         },
         title: "Event",
-        id: "__alloyId9"
+        id: "__alloyId18"
     });
-    $.__views.__alloyId7.add($.__views.__alloyId9);
-    $.__views.__alloyId10 = Ti.UI.createButton({
+    $.__views.__alloyId16.add($.__views.__alloyId18);
+    $.__views.__alloyId19 = Ti.UI.createButton({
         left: "4%",
         height: "50px",
         width: "28%",
@@ -127,34 +127,34 @@ function Controller() {
             fontWeight: "normal"
         },
         title: "Event",
-        id: "__alloyId10"
+        id: "__alloyId19"
     });
-    $.__views.__alloyId7.add($.__views.__alloyId10);
-    $.__views.__alloyId11 = Ti.UI.createView({
+    $.__views.__alloyId16.add($.__views.__alloyId19);
+    $.__views.__alloyId20 = Ti.UI.createView({
         top: "10px",
         layout: "horizontal",
         height: "236px",
-        id: "__alloyId11"
+        id: "__alloyId20"
     });
-    $.__views.addText.add($.__views.__alloyId11);
-    $.__views.__alloyId12 = Ti.UI.createImageView({
+    $.__views.addText.add($.__views.__alloyId20);
+    $.__views.__alloyId21 = Ti.UI.createImageView({
         top: "20px",
         left: "96px",
         height: "176px",
         width: "176px",
         image: "images/icon-check.png",
-        id: "__alloyId12"
+        id: "__alloyId21"
     });
-    $.__views.__alloyId11.add($.__views.__alloyId12);
-    $.__views.__alloyId13 = Ti.UI.createImageView({
+    $.__views.__alloyId20.add($.__views.__alloyId21);
+    $.__views.__alloyId22 = Ti.UI.createImageView({
         top: "30px",
         left: "96px",
         height: "176px",
         width: "176px",
         image: "images/icon-x.png",
-        id: "__alloyId13"
+        id: "__alloyId22"
     });
-    $.__views.__alloyId11.add($.__views.__alloyId13);
+    $.__views.__alloyId20.add($.__views.__alloyId22);
     exports.destroy = function() {};
     _.extend($, $.__views);
     focusTextField();
