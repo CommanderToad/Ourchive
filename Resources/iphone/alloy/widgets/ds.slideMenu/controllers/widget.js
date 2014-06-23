@@ -233,14 +233,14 @@ function Controller() {
         id: "__alloyId8"
     });
     $.__views.__alloyId7.add($.__views.__alloyId8);
-    $.__views.settingsBtn = Ti.UI.createButton({
+    $.__views.settings = Ti.UI.createButton({
         height: "7%",
         width: "90%",
         backgroundColor: "#424242",
         top: "1%",
-        id: "settingsBtn"
+        id: "settings"
     });
-    $.__views.menuView.add($.__views.settingsBtn);
+    $.__views.menuView.add($.__views.settings);
     $.__views.__alloyId9 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
@@ -254,7 +254,7 @@ function Controller() {
         text: "Settings",
         id: "__alloyId9"
     });
-    $.__views.settingsBtn.add($.__views.__alloyId9);
+    $.__views.settings.add($.__views.__alloyId9);
     $.__views.movableview = Ti.UI.createView({
         top: 0,
         left: 0,

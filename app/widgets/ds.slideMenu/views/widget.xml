@@ -13,7 +13,7 @@
 				<Button class="Btn" id="addAudio"><Label class="menuText">Audio</Label></Button>
 				<Button class="Btn" id="addEvent"><Label class="menuText">New Event</Label></Button>
 				<Button class="Btn"><Label class="menuText">All Events</Label></Button>
-				<Button class="Btn" id="settingsBtn" ><Label class="menuText">Settings</Label></Button>
+				<Button class="Btn" id="settings" ><Label class="menuText">Settings</Label></Button>
 			</View>
 		</View>
 		<View id="movableview">
