@@ -89,11 +89,19 @@ function Controller() {
         id: "tagView"
     });
     $.__views.addEventView.add($.__views.tagView);
+<<<<<<< HEAD
     $.__views.__alloyId51 = Ti.UI.createLabel({
         text: "Tags",
         id: "__alloyId51"
     });
     $.__views.tagView.add($.__views.__alloyId51);
+=======
+    $.__views.__alloyId37 = Ti.UI.createLabel({
+        text: "Tags",
+        id: "__alloyId37"
+    });
+    $.__views.tagView.add($.__views.__alloyId37);
+>>>>>>> FETCH_HEAD
     $.__views.tagsDescription = Ti.UI.createLabel({
         left: "250px",
         font: {

@@ -74,8 +74,13 @@ function Controller() {
         id: "__alloyId34"
     });
     $.__views.row2.add($.__views.__alloyId34);
+<<<<<<< HEAD
     $.__views.__alloyId35 = Ti.UI.createView({
         layout: "absolute",
+=======
+    $.__views.row3 = Ti.UI.createView({
+        layout: "horizontal",
+>>>>>>> FETCH_HEAD
         height: "236px",
         backgroundColor: "white",
         id: "__alloyId35"
