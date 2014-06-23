@@ -11,56 +11,117 @@
 	backgroundColor:"white",
 }
 ".buttonRow":{
-	layout:"horizontal",
+	layout:"absolute",
 	height:"236px",
 	backgroundColor:"white",
 }
 ".leftBtn":{
 	top:"30px",
-	left:"96px",
+	left:"15%",
 	height:"176px",
 	width:"176px",
 }
 ".rightBtn":{
 	top:"30px",
-	left:"96px",
+	right:"15%",
 	height:"176px",
 	width:"176px",
 }
-"#row1":{
-	backgroundColor:"white"
+
+"#myOurchiveBtn": {
+	left:"19%",
+	top:"40px",
+	height: "90px",
+	width: "220px",
 }
-"#row2":{
-	backgroundColor:"white"
+
+"#streamFollowers": {
+	right: "19%",
+	top:"65px",
+	color: "#333333",
+	font: {
+		fontFamily: 'Helvetica',
+		fontSize: '13dp',
+		fontStyle: 'italic',
+		fontWeight: 'normal',
+	}
 }
-"#row3":{
-	backgroundColor:"white"
-}
-"#events": {
+
+"#bottomTable":{
+	layout:"vertical",
 	bottom: "4px",
-	height: '224px',
-	width: Ti.UI.FILL,
-	backgroundColor:"gray",
+	width: "96%",
+	backgroundColor: "#555555",
 }
+
+"#recentEvents": {
+	layout: "vertical",
+	width: "100%",
+	separatorColor: "#555555",
+}
+
+".bottomTableRow": {
+	layout: "absolute",
+	width: "100%",
+	height: "70px",
+	top: "10px",
+	backgroundColor: "#3C3C3C",
+}
+
 "#tableHeader":{
-	layout:"horizontal",
+	layout:"absolute",
 	width:"100%",
 	height:"70px",
-	backgroundColor:"gray"
 }
-"#tableTitle":{
+
+"#titleNewEvent": {
 	left:"2%",
-	color:"white"
+	color:"white",
+	font: {
+        fontFamily:'Helvetica',
+        fontSize: '15dp',
+        fontStyle: 'italic',
+        fontWeight: 'normal',
+    },
 }
-"#addEvent":{
-	left:"380px",
-	color:"white"
+
+"#newEvent": {
+	right: "2%",
+	color: "white",
+	font: {
+		fontFamily: 'Helvetica',
+		fontSize: '15dp',
+		fontStyle: 'italic',
+		fontWeight: 'normal',
+	},
 }
-"#myOurchiveBtn": {
-	left:"96px",
-	top:"40px",
-	borderRadius:"5px",
-	height: "100px",
-	width: "448px",
-	backgroundColor:"white",
+
+".tableTitle":{
+	left:"2%",
+	color:"white",
+	font: {
+        fontFamily:'Helvetica',
+        fontSize: '15dp',
+        fontWeight: 'normal',
+    },
+}
+
+".titleTime": {
+	right: "20%",
+	color: "white",
+	font: {
+		fontFamily: 'Helvetica',
+		fontSize: '9dp',
+		fontWeight: 'normal',
+	},
+}
+
+".changeEvent": {
+	right: "2%",
+	color: "white",
+	font: {
+		fontFamily: 'Helvetica',
+		fontSize: '15dp',
+		fontWeight: 'normal',
+	},
 }
