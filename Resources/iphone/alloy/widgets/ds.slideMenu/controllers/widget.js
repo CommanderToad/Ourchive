@@ -35,8 +35,8 @@ function Controller() {
     });
     $.__views.leftMenu.add($.__views.menuView);
     $.__views.titleView = Ti.UI.createView({
-        layout: "horizontal",
-        height: "135px",
+        layout: "absolute",
+        height: "125px",
         width: "90%",
         left: "20px",
         id: "titleView"
@@ -52,14 +52,15 @@ function Controller() {
             fontSize: "14dp",
             fontWeight: "normal"
         },
-        top: "60px",
+        top: "80px",
         text: "Menu",
         id: "menuTitle"
     });
     $.__views.titleView.add($.__views.menuTitle);
     $.__views.homeView = Ti.UI.createButton({
         height: "7%",
-        width: "90%",
+        right: 0,
+        width: "95%",
         backgroundColor: "#424242",
         top: "1%",
         id: "homeView"
@@ -81,7 +82,8 @@ function Controller() {
     $.__views.homeView.add($.__views.__alloyId0);
     $.__views.myBtn = Ti.UI.createButton({
         height: "7%",
-        width: "90%",
+        right: 0,
+        width: "95%",
         backgroundColor: "#424242",
         top: "1%",
         id: "myBtn"
@@ -103,7 +105,8 @@ function Controller() {
     $.__views.myBtn.add($.__views.__alloyId1);
     $.__views.addPhoto = Ti.UI.createButton({
         height: "7%",
-        width: "90%",
+        right: 0,
+        width: "95%",
         backgroundColor: "#424242",
         top: "1%",
         id: "addPhoto"
@@ -125,7 +128,8 @@ function Controller() {
     $.__views.addPhoto.add($.__views.__alloyId2);
     $.__views.addVideo = Ti.UI.createButton({
         height: "7%",
-        width: "90%",
+        right: 0,
+        width: "95%",
         backgroundColor: "#424242",
         top: "1%",
         id: "addVideo"
@@ -147,7 +151,8 @@ function Controller() {
     $.__views.addVideo.add($.__views.__alloyId3);
     $.__views.addText = Ti.UI.createButton({
         height: "7%",
-        width: "90%",
+        right: 0,
+        width: "95%",
         backgroundColor: "#424242",
         top: "1%",
         id: "addText"
@@ -169,7 +174,8 @@ function Controller() {
     $.__views.addText.add($.__views.__alloyId4);
     $.__views.addAudio = Ti.UI.createButton({
         height: "7%",
-        width: "90%",
+        right: 0,
+        width: "95%",
         backgroundColor: "#424242",
         top: "1%",
         id: "addAudio"
@@ -191,7 +197,8 @@ function Controller() {
     $.__views.addAudio.add($.__views.__alloyId5);
     $.__views.addEvent = Ti.UI.createButton({
         height: "7%",
-        width: "90%",
+        right: 0,
+        width: "95%",
         backgroundColor: "#424242",
         top: "1%",
         id: "addEvent"
@@ -213,7 +220,8 @@ function Controller() {
     $.__views.addEvent.add($.__views.__alloyId6);
     $.__views.__alloyId7 = Ti.UI.createButton({
         height: "7%",
-        width: "90%",
+        right: 0,
+        width: "95%",
         backgroundColor: "#424242",
         top: "1%",
         id: "__alloyId7"
@@ -233,14 +241,15 @@ function Controller() {
         id: "__alloyId8"
     });
     $.__views.__alloyId7.add($.__views.__alloyId8);
-    $.__views.settings = Ti.UI.createButton({
+    $.__views.settingsBtn = Ti.UI.createButton({
         height: "7%",
-        width: "90%",
+        right: 0,
+        width: "95%",
         backgroundColor: "#424242",
         top: "1%",
-        id: "settings"
+        id: "settingsBtn"
     });
-    $.__views.menuView.add($.__views.settings);
+    $.__views.menuView.add($.__views.settingsBtn);
     $.__views.__alloyId9 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
@@ -254,7 +263,7 @@ function Controller() {
         text: "Settings",
         id: "__alloyId9"
     });
-    $.__views.settings.add($.__views.__alloyId9);
+    $.__views.settingsBtn.add($.__views.__alloyId9);
     $.__views.movableview = Ti.UI.createView({
         top: 0,
         left: 0,
@@ -293,8 +302,8 @@ function Controller() {
     $.__views.title = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
-        left: "160px",
+        color: "#555555",
+        textAlign: "center",
         top: "60px",
         font: {
             fontFamily: "Helvetica",

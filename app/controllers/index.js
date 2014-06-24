@@ -4,25 +4,34 @@ $.homeWin.open();
 Alloy.Globals.contentview = $.ds.contentview;
 Alloy.Globals.title = $.ds.title;
 
+function openFunction() {
+	Alloy.Globals.homeWin = $.homeWin;
+	Alloy.Globals.previous = $.homeWin;
+}
 function rowSelect(e) {
 	var obj = e.source;
 	var views = ["homeView", "addText", "addPhoto", "addEvent", "addVideo", "settings", "addAudio"];
-	var viewTitleText = ["Add a Moment", "Add Text Moment", "Add Photo Moment", "New Event", "Add Video Moment", "Settings", "Add Audio Moment"];
+	var viewTitleText = ["Add a Moment", "Add Text Moment", "Edit Details", "New Event", "Edit Details", "Settings", "Add Audio Moment"];
 	if (Alloy.Globals.currentView.id != obj.id) {
 		for (var i=0; i < 7 ; i++){
 			if (obj.id == views[i]) {
 				$.ds.contentview.remove(currentView);
 				currentView = Alloy.createController(obj.id).getView();
+				// if homescreen icon then animate else menu and don't animate
 				if (obj.parent.id == "row1" || obj.parent.id =="row2") {
-					$.ds.contentview.animate({
-           			 view: currentView,
-        			    transition:Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
-   				     });
+					$.ds.contentview.add(currentView);
+					//var animation = require('alloy/animation');
+				//	$.ds.contentview.animate({
+           			// view: currentView,
+        		//	    transition: animation.fadeIn(Alloy.Globals.currentView, 500)
+   				  //   });
 				} else {
 					$.ds.contentview.add(currentView);
 				}
+				// set title text
 				$.ds.title.setText(viewTitleText[i]);
 				Alloy.Globals.currentView = currentView;
+
 			}
 		}
 	}
