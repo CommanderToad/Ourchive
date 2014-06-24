@@ -76,19 +76,34 @@
 	width:"90%",
 	left:"20px"
 }
-".Btn":{
+".btn":{
+	layout: "absolute",
 	height:"7%",
 	right: 0,
 	width:"95%",
 	backgroundColor:"#424242",
 	top:"1%",
 }
+
+".icon": {
+	left: "3%",
+	height: "50px",
+	width: "50px",
+	
+}
+
+".addSomething": {
+	right: "5%",
+	height: "50px",
+	width: "50px",
+}
+
 ".menuText":{
-	left:"3%",
+	left:"17%",
 	color:"white",
 	font: {
         fontFamily:'Helvetica',
-        fontSize: '14dp',
+        fontSize: '16dp',
         fontWeight: 'normal',
     },	
 }

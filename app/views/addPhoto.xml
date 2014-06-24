@@ -2,16 +2,21 @@
 	<View id="addPhoto" onOpen="openCamera">
 		<View id="addPhotoView">
 			<ImageView id="photo"></ImageView>
-			<TextArea id="eventDescription" hintText="Description"></TextArea>
-			<View id="tagView">
-				<Label>Tags</Label>
-				<Label id="tagsDescription">Photo Description</Label>
+			<View id="photoEdit">
+				<TextField class="singleLineText" hintText="Name"></TextField>
+				<TextField class="singleLineText" hintText="Location"></TextField>
+				<ImageView class="chatBubble" image="images/icon-chatbubble.png"></ImageView>
 			</View>
-			<TextField class="singleLineText" id="eventTags"></TextField>
-			<View id="submitBtnView">
-				<Button class="btn" id="submitBtn">Submit</Button>
-				<Button class="btn" id="cancelBtn">Cancel</Button>
-			</View>
+		</View>
+		<TextArea class="photoDesc"></TextArea>
+		<View class="tagRow">
+			<Button class="tagYellow">Tag</Button>
+			<Button class="tagYellow">Tag</Button>
+			<Button class="tagGray">Tag</Button>
+		</View>
+		<View class="btnRow">
+			<ImageView class="leftBtn" image = "images/icon-check.png"></ImageView>
+			<ImageView class="rightBtn" image = "images/icon-x.png"></ImageView>
 		</View>
 	</View>
 </Alloy>
