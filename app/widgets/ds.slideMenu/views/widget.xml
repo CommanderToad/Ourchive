@@ -33,6 +33,8 @@
 					<Label class="menuText">Audio</Label>
 					<ImageView class="addSomething" image = "images/menu/add.png"></ImageView>
 				</View>
+
+				<View class="menuSection"></View>
 				<View class="btn" id="addEvent">
 					<ImageView class="icon" image = "images/menu/newevent.png"></ImageView>
 					<Label class="menuText">New Event</Label>
@@ -42,6 +44,9 @@
 					<ImageView class="icon" image = "images/menu/allevents.png"></ImageView>
 					<Label class="menuText">All Events</Label>
 				</View>
+
+
+				<View class="menuSection"></View>
 				<View class="btn" id="settings">
 					<ImageView class="icon" image = "images/menu/settings.png"></ImageView>
 					<Label class="menuText">Settings</Label>

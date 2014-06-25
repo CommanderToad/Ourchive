@@ -66,23 +66,33 @@
 "#menuView":{
 	layout:"vertical",
 	backgroundColor:"gray",
-},
-"#menuTitle":{
-	top:"80px"
 }
+
+"#menuTitle":{
+	left: "3%",
+	top:"60px",
+	font: {
+		fontSize: "18dp",
+	}
+}
+
 "#titleView":{
 	layout:"absolute",
-	height:"125px",
-	width:"90%",
-	left:"20px"
+	height:"135px",
+	width:"100%"
 }
+
+".menuSection": {
+	height: "2%",
+	width: "100%",
+}
+
 ".btn":{
 	layout: "absolute",
-	height:"7%",
-	right: 0,
-	width:"95%",
+	width:"100%",
+	height: "7%",
 	backgroundColor:"#424242",
-	top:"1%",
+	top:"3px",
 }
 
 ".icon": {
