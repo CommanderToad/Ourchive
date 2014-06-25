@@ -17,7 +17,7 @@
 		<View id="bottomTable">
 			<View id="tableHeader">
 				<Label id="titleNewEvent">Events</Label>
-				<Button id="addEvent">New</Button>
+				<Button id="addEvent" id="addEvent">New</Button>
 				<ImageView class="eventIcon" image="images/menu/add.png"></ImageView>
 			</View>
 			<TableView id="recentEvents">
