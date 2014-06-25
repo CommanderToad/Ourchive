@@ -2,12 +2,11 @@
 	layout:"vertical",
 	height: "100%",
 	width: "100%",
-	backgroundColor: "gray",
+	backgroundColor: "#EEEEEE",
 }
 
 "#addVideoView":{
 	layout:"absolute",
-	backgroundColor: "gray",
 	width:"100%",
 	height:"300px"
 }
@@ -57,7 +56,7 @@
 	left: "4%",
 	height: "50px",
 	width: "28%",
-	backgroundColor: "#7A6F30",
+	backgroundColor: "#EAE18E",
 	color: "white",
 	font: {
         fontFamily:'Helvetica',
@@ -70,7 +69,7 @@
 	left: "4%",
 	height: "50px",
 	width: "28%",
-	backgroundColor: "#545451",
+	backgroundColor: "#D1D0D6",
 	color: "white",
 	font: {
         fontFamily:'Helvetica',

@@ -1,40 +1,15 @@
 "#addText": {
 	layout: "vertical",
 	height: "100%",
-	backgroundColor: "gray",
+	backgroundColor: "#EEEEEE",
 }
 
-
-"#titleBar": {
-	backgroundColor:"gray",
-	height: "90px",
-	width: "100%",
-	layout:"horizontal"
-}
-"#menuBtn":{
-	left:"10px",
-	top:"40px"
-}
-"#title":{
-	left:"100px",
-	top:"40px"
-}
 "#itemField":{
 	left:"10px",
 	right:"10px",
 	top: "10px",
 	width:"620px",
 	height:"300px"
-}
-".btn":{
-	top:"50px",
-	width:"50%"
-}
-"#submitBtn":{
-	backgroundColor:"green"
-}
-"#cancelBtn":{
-	backgroundColor:"red"
 }
 
 ".eventRow": {
@@ -47,7 +22,7 @@
 	left: "4%",
 	height: "50px",
 	width: "28%",
-	backgroundColor: "#7A6F30",
+	backgroundColor: "#EAE18E",
 	color: "white",
 	font: {
         fontFamily:'Helvetica',
@@ -60,7 +35,7 @@
 	left: "4%",
 	height: "50px",
 	width: "28%",
-	backgroundColor: "#545451",
+	backgroundColor: "#D1D0D6",
 	color: "white",
 	font: {
         fontFamily:'Helvetica',
@@ -70,21 +45,21 @@
 }
 
 ".btnRow":{
+	layout: "absolute",
 	top: "10px",
-	layout: "horizontal",
 	height: "236px",
 }
 
 ".leftBtn":{
 	top:"20px",
-	left:"96px",
+	left:"15%",
 	height:"176px",
 	width:"176px",
 }
 
 ".rightBtn":{
-	top:"30px",
-	left:"96px",
+	top:"20px",
+	right:"15%",
 	height:"176px",
 	width:"176px",
 }

@@ -10,13 +10,13 @@
 		</View>
 		<TextArea class="photoDesc"></TextArea>
 		<View class="tagRow">
-			<Button class="tagYellow">Tag</Button>
-			<Button class="tagYellow">Tag</Button>
-			<Button class="tagGray">Tag</Button>
+			<Button class="tagYellow"></Button>
+			<Button class="tagYellow"></Button>
+			<Button class="tagGray"></Button>
 		</View>
 		<View class="btnRow">
-			<ImageView class="leftBtn" image = "images/icon-check.png"></ImageView>
-			<ImageView class="rightBtn" image = "images/icon-x.png"></ImageView>
+			<ImageView class="leftBtn" image="images/icon-check.png"></ImageView>
+			<ImageView class="rightBtn" image="images/icon-x.png"></ImageView>
 		</View>
 	</View>
 </Alloy>
