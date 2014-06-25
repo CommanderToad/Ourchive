@@ -4,9 +4,12 @@ function Controller() {
         var views = [ "homeView", "addText", "addPhoto", "addEvent", "addVideo", "settings", "addAudio" ];
         var viewTitleText = [ "Add a Moment", "Add Text Moment", "Edit Details", "New Event", "Edit Details", "Settings", "Add Audio Moment" ];
         if (Alloy.Globals.currentView.id != obj.id) for (var i = 0; 7 > i; i++) if (obj.id == views[i]) {
-            $.ds.contentview.remove(currentView);
+            var oldView = currentView;
             currentView = Alloy.createController(obj.id).getView();
-            "row1" == obj.parent.id || "row2" == obj.parent.id ? $.ds.contentview.add(currentView) : $.ds.contentview.add(currentView);
+            if ("row1" == obj.parent.id || "row2" == obj.parent.id) animation.crossFade(oldView, currentView, 500); else {
+                $.ds.contentview.add(currentView);
+                $.ds.contentview.remove(currentView);
+            }
             $.ds.title.setText(viewTitleText[i]);
             Alloy.Globals.currentView = currentView;
         }
@@ -30,7 +33,7 @@ function Controller() {
     $.__views.ds.setParent($.__views.homeWin);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    require("alloy/animation");
+    var animation = require("alloy/animation");
     $.homeWin.open();
     Alloy.Globals.contentview = $.ds.contentview;
     Alloy.Globals.title = $.ds.title;

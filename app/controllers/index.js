@@ -15,18 +15,29 @@ function rowSelect(e) {
 	if (Alloy.Globals.currentView.id != obj.id) {
 		for (var i=0; i < 7 ; i++){
 			if (obj.id == views[i]) {
-				$.ds.contentview.remove(currentView);
+				var oldView = currentView;
 				currentView = Alloy.createController(obj.id).getView();
 				// if homescreen icon then animate else menu and don't animate
 				if (obj.parent.id == "row1" || obj.parent.id =="row2") {
-					$.ds.contentview.add(currentView);
-					//var animation = require('alloy/animation');
+					//$.ds.contentview.add(currentView);
+					var animation = Titanium.UI.createAnimation();
+						animation.backgroundColor = 'black';
+						animation.duration = 500;
+						var animationHandler = function() {
+						  animation.removeEventListener('complete',animationHandler);
+						  animation.backgroundColor = 'orange';
+						  view.animate(animation);
+						};
+					
+					
+		
 				//	$.ds.contentview.animate({
            			// view: currentView,
         		//	    transition: animation.fadeIn(Alloy.Globals.currentView, 500)
    				  //   });
 				} else {
 					$.ds.contentview.add(currentView);
+					$.ds.contentview.remove(currentView);
 				}
 				// set title text
 				$.ds.title.setText(viewTitleText[i]);
