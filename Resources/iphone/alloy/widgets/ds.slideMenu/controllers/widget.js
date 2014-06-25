@@ -36,8 +36,14 @@ function Controller() {
     $.__views.leftMenu.add($.__views.menuView);
     $.__views.titleView = Ti.UI.createView({
         layout: "absolute",
+<<<<<<< HEAD
         height: "135px",
         width: "100%",
+=======
+        height: "125px",
+        width: "90%",
+        left: "20px",
+>>>>>>> FETCH_HEAD
         id: "titleView"
     });
     $.__views.menuView.add($.__views.titleView);
@@ -49,7 +55,7 @@ function Controller() {
         font: {
             fontSize: "18dp"
         },
-        top: "60px",
+        top: "80px",
         text: "Menu",
         id: "menuTitle"
     });
@@ -66,6 +72,11 @@ function Controller() {
         layout: "absolute",
         width: "100%",
         height: "7%",
+<<<<<<< HEAD
+=======
+        right: 0,
+        width: "95%",
+>>>>>>> FETCH_HEAD
         backgroundColor: "#424242",
         top: "3px",
         id: "__alloyId1"
@@ -103,6 +114,11 @@ function Controller() {
         layout: "absolute",
         width: "100%",
         height: "7%",
+<<<<<<< HEAD
+=======
+        right: 0,
+        width: "95%",
+>>>>>>> FETCH_HEAD
         backgroundColor: "#424242",
         top: "3px",
         id: "__alloyId5"
@@ -140,6 +156,11 @@ function Controller() {
         layout: "absolute",
         width: "100%",
         height: "7%",
+<<<<<<< HEAD
+=======
+        right: 0,
+        width: "95%",
+>>>>>>> FETCH_HEAD
         backgroundColor: "#424242",
         top: "3px",
         id: "__alloyId9"
@@ -179,6 +200,11 @@ function Controller() {
         layout: "absolute",
         width: "100%",
         height: "7%",
+<<<<<<< HEAD
+=======
+        right: 0,
+        width: "95%",
+>>>>>>> FETCH_HEAD
         backgroundColor: "#424242",
         top: "3px",
         id: "__alloyId13"
@@ -218,6 +244,11 @@ function Controller() {
         layout: "absolute",
         width: "100%",
         height: "7%",
+<<<<<<< HEAD
+=======
+        right: 0,
+        width: "95%",
+>>>>>>> FETCH_HEAD
         backgroundColor: "#424242",
         top: "3px",
         id: "__alloyId17"
@@ -257,6 +288,11 @@ function Controller() {
         layout: "absolute",
         width: "100%",
         height: "7%",
+<<<<<<< HEAD
+=======
+        right: 0,
+        width: "95%",
+>>>>>>> FETCH_HEAD
         backgroundColor: "#424242",
         top: "3px",
         id: "__alloyId21"
@@ -302,6 +338,11 @@ function Controller() {
         layout: "absolute",
         width: "100%",
         height: "7%",
+<<<<<<< HEAD
+=======
+        right: 0,
+        width: "95%",
+>>>>>>> FETCH_HEAD
         backgroundColor: "#424242",
         top: "3px",
         id: "__alloyId26"
@@ -341,6 +382,11 @@ function Controller() {
         layout: "absolute",
         width: "100%",
         height: "7%",
+<<<<<<< HEAD
+=======
+        right: 0,
+        width: "95%",
+>>>>>>> FETCH_HEAD
         backgroundColor: "#424242",
         top: "3px",
         id: "__alloyId30"
@@ -367,6 +413,7 @@ function Controller() {
         text: "All Events",
         id: "__alloyId32"
     });
+<<<<<<< HEAD
     $.__views.__alloyId30.add($.__views.__alloyId32);
     $.__views.__alloyId33 = Ti.UI.createView({
         height: "2%",
@@ -381,6 +428,28 @@ function Controller() {
         backgroundColor: "#424242",
         top: "3px",
         id: "__alloyId34"
+=======
+<<<<<<< HEAD
+    $.__views.__alloyId7.add($.__views.__alloyId8);
+    $.__views.settingsBtn = Ti.UI.createButton({
+=======
+    $.__views.__alloyId26.add($.__views.__alloyId28);
+    $.__views.__alloyId29 = Ti.UI.createView({
+        layout: "absolute",
+>>>>>>> FETCH_HEAD
+        height: "7%",
+        right: 0,
+        width: "95%",
+        backgroundColor: "#424242",
+        top: "1%",
+<<<<<<< HEAD
+        id: "settingsBtn"
+    });
+    $.__views.menuView.add($.__views.settingsBtn);
+    $.__views.__alloyId9 = Ti.UI.createLabel({
+=======
+        id: "__alloyId29"
+>>>>>>> FETCH_HEAD
     });
     $.__views.menuView.add($.__views.__alloyId34);
     $.__views.__alloyId35 = Ti.UI.createImageView({
@@ -390,8 +459,14 @@ function Controller() {
         image: "images/menu/settings.png",
         id: "__alloyId35"
     });
+<<<<<<< HEAD
     $.__views.__alloyId34.add($.__views.__alloyId35);
     $.__views.__alloyId36 = Ti.UI.createLabel({
+=======
+    $.__views.__alloyId29.add($.__views.__alloyId30);
+    $.__views.__alloyId31 = Ti.UI.createLabel({
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "white",
@@ -404,7 +479,15 @@ function Controller() {
         text: "Settings",
         id: "__alloyId36"
     });
+<<<<<<< HEAD
     $.__views.__alloyId34.add($.__views.__alloyId36);
+=======
+<<<<<<< HEAD
+    $.__views.settingsBtn.add($.__views.__alloyId9);
+=======
+    $.__views.__alloyId29.add($.__views.__alloyId31);
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
     $.__views.movableview = Ti.UI.createView({
         top: 0,
         left: 0,
@@ -443,8 +526,8 @@ function Controller() {
     $.__views.title = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
-        left: "160px",
+        color: "#555555",
+        textAlign: "center",
         top: "60px",
         font: {
             fontFamily: "Helvetica",

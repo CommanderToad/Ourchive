@@ -51,7 +51,8 @@
 	color: "#000"
 } 
 "#title":{
-	left:"160px",
+	textAlign: "center",
+	color: "#555555",
 	top:"60px",
 	font: {
         fontFamily:'Helvetica',
@@ -78,7 +79,7 @@
 "#titleView":{
 	layout:"absolute",
 	height:"135px",
-	width:"100%",
+	width:"100%"
 }
 
 ".menuSection": {
@@ -116,4 +117,3 @@
         fontWeight: 'normal',
     },	
 }
-

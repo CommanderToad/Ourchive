@@ -2,14 +2,11 @@ function Controller() {
     function rowSelect(e) {
         var obj = e.source;
         var views = [ "homeView", "addText", "addPhoto", "addEvent", "addVideo", "settings", "addAudio" ];
-        var viewTitleText = [ "Add a Moment", "Add Text Moment", "Add Photo Moment", "New Event", "Add Video Moment", "Settings", "Add Audio Moment" ];
+        var viewTitleText = [ "Add a Moment", "Add Text Moment", "Edit Details", "New Event", "Edit Details", "Settings", "Add Audio Moment" ];
         if (Alloy.Globals.currentView.id != obj.id) for (var i = 0; 7 > i; i++) if (obj.id == views[i]) {
             $.ds.contentview.remove(currentView);
             currentView = Alloy.createController(obj.id).getView();
-            "row1" == obj.parent.id || "row2" == obj.parent.id ? $.ds.contentview.animate({
-                view: currentView,
-                transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
-            }) : $.ds.contentview.add(currentView);
+            "row1" == obj.parent.id || "row2" == obj.parent.id ? $.ds.contentview.add(currentView) : $.ds.contentview.add(currentView);
             $.ds.title.setText(viewTitleText[i]);
             Alloy.Globals.currentView = currentView;
         }
