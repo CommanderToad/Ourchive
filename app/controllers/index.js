@@ -16,16 +16,19 @@ function rowSelect(e) {
 		for (var i=0; i < 7 ; i++){
 			if (obj.id == views[i]) {
 				currentView = Alloy.createController(obj.id).getView();
-				$.ds.contentview.remove(Alloy.Globals.currentView);
+				//$.ds.contentview.remove(Alloy.Globals.currentView);
 				// if homescreen icon then animate else menu and don't animate
 				if (obj.parent.id == "row1" || obj.parent.id =="row2") {
-					//$.ds.contentview.add(currentView);
+					animation.fadeAndRemove(Alloy.Globals.currentView,500,$.ds.contentview);
+					setTimeout(function(){$.ds.contentview.add(currentView);
+						$.ds.contentview.setOpacity(0);
+					$.ds.contentview.animate({
+						opacity:1,
+						duation:500
+					});},501);
 					
-				$.ds.contentview.add(currentView);
-				//	$.ds.contentview.animate({
-           			// view: currentView,
-        		//	    transition: animation.fadeIn(Alloy.Globals.currentView, 500)
-   				  //   });
+					
+					//$.ds.contentview.add(currentView);
 				} else {
 					$.ds.contentview.add(currentView);
 				}
