@@ -5,59 +5,47 @@
 				<View id="titleView">
 					<Label class="menuText" id="menuTitle">Menu</Label>
 				</View>
-<<<<<<< HEAD
-				<Button class="Btn" id="homeView" ><Label class="menuText">Home</Label></Button>
-				<Button class="Btn" id="myBtn" ><Label class="menuText">My Ourchive</Label></Button>
-				<Button class="Btn" id="addPhoto" ><Label class="menuText">Photo</Label></Button>
-				<Button class="Btn" id="addVideo" ><Label class="menuText">Video</Label></Button>
-				<Button class="Btn" id="addText" ><Label class="menuText">Text</Label></Button>
-				<Button class="Btn" id="addAudio"><Label class="menuText">Audio</Label></Button>
-				<Button class="Btn" id="addEvent"><Label class="menuText">New Event</Label></Button>
-				<Button class="Btn"><Label class="menuText">All Events</Label></Button>
-				<Button class="Btn" id="settingsBtn" ><Label class="menuText">Settings</Label></Button>
-=======
-				<View class="btn">
-					<ImageView class="icon" image = "images/menu/home.png"></ImageView>
+				<View class="btn" id="homeView">
+					<ImageView class="icon" image = "images/menu/home.png" ></ImageView>
 					<Label class="menuText">Home</Label>
 				</View>
-				<View class="btn">
-					<ImageView class="icon" image = "images/menu/myourchive.png"></ImageView>
+				<View class="btn" id="myBtn">
+					<ImageView class="icon" image = "images/menu/myourchive.png" ></ImageView>
 					<Label class="menuText">My Ourchive</Label>
 				</View>
-				<View class="btn">
+				<View class="btn" id="addPhoto">
 					<ImageView class="icon" image = "images/menu/photo.png"></ImageView>
 					<Label class="menuText">Photos</Label>
-					<ImageView class="addSomething" image = "images/menu/add.png"></ImageView>
+					<ImageView class="addSomething" image = "images/menu/add.png" ></ImageView>
 				</View>
-				<View class="btn">
+				<View class="btn" id="addVideo">
 					<ImageView class="icon" image = "images/menu/video.png"></ImageView>
 					<Label class="menuText">Videos</Label>
 					<ImageView class="addSomething" image = "images/menu/add.png"></ImageView>
 				</View>
-				<View class="btn">
+				<View class="btn" id="addText">
 					<ImageView class="icon" image = "images/menu/text.png"></ImageView>
 					<Label class="menuText">Text</Label>
 					<ImageView class="addSomething" image = "images/menu/add.png"></ImageView>
 				</View>
-				<View class="btn">
+				<View class="btn" id="addAudio">
 					<ImageView class="icon" image = "images/menu/audio.png"></ImageView>
 					<Label class="menuText">Audio</Label>
 					<ImageView class="addSomething" image = "images/menu/add.png"></ImageView>
 				</View>
-				<View class="btn">
+				<View class="btn" id="addEvent">
 					<ImageView class="icon" image = "images/menu/newevent.png"></ImageView>
 					<Label class="menuText">New Event</Label>
 					<ImageView class="addSomething" image = "images/menu/add.png"></ImageView>
 				</View>
-				<View class="btn">
+				<View class="btn" >
 					<ImageView class="icon" image = "images/menu/allevents.png"></ImageView>
 					<Label class="menuText">All Events</Label>
 				</View>
-				<View class="btn">
+				<View class="btn" id="settings">
 					<ImageView class="icon" image = "images/menu/settings.png"></ImageView>
 					<Label class="menuText">Settings</Label>
 				</View>
->>>>>>> FETCH_HEAD
 			</View>
 		</View>
 		<View id="movableview">
