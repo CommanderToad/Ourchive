@@ -11,7 +11,52 @@ function closeWindow() {
 	$.addEventWin.close();
 }
 
+var hintText = "TEST THIS";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
+$.eventDescription.addEventListener('focus', function(_e) {
+	if ($.eventDescription.focus()) {
+		$.textAreaHint.visible = false;
+	}
+});
+
+$.eventDescription.addEventListener('blur', function(_e) {
+	if ($.eventDescription.blur() && $.eventDescription.value() === '') {
+		$.textAreaHint.visible = false;
+	}
+});
+
+
+
+
+
+/*
+function textAreaHint() {	
+	if ($.eventDescription.focus()) {
+		$.textAreaHint.visible = false;
+	}
+	if ($.eventDescription.blur() && $.eventDescription.value() === '') {
+		$.textAreaHint.visible = false;
+	}
+}
+
+
 $.submitBtn.addEventListener('click', function(_e) {
 
     var eventModel = Alloy.createModel("event", {
