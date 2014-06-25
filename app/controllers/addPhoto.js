@@ -39,3 +39,22 @@ function openCamera() {
 
 };
 openCamera();
+
+
+//HintText for the TextArea field.
+if ($.photoDesc.value.length > 0) {
+	$.textAreaHint.hide();
+}
+
+$.photoDesc.addEventListener('change', function(e){
+	if (e.source.value.length > 0) {
+		$.textAreaHint.hide();
+	}
+	else {
+		$.textAreaHint.show();
+	}
+});
+
+$.textAreaHint.addEventListener('click', function(e){
+	$.photoDesc.focus();
+});

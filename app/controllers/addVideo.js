@@ -30,3 +30,22 @@ function openVideoCamera(e) {
 	});
 }
 openVideoCamera();
+
+
+//HintText for the TextArea field.
+if ($.videoDesc.value.length > 0) {
+	$.textAreaHint.hide();
+}
+
+$.videoDesc.addEventListener('change', function(e){
+	if (e.source.value.length > 0) {
+		$.textAreaHint.hide();
+	}
+	else {
+		$.textAreaHint.show();
+	}
+});
+
+$.textAreaHint.addEventListener('click', function(e){
+	$.videoDesc.focus();
+});

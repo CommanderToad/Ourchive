@@ -1,6 +1,9 @@
 <Alloy>
 	<View id="addText">
-		<TextArea id="itemField" hintText="New Moment"></TextArea>
+		<View class="textAreaContainer">
+			<TextArea id="textDesc"></TextArea>
+			<Label id="textAreaHint">New moment</Label>
+		</View>
 		<View class="eventRow">
 			<Button class="eventYellow"></Button>
 			<Button class="eventYellow"></Button>

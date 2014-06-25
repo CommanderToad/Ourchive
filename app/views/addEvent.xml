@@ -5,7 +5,7 @@
 			<TextField class="singleLineText" hintText="Location"></TextField>
 			<View class="textAreaContainer">
 				<TextArea id="eventDescription"></TextArea>
-				<Label id="textAreaHint">Test Hint</Label>
+				<Label id="textAreaHint">Description</Label>
 			</View>
 			<View id="tagLabel">
 				<Label>Tags</Label>

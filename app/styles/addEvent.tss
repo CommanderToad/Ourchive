@@ -14,12 +14,21 @@
 	height:"90px",
 	width:"86%",
 	backgroundColor:"white",
-	top:"15px"
+	top:"15px",
+	paddingLeft: "5px",
+	font: {
+		fontFamily: 'Helvetica',
+		fontSize: '18dp',
+	},
 }
 "#eventDescription":{
 	height:"220px",
 	width:"100%",
 	backgroundColor:"white",
+	font: {
+		fontFamily: 'Helvetica',
+		fontSize: '18dp',
+	},
 }
 
 ".textAreaContainer": {
@@ -31,8 +40,8 @@
 }
 
 "#textAreaHint": {
-	top: "30px",
-	left: "1px",
+	top: "15px",
+	left: "10px",
 	color: "#C7C7CD",
 	font: {
 		fontFamily: 'Helvetica',

@@ -8,7 +8,10 @@
 				<ImageView class="chatBubble" image="images/icon-chatbubble.png"></ImageView>
 			</View>
 		</View>
-		<TextArea class="photoDesc"></TextArea>
+		<View class="textAreaContainer">
+			<TextArea id="photoDesc"></TextArea>
+			<Label id="textAreaHint">Description</Label>
+		</View>
 		<View class="tagRow">
 			<Button class="tagYellow"></Button>
 			<Button class="tagYellow"></Button>

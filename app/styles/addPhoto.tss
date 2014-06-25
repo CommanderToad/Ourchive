@@ -28,9 +28,14 @@
 
 ".singleLineText":{
 	height:"50px",
-	width:"100%",
+	width:"86%",
 	backgroundColor:"white",
-	bottom:"15px"
+	bottom:"15px",
+	paddingLeft: "5px",
+	font: {
+		fontFamily: 'Helvetica',
+		fontSize: '12dp',
+	},
 }
 
 ".chatBubble": {
@@ -39,10 +44,33 @@
 	top: "5px",
 }
 
-".photoDesc": {
-	top: "20px",
-	height: "220px",
+
+
+"#photoDesc":{
+	height:"220px",
+	width:"100%",
+	backgroundColor:"white",
+	font: {
+		fontFamily: 'Helvetica',
+		fontSize: '18dp',
+	},
+}
+
+".textAreaContainer": {
+	layout: "absolute",
+	top:"20px",
 	width: "86%",
+	height: "220px",
+}
+
+"#textAreaHint": {
+	top: "15px",
+	left: "10px",
+	color: "#C7C7CD",
+	font: {
+		fontFamily: 'Helvetica',
+		fontSize: '18dp',
+	},
 }
 
 ".tagRow": {

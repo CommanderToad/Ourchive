@@ -11,6 +11,8 @@ function closeWindow() {
 	$.addEventWin.close();
 }
 
+
+//HintText for the TextArea field.
 if ($.eventDescription.value.length > 0) {
 	$.textAreaHint.hide();
 }
