@@ -352,25 +352,14 @@ function Controller() {
         text: "All Events",
         id: "__alloyId28"
     });
-<<<<<<< HEAD
-    $.__views.__alloyId7.add($.__views.__alloyId8);
-    $.__views.settingsBtn = Ti.UI.createButton({
-=======
     $.__views.__alloyId26.add($.__views.__alloyId28);
     $.__views.__alloyId29 = Ti.UI.createView({
         layout: "absolute",
->>>>>>> FETCH_HEAD
         height: "7%",
         right: 0,
         width: "95%",
         backgroundColor: "#424242",
         top: "1%",
-<<<<<<< HEAD
-        id: "settingsBtn"
-    });
-    $.__views.menuView.add($.__views.settingsBtn);
-    $.__views.__alloyId9 = Ti.UI.createLabel({
-=======
         id: "__alloyId29"
     });
     $.__views.menuView.add($.__views.__alloyId29);
@@ -383,7 +372,6 @@ function Controller() {
     });
     $.__views.__alloyId29.add($.__views.__alloyId30);
     $.__views.__alloyId31 = Ti.UI.createLabel({
->>>>>>> FETCH_HEAD
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "white",
@@ -396,11 +384,7 @@ function Controller() {
         text: "Settings",
         id: "__alloyId31"
     });
-<<<<<<< HEAD
-    $.__views.settingsBtn.add($.__views.__alloyId9);
-=======
     $.__views.__alloyId29.add($.__views.__alloyId31);
->>>>>>> FETCH_HEAD
     $.__views.movableview = Ti.UI.createView({
         top: 0,
         left: 0,

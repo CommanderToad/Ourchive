@@ -5,17 +5,6 @@
 				<View id="titleView">
 					<Label class="menuText" id="menuTitle">Menu</Label>
 				</View>
-<<<<<<< HEAD
-				<Button class="Btn" id="homeView" ><Label class="menuText">Home</Label></Button>
-				<Button class="Btn" id="myBtn" ><Label class="menuText">My Ourchive</Label></Button>
-				<Button class="Btn" id="addPhoto" ><Label class="menuText">Photo</Label></Button>
-				<Button class="Btn" id="addVideo" ><Label class="menuText">Video</Label></Button>
-				<Button class="Btn" id="addText" ><Label class="menuText">Text</Label></Button>
-				<Button class="Btn" id="addAudio"><Label class="menuText">Audio</Label></Button>
-				<Button class="Btn" id="addEvent"><Label class="menuText">New Event</Label></Button>
-				<Button class="Btn"><Label class="menuText">All Events</Label></Button>
-				<Button class="Btn" id="settingsBtn" ><Label class="menuText">Settings</Label></Button>
-=======
 				<View class="btn">
 					<ImageView class="icon" image = "images/menu/home.png"></ImageView>
 					<Label class="menuText">Home</Label>
@@ -57,7 +46,6 @@
 					<ImageView class="icon" image = "images/menu/settings.png"></ImageView>
 					<Label class="menuText">Settings</Label>
 				</View>
->>>>>>> FETCH_HEAD
 			</View>
 		</View>
 		<View id="movableview">

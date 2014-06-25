@@ -1,11 +1,9 @@
 var args = arguments[0] || {};
 
 
-
-var api = require('lib/api');
-
-api.user.login('test@test.com', 'skween01', function(){
-	console.log('got success', arguments);
+var api = require('api');
+api.user.login('test2@test.com', 'testtest', function(data){
+	console.log('got success', data);
 }, function(){
 	console.log('got error', arguments);
 });
