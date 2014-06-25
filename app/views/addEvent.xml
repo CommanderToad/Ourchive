@@ -3,7 +3,10 @@
 		<View id="addEventView">
 			<TextField class="singleLineText" hintText="Title"></TextField>
 			<TextField class="singleLineText" hintText="Location"></TextField>
-			<TextArea id="eventDescription"></TextArea>
+			<View class="textAreaContainer">
+				<TextArea id="eventDescription"></TextArea>
+				<Label id="textAreaHint">Test Hint</Label>
+			</View>
 			<View id="tagLabel">
 				<Label>Tags</Label>
 				<Label id="tagDesc">For all moments in this event</Label>

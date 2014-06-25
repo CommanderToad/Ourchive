@@ -18,11 +18,28 @@
 }
 "#eventDescription":{
 	height:"220px",
-	width:"86%",
+	width:"100%",
 	backgroundColor:"white",
+}
+
+".textAreaContainer": {
+	layout: "absolute",
 	top:"15px",
 	bottom: "15px",
+	width: "86%",
+	height: "220px",
 }
+
+"#textAreaHint": {
+	top: "30px",
+	left: "1px",
+	color: "#C7C7CD",
+	font: {
+		fontFamily: 'Helvetica',
+		fontSize: '18dp',
+	},
+}
+
 "#tagLabel":{
 	layout:"horizontal",
 	height:"40px",

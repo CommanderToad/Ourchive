@@ -11,11 +11,22 @@ function closeWindow() {
 	$.addEventWin.close();
 }
 
-var hintText = "TEST THIS";
+if ($.eventDescription.value.length > 0) {
+	$.textAreaHint.hide();
+}
 
+$.eventDescription.addEventListener('change', function(e){
+	if (e.source.value.length > 0) {
+		$.textAreaHint.hide();
+	}
+	else {
+		$.textAreaHint.show();
+	}
+});
 
-
-
+$.textAreaHint.addEventListener('click', function(e){
+	$.eventDescription.focus();
+});
 
 
 
