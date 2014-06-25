@@ -38,7 +38,7 @@
 "#streamFollowers": {
 	right: "19%",
 	top:"65px",
-	color: "#333333",
+	color: "#BBBBBB",
 	font: {
 		fontFamily: 'Helvetica',
 		fontSize: '13dp',
@@ -86,7 +86,7 @@
 }
 
 "#addEvent": {
-	right: "2%",
+	right: "9%",
 	color: "white",
 	font: {
 		fontFamily: 'Helvetica',
@@ -117,11 +117,17 @@
 }
 
 ".changeEvent": {
-	right: "2%",
+	right: "9%",
 	color: "white",
 	font: {
 		fontFamily: 'Helvetica',
 		fontSize: '15dp',
 		fontWeight: 'normal',
 	},
+},
+	
+".eventIcon": {
+	right: "2%",
+	height: "35px",
+	width: "35px",
 }

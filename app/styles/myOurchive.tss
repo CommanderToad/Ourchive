@@ -3,7 +3,7 @@
 }
 "#addEventView":{
 	layout:"vertical",
-	backgroundColor: "gray",
+	backgroundColor: "blue",
 	width:"100%",
 	height:"1046px"
 }

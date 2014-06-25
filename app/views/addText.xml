@@ -2,14 +2,14 @@
 	<View id="addText">
 		<TextArea id="itemField" hintText="New Moment"></TextArea>
 		<View class="eventRow">
-			<Button class="eventYellow">Event</Button>
-			<Button class="eventYellow">Event</Button>
-			<Button class="eventGray">Event</Button>
+			<Button class="eventYellow"></Button>
+			<Button class="eventYellow"></Button>
+			<Button class="eventGray"></Button>
 		</View>
 		<View class="eventRow">
-			<Button class="eventGray">Event</Button>
-			<Button class="eventGray">Event</Button>
-			<Button class="eventGray">Event</Button>
+			<Button class="eventGray"></Button>
+			<Button class="eventGray"></Button>
+			<Button class="eventGray"></Button>
 		</View>
 		<View class="btnRow">
 			<ImageView class="leftBtn" image = "images/icon-check.png"></ImageView>

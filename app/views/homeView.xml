@@ -17,23 +17,27 @@
 		<View id="bottomTable">
 			<View id="tableHeader">
 				<Label id="titleNewEvent">Events</Label>
-				<Button id="addEvent">New +</Button>
+				<Button id="addEvent">New</Button>
+				<ImageView class="eventIcon" image="images/menu/add.png"></ImageView>
 			</View>
 			<TableView id="recentEvents">
 				<TableViewRow class="bottomTableRow">
 					<Label class="tableTitle">European Vacation</Label>
 					<Label class="titleTime">3d 5h</Label>
-					<Button class="changeEvent">Stop X</Button>
+					<Button class="changeEvent">Stop</Button>
+					<ImageView class="eventIcon" image="images/menu/close.png"></ImageView>
 				</TableViewRow>
 				<TableViewRow class="bottomTableRow">
 					<Label class="tableTitle">Jeff's Wedding</Label>
 					<Label class="titleTime">3h 26m</Label>
-					<Button class="changeEvent">Start X</Button>
+					<Button class="changeEvent">Start</Button>
+					<ImageView class="eventIcon" image="images/menu/close.png"></ImageView>
 				</TableViewRow>
 				<TableViewRow class="bottomTableRow">
 					<Label class="tableTitle">Koles's Bar Mitzvah</Label>
 					<Label class="titleTime">2h 16m</Label>
-					<Button class="changeEvent">Start X</Button>
+					<Button class="changeEvent">Start</Button>
+					<ImageView class="eventIcon" image="images/menu/close.png"></ImageView>
 				</TableViewRow>
 			</TableView>
 		</View>

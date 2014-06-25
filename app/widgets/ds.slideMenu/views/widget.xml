@@ -5,14 +5,19 @@
 				<View id="titleView">
 					<Label class="menuText" id="menuTitle">Menu</Label>
 				</View>
+	
 				<View class="btn" id="homeView">
 					<ImageView class="icon" image = "images/menu/home.png" ></ImageView>
 					<Label class="menuText">Home</Label>
 				</View>
+				
+				<View class="menuSection"></View>
 				<View class="btn" id="myBtn">
 					<ImageView class="icon" image = "images/menu/myourchive.png" ></ImageView>
 					<Label class="menuText">My Ourchive</Label>
 				</View>
+				
+				<View class="menuSection"></View>
 				<View class="btn" id="addPhoto">
 					<ImageView class="icon" image = "images/menu/photo.png"></ImageView>
 					<Label class="menuText">Photos</Label>
@@ -44,7 +49,6 @@
 					<ImageView class="icon" image = "images/menu/allevents.png"></ImageView>
 					<Label class="menuText">All Events</Label>
 				</View>
-
 
 				<View class="menuSection"></View>
 				<View class="btn" id="settings">
