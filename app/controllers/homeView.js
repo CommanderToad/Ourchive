@@ -1,6 +1,16 @@
 var args = arguments[0] || {};
 
 
+
+var api = require('lib/api');
+
+api.user.login('test@test.com', 'skween01', function(){
+	console.log('got success', arguments);
+}, function(){
+	console.log('got error', arguments);
+});
+
+
 function openMenu() {
 	Alloy.createController("menu").getView().open();
 }
