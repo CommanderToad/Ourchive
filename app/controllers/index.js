@@ -17,20 +17,12 @@ function rowSelect(e) {
 			if (obj.id == views[i]) {
 				var oldView = currentView;
 				currentView = Alloy.createController(obj.id).getView();
+				$.ds.contentview.remove(currentView);
 				// if homescreen icon then animate else menu and don't animate
 				if (obj.parent.id == "row1" || obj.parent.id =="row2") {
 					//$.ds.contentview.add(currentView);
-					var animation = Titanium.UI.createAnimation();
-						animation.backgroundColor = 'black';
-						animation.duration = 500;
-						var animationHandler = function() {
-						  animation.removeEventListener('complete',animationHandler);
-						  animation.backgroundColor = 'orange';
-						  view.animate(animation);
-						};
 					
-					
-		
+				$.ds.contentview.add(currentView);
 				//	$.ds.contentview.animate({
            			// view: currentView,
         		//	    transition: animation.fadeIn(Alloy.Globals.currentView, 500)
