@@ -35,10 +35,9 @@ function Controller() {
     });
     $.__views.leftMenu.add($.__views.menuView);
     $.__views.titleView = Ti.UI.createView({
-        layout: "horizontal",
+        layout: "absolute",
         height: "135px",
-        width: "90%",
-        left: "20px",
+        width: "100%",
         id: "titleView"
     });
     $.__views.menuView.add($.__views.titleView);
@@ -46,35 +45,41 @@ function Controller() {
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "white",
-        left: "17%",
+        left: "3%",
         font: {
-            fontFamily: "Helvetica",
-            fontSize: "16dp",
-            fontWeight: "normal"
+            fontSize: "18dp"
         },
         top: "60px",
         text: "Menu",
         id: "menuTitle"
     });
     $.__views.titleView.add($.__views.menuTitle);
-    $.__views.__alloyId0 = Ti.UI.createView({
-        layout: "absolute",
-        height: "7%",
-        width: "90%",
-        backgroundColor: "#424242",
-        top: "1%",
+    $.__views.__alloyId0 = Ti.UI.createImageView({
+        left: "3%",
+        height: "50px",
+        width: "50px",
+        image: "images/menu/close.png",
         id: "__alloyId0"
     });
-    $.__views.menuView.add($.__views.__alloyId0);
-    $.__views.__alloyId1 = Ti.UI.createImageView({
+    $.__views.titleView.add($.__views.__alloyId0);
+    $.__views.__alloyId1 = Ti.UI.createView({
+        layout: "absolute",
+        width: "100%",
+        height: "7%",
+        backgroundColor: "#424242",
+        top: "3px",
+        id: "__alloyId1"
+    });
+    $.__views.menuView.add($.__views.__alloyId1);
+    $.__views.__alloyId2 = Ti.UI.createImageView({
         left: "3%",
         height: "50px",
         width: "50px",
         image: "images/menu/home.png",
-        id: "__alloyId1"
+        id: "__alloyId2"
     });
-    $.__views.__alloyId0.add($.__views.__alloyId1);
-    $.__views.__alloyId2 = Ti.UI.createLabel({
+    $.__views.__alloyId1.add($.__views.__alloyId2);
+    $.__views.__alloyId3 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "white",
@@ -85,27 +90,33 @@ function Controller() {
             fontWeight: "normal"
         },
         text: "Home",
-        id: "__alloyId2"
-    });
-    $.__views.__alloyId0.add($.__views.__alloyId2);
-    $.__views.__alloyId3 = Ti.UI.createView({
-        layout: "absolute",
-        height: "7%",
-        width: "90%",
-        backgroundColor: "#424242",
-        top: "1%",
         id: "__alloyId3"
     });
-    $.__views.menuView.add($.__views.__alloyId3);
-    $.__views.__alloyId4 = Ti.UI.createImageView({
+    $.__views.__alloyId1.add($.__views.__alloyId3);
+    $.__views.__alloyId4 = Ti.UI.createView({
+        height: "2%",
+        width: "100%",
+        id: "__alloyId4"
+    });
+    $.__views.menuView.add($.__views.__alloyId4);
+    $.__views.__alloyId5 = Ti.UI.createView({
+        layout: "absolute",
+        width: "100%",
+        height: "7%",
+        backgroundColor: "#424242",
+        top: "3px",
+        id: "__alloyId5"
+    });
+    $.__views.menuView.add($.__views.__alloyId5);
+    $.__views.__alloyId6 = Ti.UI.createImageView({
         left: "3%",
         height: "50px",
         width: "50px",
         image: "images/menu/myourchive.png",
-        id: "__alloyId4"
+        id: "__alloyId6"
     });
-    $.__views.__alloyId3.add($.__views.__alloyId4);
-    $.__views.__alloyId5 = Ti.UI.createLabel({
+    $.__views.__alloyId5.add($.__views.__alloyId6);
+    $.__views.__alloyId7 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "white",
@@ -116,27 +127,33 @@ function Controller() {
             fontWeight: "normal"
         },
         text: "My Ourchive",
-        id: "__alloyId5"
+        id: "__alloyId7"
     });
-    $.__views.__alloyId3.add($.__views.__alloyId5);
-    $.__views.__alloyId6 = Ti.UI.createView({
+    $.__views.__alloyId5.add($.__views.__alloyId7);
+    $.__views.__alloyId8 = Ti.UI.createView({
+        height: "2%",
+        width: "100%",
+        id: "__alloyId8"
+    });
+    $.__views.menuView.add($.__views.__alloyId8);
+    $.__views.__alloyId9 = Ti.UI.createView({
         layout: "absolute",
+        width: "100%",
         height: "7%",
-        width: "90%",
         backgroundColor: "#424242",
-        top: "1%",
-        id: "__alloyId6"
+        top: "3px",
+        id: "__alloyId9"
     });
-    $.__views.menuView.add($.__views.__alloyId6);
-    $.__views.__alloyId7 = Ti.UI.createImageView({
+    $.__views.menuView.add($.__views.__alloyId9);
+    $.__views.__alloyId10 = Ti.UI.createImageView({
         left: "3%",
         height: "50px",
         width: "50px",
         image: "images/menu/photo.png",
-        id: "__alloyId7"
+        id: "__alloyId10"
     });
-    $.__views.__alloyId6.add($.__views.__alloyId7);
-    $.__views.__alloyId8 = Ti.UI.createLabel({
+    $.__views.__alloyId9.add($.__views.__alloyId10);
+    $.__views.__alloyId11 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "white",
@@ -147,35 +164,35 @@ function Controller() {
             fontWeight: "normal"
         },
         text: "Photos",
-        id: "__alloyId8"
+        id: "__alloyId11"
     });
-    $.__views.__alloyId6.add($.__views.__alloyId8);
-    $.__views.__alloyId9 = Ti.UI.createImageView({
+    $.__views.__alloyId9.add($.__views.__alloyId11);
+    $.__views.__alloyId12 = Ti.UI.createImageView({
         right: "5%",
         height: "50px",
         width: "50px",
         image: "images/menu/add.png",
-        id: "__alloyId9"
+        id: "__alloyId12"
     });
-    $.__views.__alloyId6.add($.__views.__alloyId9);
-    $.__views.__alloyId10 = Ti.UI.createView({
+    $.__views.__alloyId9.add($.__views.__alloyId12);
+    $.__views.__alloyId13 = Ti.UI.createView({
         layout: "absolute",
+        width: "100%",
         height: "7%",
-        width: "90%",
         backgroundColor: "#424242",
-        top: "1%",
-        id: "__alloyId10"
+        top: "3px",
+        id: "__alloyId13"
     });
-    $.__views.menuView.add($.__views.__alloyId10);
-    $.__views.__alloyId11 = Ti.UI.createImageView({
+    $.__views.menuView.add($.__views.__alloyId13);
+    $.__views.__alloyId14 = Ti.UI.createImageView({
         left: "3%",
         height: "50px",
         width: "50px",
         image: "images/menu/video.png",
-        id: "__alloyId11"
+        id: "__alloyId14"
     });
-    $.__views.__alloyId10.add($.__views.__alloyId11);
-    $.__views.__alloyId12 = Ti.UI.createLabel({
+    $.__views.__alloyId13.add($.__views.__alloyId14);
+    $.__views.__alloyId15 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "white",
@@ -186,35 +203,35 @@ function Controller() {
             fontWeight: "normal"
         },
         text: "Videos",
-        id: "__alloyId12"
+        id: "__alloyId15"
     });
-    $.__views.__alloyId10.add($.__views.__alloyId12);
-    $.__views.__alloyId13 = Ti.UI.createImageView({
+    $.__views.__alloyId13.add($.__views.__alloyId15);
+    $.__views.__alloyId16 = Ti.UI.createImageView({
         right: "5%",
         height: "50px",
         width: "50px",
         image: "images/menu/add.png",
-        id: "__alloyId13"
+        id: "__alloyId16"
     });
-    $.__views.__alloyId10.add($.__views.__alloyId13);
-    $.__views.__alloyId14 = Ti.UI.createView({
+    $.__views.__alloyId13.add($.__views.__alloyId16);
+    $.__views.__alloyId17 = Ti.UI.createView({
         layout: "absolute",
+        width: "100%",
         height: "7%",
-        width: "90%",
         backgroundColor: "#424242",
-        top: "1%",
-        id: "__alloyId14"
+        top: "3px",
+        id: "__alloyId17"
     });
-    $.__views.menuView.add($.__views.__alloyId14);
-    $.__views.__alloyId15 = Ti.UI.createImageView({
+    $.__views.menuView.add($.__views.__alloyId17);
+    $.__views.__alloyId18 = Ti.UI.createImageView({
         left: "3%",
         height: "50px",
         width: "50px",
         image: "images/menu/text.png",
-        id: "__alloyId15"
+        id: "__alloyId18"
     });
-    $.__views.__alloyId14.add($.__views.__alloyId15);
-    $.__views.__alloyId16 = Ti.UI.createLabel({
+    $.__views.__alloyId17.add($.__views.__alloyId18);
+    $.__views.__alloyId19 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "white",
@@ -225,35 +242,35 @@ function Controller() {
             fontWeight: "normal"
         },
         text: "Text",
-        id: "__alloyId16"
+        id: "__alloyId19"
     });
-    $.__views.__alloyId14.add($.__views.__alloyId16);
-    $.__views.__alloyId17 = Ti.UI.createImageView({
+    $.__views.__alloyId17.add($.__views.__alloyId19);
+    $.__views.__alloyId20 = Ti.UI.createImageView({
         right: "5%",
         height: "50px",
         width: "50px",
         image: "images/menu/add.png",
-        id: "__alloyId17"
+        id: "__alloyId20"
     });
-    $.__views.__alloyId14.add($.__views.__alloyId17);
-    $.__views.__alloyId18 = Ti.UI.createView({
+    $.__views.__alloyId17.add($.__views.__alloyId20);
+    $.__views.__alloyId21 = Ti.UI.createView({
         layout: "absolute",
+        width: "100%",
         height: "7%",
-        width: "90%",
         backgroundColor: "#424242",
-        top: "1%",
-        id: "__alloyId18"
+        top: "3px",
+        id: "__alloyId21"
     });
-    $.__views.menuView.add($.__views.__alloyId18);
-    $.__views.__alloyId19 = Ti.UI.createImageView({
+    $.__views.menuView.add($.__views.__alloyId21);
+    $.__views.__alloyId22 = Ti.UI.createImageView({
         left: "3%",
         height: "50px",
         width: "50px",
         image: "images/menu/audio.png",
-        id: "__alloyId19"
+        id: "__alloyId22"
     });
-    $.__views.__alloyId18.add($.__views.__alloyId19);
-    $.__views.__alloyId20 = Ti.UI.createLabel({
+    $.__views.__alloyId21.add($.__views.__alloyId22);
+    $.__views.__alloyId23 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "white",
@@ -264,62 +281,29 @@ function Controller() {
             fontWeight: "normal"
         },
         text: "Audio",
-        id: "__alloyId20"
-    });
-    $.__views.__alloyId18.add($.__views.__alloyId20);
-    $.__views.__alloyId21 = Ti.UI.createImageView({
-        right: "5%",
-        height: "50px",
-        width: "50px",
-        image: "images/menu/add.png",
-        id: "__alloyId21"
-    });
-    $.__views.__alloyId18.add($.__views.__alloyId21);
-    $.__views.__alloyId22 = Ti.UI.createView({
-        layout: "absolute",
-        height: "7%",
-        width: "90%",
-        backgroundColor: "#424242",
-        top: "1%",
-        id: "__alloyId22"
-    });
-    $.__views.menuView.add($.__views.__alloyId22);
-    $.__views.__alloyId23 = Ti.UI.createImageView({
-        left: "3%",
-        height: "50px",
-        width: "50px",
-        image: "images/menu/newevent.png",
         id: "__alloyId23"
     });
-    $.__views.__alloyId22.add($.__views.__alloyId23);
-    $.__views.__alloyId24 = Ti.UI.createLabel({
-        width: Ti.UI.SIZE,
-        height: Ti.UI.SIZE,
-        color: "white",
-        left: "17%",
-        font: {
-            fontFamily: "Helvetica",
-            fontSize: "16dp",
-            fontWeight: "normal"
-        },
-        text: "New Event",
-        id: "__alloyId24"
-    });
-    $.__views.__alloyId22.add($.__views.__alloyId24);
-    $.__views.__alloyId25 = Ti.UI.createImageView({
+    $.__views.__alloyId21.add($.__views.__alloyId23);
+    $.__views.__alloyId24 = Ti.UI.createImageView({
         right: "5%",
         height: "50px",
         width: "50px",
         image: "images/menu/add.png",
+        id: "__alloyId24"
+    });
+    $.__views.__alloyId21.add($.__views.__alloyId24);
+    $.__views.__alloyId25 = Ti.UI.createView({
+        height: "2%",
+        width: "100%",
         id: "__alloyId25"
     });
-    $.__views.__alloyId22.add($.__views.__alloyId25);
+    $.__views.menuView.add($.__views.__alloyId25);
     $.__views.__alloyId26 = Ti.UI.createView({
         layout: "absolute",
+        width: "100%",
         height: "7%",
-        width: "90%",
         backgroundColor: "#424242",
-        top: "1%",
+        top: "3px",
         id: "__alloyId26"
     });
     $.__views.menuView.add($.__views.__alloyId26);
@@ -327,7 +311,7 @@ function Controller() {
         left: "3%",
         height: "50px",
         width: "50px",
-        image: "images/menu/allevents.png",
+        image: "images/menu/newevent.png",
         id: "__alloyId27"
     });
     $.__views.__alloyId26.add($.__views.__alloyId27);
@@ -341,28 +325,73 @@ function Controller() {
             fontSize: "16dp",
             fontWeight: "normal"
         },
-        text: "All Events",
+        text: "New Event",
         id: "__alloyId28"
     });
     $.__views.__alloyId26.add($.__views.__alloyId28);
-    $.__views.__alloyId29 = Ti.UI.createView({
-        layout: "absolute",
-        height: "7%",
-        width: "90%",
-        backgroundColor: "#424242",
-        top: "1%",
+    $.__views.__alloyId29 = Ti.UI.createImageView({
+        right: "5%",
+        height: "50px",
+        width: "50px",
+        image: "images/menu/add.png",
         id: "__alloyId29"
     });
-    $.__views.menuView.add($.__views.__alloyId29);
-    $.__views.__alloyId30 = Ti.UI.createImageView({
+    $.__views.__alloyId26.add($.__views.__alloyId29);
+    $.__views.__alloyId30 = Ti.UI.createView({
+        layout: "absolute",
+        width: "100%",
+        height: "7%",
+        backgroundColor: "#424242",
+        top: "3px",
+        id: "__alloyId30"
+    });
+    $.__views.menuView.add($.__views.__alloyId30);
+    $.__views.__alloyId31 = Ti.UI.createImageView({
+        left: "3%",
+        height: "50px",
+        width: "50px",
+        image: "images/menu/allevents.png",
+        id: "__alloyId31"
+    });
+    $.__views.__alloyId30.add($.__views.__alloyId31);
+    $.__views.__alloyId32 = Ti.UI.createLabel({
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        color: "white",
+        left: "17%",
+        font: {
+            fontFamily: "Helvetica",
+            fontSize: "16dp",
+            fontWeight: "normal"
+        },
+        text: "All Events",
+        id: "__alloyId32"
+    });
+    $.__views.__alloyId30.add($.__views.__alloyId32);
+    $.__views.__alloyId33 = Ti.UI.createView({
+        height: "2%",
+        width: "100%",
+        id: "__alloyId33"
+    });
+    $.__views.menuView.add($.__views.__alloyId33);
+    $.__views.__alloyId34 = Ti.UI.createView({
+        layout: "absolute",
+        width: "100%",
+        height: "7%",
+        backgroundColor: "#424242",
+        top: "3px",
+        id: "__alloyId34"
+    });
+    $.__views.menuView.add($.__views.__alloyId34);
+    $.__views.__alloyId35 = Ti.UI.createImageView({
         left: "3%",
         height: "50px",
         width: "50px",
         image: "images/menu/settings.png",
-        id: "__alloyId30"
+        id: "__alloyId35"
     });
-    $.__views.__alloyId29.add($.__views.__alloyId30);
-    $.__views.__alloyId31 = Ti.UI.createLabel({
+    $.__views.__alloyId34.add($.__views.__alloyId35);
+    $.__views.__alloyId36 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "white",
@@ -373,9 +402,9 @@ function Controller() {
             fontWeight: "normal"
         },
         text: "Settings",
-        id: "__alloyId31"
+        id: "__alloyId36"
     });
-    $.__views.__alloyId29.add($.__views.__alloyId31);
+    $.__views.__alloyId34.add($.__views.__alloyId36);
     $.__views.movableview = Ti.UI.createView({
         top: 0,
         left: 0,

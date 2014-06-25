@@ -9,10 +9,12 @@
 					<ImageView class="icon" image = "images/menu/home.png"></ImageView>
 					<Label class="menuText">Home</Label>
 				</View>
+				<View class="menuSection"></View>
 				<View class="btn">
 					<ImageView class="icon" image = "images/menu/myourchive.png"></ImageView>
 					<Label class="menuText">My Ourchive</Label>
 				</View>
+				<View class="menuSection"></View>
 				<View class="btn">
 					<ImageView class="icon" image = "images/menu/photo.png"></ImageView>
 					<Label class="menuText">Photos</Label>
@@ -33,6 +35,7 @@
 					<Label class="menuText">Audio</Label>
 					<ImageView class="addSomething" image = "images/menu/add.png"></ImageView>
 				</View>
+				<View class="menuSection"></View>
 				<View class="btn">
 					<ImageView class="icon" image = "images/menu/newevent.png"></ImageView>
 					<Label class="menuText">New Event</Label>
@@ -42,6 +45,7 @@
 					<ImageView class="icon" image = "images/menu/allevents.png"></ImageView>
 					<Label class="menuText">All Events</Label>
 				</View>
+				<View class="menuSection"></View>
 				<View class="btn">
 					<ImageView class="icon" image = "images/menu/settings.png"></ImageView>
 					<Label class="menuText">Settings</Label>
