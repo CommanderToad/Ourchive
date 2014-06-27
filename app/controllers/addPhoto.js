@@ -1,13 +1,10 @@
-var myOverlay = Titanium.UI.createView({
-	backroundColor:"blue",
-	height:"100%",
-	width:"100%",
-});
-
-
 function openCamera() {
+	var overlay = Titanium.UI.createView({
+		backgroundColor: 'blue'
+	});
+	
     var cameraOptions = {
-        success : function(event) {
+        /*success : function(event) {
             var takenPicture = event.media;
 
             // set image on window
@@ -20,9 +17,9 @@ function openCamera() {
 			Alloy.Globals.contentview.add(currentView);
         	Alloy.Globals.title.setText("Add a Moment");
             // cancel and close window
-        },
-        overlay: myOverlay,
-        error : function(error) {
+        },*/
+        overlay: overlay,
+        /*error : function(error) {
             var a = Ti.UI.createAlertDialog({
                 title : "Camera Error"
             });
@@ -32,20 +29,10 @@ function openCamera() {
                 a.setMessage('Unexpected error: ' + error.code);
             }
             a.show();
-        },
-        
-        saveToPhotoGallery : true,
-        allowEditing : true,
-        mediaTypes : [Ti.Media.MEDIA_TYPE_PHOTO]
+        },*/
+        showControls: false
     };
     
-    var overlay = Ti.UI.createView();
-
-	cameraOptions = {
-		overlay: overlay,
-		showControls: false
-	};
-
     // display camera OR gallery
     if (Ti.Media.isCameraSupported) {
         Ti.Media.showCamera(cameraOptions);
