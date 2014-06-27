@@ -1,5 +1,7 @@
 Titanium.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAY_AND_RECORD;
 
+var file;
+var sound;
 var recording = Ti.Media.createAudioRecorder();
 
 recording.compression = Ti.Media.AUDIO_FORMAT_AAC;
