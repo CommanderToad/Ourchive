@@ -1,7 +1,7 @@
-function openVideoCamera(e) {
+function openVideoCamera() {
 	Titanium.Media.showCamera( {
-		success:function(e) {
-			var video = e.media;
+		success:function(event) {
+			var video = event.media;
 			movieFile = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory,'mymovie.mov');
 			movieFile.write(video);
 		},
