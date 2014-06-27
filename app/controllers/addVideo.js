@@ -1,4 +1,39 @@
 function openVideoCamera(e) {
+	Titanium.Media.showCamera( {
+		success:function(e) {
+			var video = e.media;
+			movieFile = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory,'mymovie.mov');
+			movieFile.write(video);
+		},
+		cancel:function() {
+			
+		},
+		error:function(error) {
+			//Figure out what the fuck is wrong.
+			var a = Titanium.UI.createAlertDialog({title:'Video'});
+			//Write out what the fuck is wrong.
+			if (error.code == Titanium.Media.NO_VIDEO) {
+				a.setMessage('This device does not have video recording capabilities.');
+			}
+			else {
+				a.setMessage('Unexpected error: ' + error.code);
+			}
+			//Print what the fuck is wrong.
+			a.show();
+		},
+		mediaTypes: Titanium.Media.MEDIA_TYPE_VIDEO,
+		videoMaximumDuration: 10000, //Keep it short for now.
+		videoQuality: Titanium.Media.QUALITY_HIGH,
+	});
+}
+
+//Run the motherfucker.
+openVideoCamera();
+
+
+
+/*
+function openVideoCamera(e) {
 	Titanium.Media.showCamera({
 		success: function(e) {
 			//it's a video & set on window
@@ -24,15 +59,15 @@ function openVideoCamera(e) {
 		//saveToPhotoGallery:true,
 		//mediaTypes:[Titanium.Media.MEDIA_TYPE_VIDEO],
 		
-		mediaTypes:   Titanium.Media.MEDIA_TYPE_VIDEO,   //I don't think we need "[]".
-		videoMaximumDuration: 1000000,
-		videoQuality: Titanium.Media.QUALITY_HIGH,
+		mediaTypes:Titanium.Media.MEDIA_TYPE_VIDEO,   //I don't think we need "[]".
+		videoMaximumDuration:1000000,
+		videoQuality:Titanium.Media.QUALITY_HIGH,
 	});
 }
 
 //Run dat shit.
 openVideoCamera();
-
+*/
 
 //HintText for the TextArea field.
 if ($.videoDesc.value.length > 0) {
