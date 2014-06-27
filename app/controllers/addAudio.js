@@ -1,7 +1,9 @@
+Titanium.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAY_AND_RECORD;
+
 var recording = Ti.Media.createAudioRecorder();
 
-recording.compression = Ti.Media.AUDIO_FORMAT_LINEAR_PCM;
-recording.format = Ti.Media.AUDIO_FILEFORMAT_CAF;
+recording.compression = Ti.Media.AUDIO_FORMAT_AAC;
+recording.format = Ti.Media.AUDIO_FILEFORMAT_MP4A;
 
 Ti.Media.addEventListener('linechange', function(e) {
 	linetype.text = "Audio line type: " + lineTypeToStr();
