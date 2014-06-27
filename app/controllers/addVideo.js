@@ -30,7 +30,13 @@ function openVideoCamera(e) {
 //Run the motherfucker.
 openVideoCamera();
 
-
+/* 
+Roses are red,
+Violets are blue,
+Jordan's musical taste sucks,
+and he plays everything on repeat.
+Motherfucker. . .  
+*/
 
 /*
 function openVideoCamera(e) {
