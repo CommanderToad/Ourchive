@@ -1,9 +1,9 @@
 var myOverlay = Titanium.UI.createView({
-	backroundColor:"red",
-	height:"200px",
+	backroundColor:"blue",
+	height:"100%",
 	width:"100%",
-	top:0
 });
+
 
 function openCamera() {
     var cameraOptions = {
@@ -33,6 +33,7 @@ function openCamera() {
             }
             a.show();
         },
+        
         saveToPhotoGallery : true,
         allowEditing : true,
         mediaTypes : [Ti.Media.MEDIA_TYPE_PHOTO]
