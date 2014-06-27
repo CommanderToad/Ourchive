@@ -20,65 +20,26 @@ var messageView = Titanium.UI.createView({
 	visible : false
 });
  
-var indView = Titanium.UI.createView({
-	height : 30,
-	width : 250,
-	backgroundColor : '#000',
-	borderRadius : 10,
-	opacity : 0.7
-});
-messageView.add(indView);
- 
-// message
-var message = Titanium.UI.createLabel({
-	text : 'Picture Taken',
-	color : '#fff',
-	font : {
-		fontSize : 20,
-		fontWeight : 'bold',
-		fontFamily : 'Helvetica Neue'
-	},
-	width : 'auto',
-	height : 'auto'
-});
-messageView.add(message);
- 
+
+
 var overlay = Titanium.UI.createView();
 overlay.add(bottomOverlay);
 overlay.add(button);
 overlay.add(messageView);
  
 button.addEventListener('click', function() {
-	scanner.borderColor = 'blue';
+	
 	Ti.Media.takePicture();
-	messageView.animate({
-		visible : true
-	});
-	setTimeout(function() {
-		scanner.borderColor = 'red';
-		messageView.animate({
-			visible : false
-		});
-	}, 500);
+	
+	
 });
  
 Titanium.Media.showCamera({
 	saveToPhotoGallery : true,
 	success : function(event) {
- 
-		// place our picture into our window
-		var imageView = Ti.UI.createImageView({
-			image : event.media,
-			width : 320,
-			height : 480
-		});
-		win.add(imageView);
- 
-		win.open();
-		alert("picture was taken");
-		//alert(event);
-		// programatically hide the camera
-		//Ti.Media.hideCamera();
+ 	 var takenPicture = event.media;
+            // set image on window
+            $.photo.image = takenPicture;
 	},
 	cancel : function() {
 	},
