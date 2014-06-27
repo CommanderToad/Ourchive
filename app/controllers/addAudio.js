@@ -1,5 +1,50 @@
 Titanium.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAY_AND_RECORD;
 
+var recording = Ti.Media.createAudioRecorder();
+var temp;
+var sound;
+var file;
+
+recording.compression = Ti.Media.AUDIO_FORMAT_AAC;
+recording.format = Ti.Media.AUDIO_FILEFORMAT_MP4A;
+
+$.startRecording.addEventListener('click', function() {
+	if (!Ti.Media.canRecord) {
+		alert("No audio recording hardware is currently connected.");
+	}
+	else {
+		recording.start();
+	}
+});
+
+$.stopRecording.addEventListener('click', function () {
+	temp = recording.stop();
+	file = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, 'preview.mp3');
+	file.write(temp);
+});
+
+$.playback.addEventListener('click', function() {
+	if (sound && sound.playing) {
+		sound.stop();
+	}
+	else {
+		Ti.API.info("Recording file size: " + file.size);
+		sound = Titanium.Media.createSound({sound: file});
+	}
+});
+
+
+
+
+
+
+
+
+
+
+/*
+Titanium.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAY_AND_RECORD;
+
 var file;
 var sound;
 var recording = Ti.Media.createAudioRecorder();
@@ -59,3 +104,4 @@ $.playback.addEventListener('click', function() {
 		sound = Titanium.Media.createSound({sound: file});
 	}
 });
+*/
