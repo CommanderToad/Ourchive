@@ -1,3 +1,10 @@
+var myOverlay = Titanium.UI.createView({
+	backroundColor:"red",
+	height:"200px",
+	width:"100%",
+	top:0
+});
+
 function openCamera() {
     var cameraOptions = {
         success : function(event) {
@@ -14,6 +21,7 @@ function openCamera() {
         	Alloy.Globals.title.setText("Add a Moment");
             // cancel and close window
         },
+        overlay: myOverlay,
         error : function(error) {
             var a = Ti.UI.createAlertDialog({
                 title : "Camera Error"
