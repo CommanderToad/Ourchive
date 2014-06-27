@@ -1,4 +1,15 @@
-
+var topOverlay = Titanium.UI.createView({
+	width:"100%",
+	height:"20%",
+	top:0,
+	layout:"horizontal",
+	backgroundColor:"white"
+});
+var thumbnail = Titanium.UI.createImageView({
+	width:"40px",
+	height:"40px",
+	left:"10%",
+});
 var bottomOverlay = Titanium.UI.createView({
 	width: "100%",
 	height: "20%",
@@ -7,11 +18,18 @@ var bottomOverlay = Titanium.UI.createView({
 });
  
 var button = Titanium.UI.createButton({
+	right:0,
 	height:"90%",
 	borderRadius:"20px",
-	width:"50%",
+	width:"30%",
 	backgroundColor:"red",
-	title : 'Take Picture'
+	title : 'Take Picture',
+});
+var flashBtn = Titanium.UI.createButton({
+	height:"70%",
+	borderRadius:"20px",
+	width:"20%",
+	backgroundColor:"red",
 });
  
 
@@ -19,12 +37,25 @@ var button = Titanium.UI.createButton({
 var overlay = Titanium.UI.createView();
 overlay.add(bottomOverlay);
 bottomOverlay.add(button);
+bottomOverlay.add(flashBtn);
+topOverlay.add(thumbnail);
  
 button.addEventListener('click', function() {
-	
 	Ti.Media.takePicture();
-	
-	
+});
+flashBtn.addEventListener('click', function() {
+	alert(Ti.Media.cameraFlashMode);
+	if (Ti.Media.cameraFlashMode == 1) {
+		Ti.Media.setCameraFlashMode(0);
+		alert('got here');
+		flashBtn.setTitle("Off");
+	} else {
+		alert('before' + Ti.Media.cameraFlashMode);
+		Ti.Media.cameraFlashMode = 1;
+		alert('after' + Ti.Media.cameraFlashMode);
+		alert('got here again');
+		flashBtn.setTitle("On");
+	};
 });
  
 Titanium.Media.showCamera({
@@ -33,6 +64,8 @@ Titanium.Media.showCamera({
  	 var takenPicture = event.media;
             // set image on window
             $.photo.image = takenPicture;
+            overlay.add(topOverlay);
+           	thumbnail.image = takenPicture;
 	},
 	cancel : function() {
 		
