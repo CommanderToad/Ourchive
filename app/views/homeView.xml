@@ -7,7 +7,7 @@
 			</View>
 			<View class="buttonRow" id="row2">
 				<ImageView class="leftBtn" image="images/icon-text.png" id="addText"></ImageView>
-				<ImageView class="rightBtn" image="images/icon-audio.png"></ImageView>
+				<ImageView class="rightBtn" image="images/icon-audio.png" id="addAudio"></ImageView>
 			</View>
 			<View class="buttonRow">
 				<ImageView id="myOurchiveBtn" onClick="myOurchive" image="images/icon-mystream.png"></ImageView>

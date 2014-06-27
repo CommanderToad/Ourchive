@@ -1,14 +1,10 @@
 <Alloy>
-	<Window id="addAudioWin">
-		<View id="iphoneStatusBar"></View>
+	<View id="addAudio">
 		<View id="addAudioView">
-			<View id="titleBar">
-				<Button id="menuBtn" onClick="openMenu">menu</Button>
-				<Label id="title">Add Audio Moment</Label>
-			</View>
-			<View id="audioPlayerView">
-				<Buttton id="recordBtn" onClick="startRecording">Record</Buttton>
-			</View>
+			<Button class="recordButton" id="startRecording">Start</Button>
+			<Button class="recordButton" id="stopRecording">Stop</Button>
+			<Button class="recordButton" id="playback">Play</Button>
 		</View>
-	</Window>
+	</View>
+	
 </Alloy>

@@ -11,7 +11,7 @@ function openVideoCamera() {
 				success: function(event) {
 				},
 				error: function(evt) {
-					alert("Fail to save video to gallery");
+					alert("Failed to save video to gallery");
 				},
 			});
 		},
