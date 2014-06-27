@@ -1,26 +1,27 @@
 "#addAudio":{
-	layout:"vertical",
+	layout:"absolute",
 	width: "100%",
 	height: "100%",
 	backgroundColor: "#EEEEEE",
 }
 
-"#addAudioView":{
-	layout:"vertical",
-	width:"100%",
+"#b1": {
+	title:"Start Recording",
+	width:"200px",
+	height:"40px",
+	top:"100px",
 }
 
-".recordButton": {
-	top: "100px",
-	width: "200px",
-	height: "50px",
-	backgroundColor: "red",
+"#b2": {
+	title:'Playback Recording',
+	width:"200px",
+	height:"40px",
+	top:"160px",
 }
 
-"#startRecording": {
-	
-}
-
-"#stopRecording": {
-	
+"#pause": {
+	title:'Pause recording',
+	width:"200px",
+	height:"40px",
+	top:"160px",
 }
