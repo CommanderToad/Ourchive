@@ -5,14 +5,6 @@ var recording = Ti.Media.createAudioRecorder();
 recording.compression = Ti.Media.AUDIO_FORMAT_AAC;
 recording.format = Ti.Media.AUDIO_FILEFORMAT_MP4A;
 
-Ti.Media.addEventListener('linechange', function(e) {
-	linetype.text = "Audio line type: " + lineTypeToStr();
-});
-
-Ti.Media.addEventListener('volume', function(e) {
-	volume.text = "Volume: " + e.volume;
-});
-
 function lineTypeToStr() {
 	var lineType = Ti.Media.audioLineType;
 	switch(lineType) {
