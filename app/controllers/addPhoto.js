@@ -38,6 +38,13 @@ function openCamera() {
         allowEditing : true,
         mediaTypes : [Ti.Media.MEDIA_TYPE_PHOTO]
     };
+    
+    var overlay = Ti.UI.createView();
+
+	cameraOptions = {
+		overlay: overlay,
+		showControls: false
+	};
 
     // display camera OR gallery
     if (Ti.Media.isCameraSupported) {
