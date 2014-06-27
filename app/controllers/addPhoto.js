@@ -14,18 +14,11 @@ var button = Titanium.UI.createButton({
 	title : 'Take Picture'
 });
  
-var messageView = Titanium.UI.createView({
-	height : 30,
-	width : 250,
-	visible : false
-});
- 
 
 
 var overlay = Titanium.UI.createView();
 overlay.add(bottomOverlay);
-overlay.add(button);
-overlay.add(messageView);
+bottomOverlay.add(button);
  
 button.addEventListener('click', function() {
 	
@@ -42,6 +35,7 @@ Titanium.Media.showCamera({
             $.photo.image = takenPicture;
 	},
 	cancel : function() {
+		
 	},
 	error : function(error) {
 		var a = Titanium.UI.createAlertDialog({
