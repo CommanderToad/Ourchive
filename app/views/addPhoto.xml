@@ -1,5 +1,5 @@
 <Alloy>
-	<View id="addPhoto" onOpen="openCamera">
+	<View id="addPhoto">
 		<View id="addPhotoView">
 			<ImageView id="photo"></ImageView>
 			<View id="photoEdit">
