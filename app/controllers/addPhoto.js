@@ -1,9 +1,42 @@
 function openCamera() {
-	var overlay = Titanium.UI.createView({
-		backgroundColor: 'blue'
+	
+	var overlayImage = Titanium.UI.createImageView({
+    	width: "100%",
+   		height: "20%",
+   		bottom: "0px",
+    	backgroundColor: 'blue',
+	});
+	var btn = Titanium.UI.createButton({
+		height:"90%",
+		borderRadius:"20px",
+		width:"50%",
+		backgroundColor:"red"
+	});
+	var myOverlay = Titanium.UI.createView();
+	overlayImage.add(btn);
+	myOverlay.add(overlayImage);
+	Titanium.Media.showCamera({
+    	success: function(e) {},
+    	error: function(e) {},
+    	cancel: function(e) {},
+    	overlay: myOverlay,
+    	showControls: false,
+    	saveToPhotoGallery: true,
+    	allowEditing: true,
 	});
 	
+	/*
+	var overlay = Titanium.UI.createView({
+		backgroundColor: 'blue',
+		bottom:0,
+		height: "20%",
+		width: "100%",
+		
+	});
+
+	overlay.add(btn);
     var cameraOptions = {
+    */
         /*success : function(event) {
             var takenPicture = event.media;
 
@@ -18,7 +51,7 @@ function openCamera() {
         	Alloy.Globals.title.setText("Add a Moment");
             // cancel and close window
         },*/
-        overlay: overlay,
+        //overlay: overlay,
         /*error : function(error) {
             var a = Ti.UI.createAlertDialog({
                 title : "Camera Error"
@@ -29,7 +62,7 @@ function openCamera() {
                 a.setMessage('Unexpected error: ' + error.code);
             }
             a.show();
-        },*/
+        },
         showControls: false
     };
     
@@ -39,8 +72,9 @@ function openCamera() {
     } else {
         Ti.Media.openPhotoGallery(cameraOptions);
     }
-
+*/
 };
+
 openCamera();
 
 
