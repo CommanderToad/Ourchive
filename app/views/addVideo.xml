@@ -1,7 +1,7 @@
 <Alloy>
 	<View id="addVideo">
 		<View id="addVideoView">
-			<ImageView id="video"></ImageView>
+			<View id="video"></View>
 			<View id="videoEdit">
 				<TextField class="singleLineText" hintText="Name"></TextField>
 				<TextField class="singleLineText" hintText="Location"></TextField>
@@ -18,7 +18,7 @@
 		</View>
 		<View class="btnRow">
 			<ImageView class="leftBtn" image = "images/icon-check.png"></ImageView>
-			<ImageView class="rightBtn" image = "images/icon-x.png"></ImageView>
+			<ImageView class="rightBtn" id="cancelBtn" image = "images/icon-x.png"></ImageView>
 		</View>
 	</View>
 </Alloy>

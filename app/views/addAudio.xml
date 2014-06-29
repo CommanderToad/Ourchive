@@ -1,6 +1,12 @@
 <Alloy>
 	<View id="addAudio">
+<<<<<<< HEAD
 		<Button id="recordStartBtn"></Button>
 		<Button id="playBtn"></Button>
+=======
+		<Button id="record">Record</Button>
+		<Button id="stop">Stop Recording</Button>
+		<Button id="play">Play</Button>
+>>>>>>> FETCH_HEAD
 	</View>
 </Alloy>
