@@ -1,3 +1,4 @@
+
 var cameraTransform = Ti.UI.create2DMatrix();
 cameraTransform = cameraTransform.scale(1.325);
 var recording = 0;
@@ -50,16 +51,14 @@ Titanium.Media.showCamera( {
 	autohide:false,
 	transform:cameraTransform,
 	success:function(event) {
+		var video = event.media;
 		Ti.Media.setCameraFlashMode(Ti.Media.CAMERA_FLASH_OFF);
 		Ti.Media.saveToPhotoGallery(event.media, {
 			success: function(event) {
 				Ti.Media.hideCamera();
-						var video = event.media;
-						movieFile = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory,'mymovie.mov');
-               			 movieFile.write(video);
 						 //create the video player and add it to our window
 						var my_movie = Titanium.Media.createVideoPlayer({
-						 media:movieFile,
+						 media:video,
 						 movieControlMode:Titanium.Media.VIDEO_CONTROL_DEFAULT,
 						 scalingMode:Titanium.Media.VIDEO_SCALING_ASPECT_FILL,
 						 width: "250px",
@@ -67,10 +66,10 @@ Titanium.Media.showCamera( {
 						 backgroundColor:'#000',
 						 autoplay : false,
 					 });
-					 $.video.add(my_movie);
-					 $.video.addEventListener('click', function(e){
-						my_movie.play();
-					});
+				 $.video.add(my_movie);
+				 $.video.addEventListener('click', function(e){
+					my_movie.play();
+				});
 			},
 			error: function(evt) {
 				alert("Failed to save video to gallery");

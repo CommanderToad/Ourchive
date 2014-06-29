@@ -169,7 +169,7 @@ Titanium.Media.showCamera({
 });
 
 
-
+// edit details buttons
 $.cancelBtn.addEventListener('click', function() {
 	Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
 	var currentView = Alloy.createController("homeView").getView();
