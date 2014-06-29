@@ -5,24 +5,13 @@
 	backgroundColor: "#EEEEEE",
 }
 
-"#record": {
-	width:"200px",
-	height:"40px",
-	top:"100px",
-}
 
-"#stop": {
-	width:"200px",
-	height:"40px",
-	top:"160px",
-}
 
-<<<<<<< HEAD
-"#playBtn": {
+"#playBtn":{
 	title:'Pause recording',
-=======
-"#play": {
->>>>>>> FETCH_HEAD
+}
+"#play":{
+
 	width:"200px",
 	height:"40px",
 	top:"160px",

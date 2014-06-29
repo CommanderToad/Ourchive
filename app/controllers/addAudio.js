@@ -44,7 +44,7 @@ $.stop.addEventListener('click', function(e) {
 
 $.play.addEventListener('click', function(e) {
 	Titanium.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAYBACK;
-<<<<<<< HEAD
+
 	var sounds = Titanium.App.Properties.getObject("sounds");
 	var currentKey = 'key.wav';
 	var soundPath = sounds[currentKey];
@@ -52,20 +52,10 @@ $.play.addEventListener('click', function(e) {
 	 
 	var sound = Titanium.Media.createSound({
 	    url : fileToPlay
-=======
+});
    var sounds = Titanium.App.Properties.getObject("sounds");
 var currentKey = 'key.wav';
 var soundPath = sounds[currentKey];
 var fileToPlay = Titanium.Filesystem.getFile(soundPath);
- 
-<<<<<<< HEAD
-$.recordStartBtn.addEventListener('click', function(e) {
-    if (recorder.recording) {           
-        var recordedFile = recorder.stop();
-        var voiceFile = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, 'test.m4a');
-        voiceFile.write(recordedFile);
-    } else {
-        recorder.start();
-    }
 });
 

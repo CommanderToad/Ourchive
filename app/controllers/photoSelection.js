@@ -145,8 +145,8 @@ Titanium.Media.showCamera({
 				});
 				var picture = Titanium.UI.createImageView({
 					width:"90%",
-					height:"630px",
-					top:"10px",
+					height:"900px",
+					top:"20px",
 					image:pics[pics.length-1],
 					});
 				$.photoSelection.add(picture);
