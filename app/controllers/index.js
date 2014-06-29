@@ -7,8 +7,8 @@ Alloy.Globals.title = $.ds.title;
 
 function rowSelect(e) {
 	var obj = e.source;
-	var views = ["homeView", "addText", "addPhoto", "addEvent", "addVideo", "settings", "addAudio"];
-	var viewTitleText = ["Add a Moment", "Add Text Moment", "Edit Details", "New Event", "Edit Details", "Settings", "Add Audio Moment"];
+	var views = ["homeView", "addText", "photoSelection", "addEvent", "addVideo", "settings", "addAudio"];
+	var viewTitleText = ["Add a Moment", "Add Text Moment", "Select Photos", "New Event", "Edit Details", "Settings", "Add Audio Moment"];
 	if (Alloy.Globals.currentView.id != obj.id) {
 		for (var i=0; i < 7 ; i++){
 			if (obj.id == views[i]) {

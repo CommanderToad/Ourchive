@@ -20,7 +20,6 @@ $.stop.addEventListener('click', function(e) {
             if (!audioDir.exists()) {audioDir.createDirectory();};
              
             // I write the most recent recording into a file
-            // getScrollableViewStatus() creates a UNIQUE name for that file
             var rec = Titanium.Filesystem.getFile(audioDir.resolve(),'key.wav');
              
             // error check
@@ -45,13 +44,13 @@ $.stop.addEventListener('click', function(e) {
 
 $.play.addEventListener('click', function(e) {
 	Titanium.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAYBACK;
-   var sounds = Titanium.App.Properties.getObject("sounds");
-var currentKey = 'key.wav';
-var soundPath = sounds[currentKey];
-var fileToPlay = Titanium.Filesystem.getFile(soundPath);
- 
-var sound = Titanium.Media.createSound({
-    url : fileToPlay
+	var sounds = Titanium.App.Properties.getObject("sounds");
+	var currentKey = 'key.wav';
+	var soundPath = sounds[currentKey];
+	var fileToPlay = Titanium.Filesystem.getFile(soundPath);
+	 
+	var sound = Titanium.Media.createSound({
+	    url : fileToPlay
 });
 sound.play();
 });

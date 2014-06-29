@@ -5,17 +5,15 @@ var recording = 0;
 var overlay = Titanium.UI.createView();
 var bottomOverlay = Titanium.UI.createView({
 	width: "100%",
-	height: "150px",
+	height: "180px",
 	bottom: "0px",
-	backgroundColor: 'gray',
+	backgroundColor: '#BDBDBD',
 });
-var button = Titanium.UI.createButton({
-	color:"white",
-	height:"140px",
-	borderRadius:"70px",
-	width:"140px",
-	backgroundColor:"red",
-	title : 'Record',
+var button = Titanium.UI.createView({
+	height:"170px",
+	borderRadius:"85px",
+	width:"170px",
+	backgroundColor:"#555555",
 });
 var cancelBtn = Titanium.UI.createButton({
 	color:"white",
@@ -26,6 +24,15 @@ var cancelBtn = Titanium.UI.createButton({
 	backgroundColor:"blue",
 	title:"Cancel"
 });
+var redBtn = Titanium.UI.createButton({
+	height:"100px",
+	borderRadius:"50px",
+	width:"100px",
+	backgroundColor:"red",
+	touchEnabled:false,
+});
+button.add(redBtn);
+redBtn.hide();
 bottomOverlay.add(cancelBtn);
 overlay.add(bottomOverlay);
 bottomOverlay.add(button);
@@ -34,11 +41,20 @@ button.addEventListener('click', function() {
 		Titanium.Media.startVideoCapture();
 		button.title = "Recording...";
 		recording = 1;
+		redBtn.show();
 	} else {
+		redBtn.hide();
 		Titanium.Media.stopVideoCapture();
-		button.title = "Record";
 		recording = 0;
 	}
+});
+cancelBtn.addEventListener('click', function() {
+	Ti.Media.hideCamera();
+	Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
+	var currentView = Alloy.createController("homeView").getView();
+	Alloy.Globals.currentView = currentView;
+	Alloy.Globals.contentview.add(currentView);
+	Alloy.Globals.title.setText("Add a Moment");
 });
 
 Titanium.Media.showCamera( {
@@ -51,11 +67,11 @@ Titanium.Media.showCamera( {
 	autohide:false,
 	transform:cameraTransform,
 	success:function(event) {
+		Ti.Media.hideCamera();
 		var video = event.media;
 		Ti.Media.setCameraFlashMode(Ti.Media.CAMERA_FLASH_OFF);
 		Ti.Media.saveToPhotoGallery(event.media, {
 			success: function(event) {
-				Ti.Media.hideCamera();
 						 //create the video player and add it to our window
 						var my_movie = Titanium.Media.createVideoPlayer({
 						 media:video,
@@ -77,16 +93,6 @@ Titanium.Media.showCamera( {
 		});
 	},
 	error:function(error) {alert("Error: " + error);},
-});
-
-
-cancelBtn.addEventListener('click', function() {
-	Ti.Media.hideCamera();
-	Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
-	var currentView = Alloy.createController("homeView").getView();
-	Alloy.Globals.currentView = currentView;
-	Alloy.Globals.contentview.add(currentView);
-	Alloy.Globals.title.setText("Add a Moment");
 });
 
 //HintText for the TextArea field.

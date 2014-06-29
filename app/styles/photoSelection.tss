@@ -1,0 +1,6 @@
+
+"#photoSelection" : {
+	backgroundColor:"#EEEEEE",
+ 	layout:"vertical",
+  	height:"auto",
+}

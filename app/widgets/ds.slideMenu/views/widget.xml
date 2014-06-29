@@ -18,7 +18,7 @@
 				</View>
 				
 				<View class="menuSection"></View>
-				<View class="btn" id="addPhoto">
+				<View class="btn" id="photoSelection">
 					<ImageView class="icon" image = "images/menu/photo.png"></ImageView>
 					<Label class="menuText">Photos</Label>
 					<ImageView class="addSomething" image = "images/menu/add.png" ></ImageView>
