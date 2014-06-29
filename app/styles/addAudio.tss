@@ -17,7 +17,12 @@
 	top:"160px",
 }
 
+<<<<<<< HEAD
+"#playBtn": {
+	title:'Pause recording',
+=======
 "#play": {
+>>>>>>> FETCH_HEAD
 	width:"200px",
 	height:"40px",
 	top:"160px",
