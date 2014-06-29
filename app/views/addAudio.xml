@@ -1,7 +1,5 @@
 <Alloy>
 	<View id="addAudio">
-		<Button id="b1"></Button>
-		<Button id="b2"></Button>
-		<Button id="pause"></Button>
+		<Button id="recordStartBtn"></Button>
 	</View>
 </Alloy>

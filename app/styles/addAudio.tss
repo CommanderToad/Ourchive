@@ -5,14 +5,14 @@
 	backgroundColor: "#EEEEEE",
 }
 
-"#b1": {
+"#recordStartBtn": {
 	title:"Start Recording",
 	width:"200px",
 	height:"40px",
 	top:"100px",
 }
 
-"#b2": {
+"#recordStopBtn": {
 	title:'Playback Recording',
 	width:"200px",
 	height:"40px",
