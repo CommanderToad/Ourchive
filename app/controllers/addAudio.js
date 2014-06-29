@@ -44,7 +44,7 @@ $.stop.addEventListener('click', function(e) {
 });
 
 $.play.addEventListener('click', function(e) {
-	Titanium.Media.AUDIO_SESSION_MODE_PLAYBACK;
+	Titanium.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAYBACK;
    var sounds = Titanium.App.Properties.getObject("sounds");
 var currentKey = 'key.wav';
 var soundPath = sounds[currentKey];
