@@ -2,5 +2,6 @@
 	<View id="addAudio">
 		<Button id="record">Record</Button>
 		<Button id="stop">Stop Recording</Button>
+		<Button id="play">Play</Button>
 	</View>
 </Alloy>
