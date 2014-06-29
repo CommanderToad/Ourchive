@@ -19,7 +19,7 @@
 	top:"160px",
 }
 
-"#pause": {
+"#playBtn": {
 	title:'Pause recording',
 	width:"200px",
 	height:"40px",

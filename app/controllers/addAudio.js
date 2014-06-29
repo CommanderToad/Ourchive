@@ -14,3 +14,4 @@ $.recordStartBtn.addEventListener('click', function(e) {
         recorder.start();
     }
 });
+
