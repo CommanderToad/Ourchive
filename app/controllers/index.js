@@ -3,6 +3,7 @@ var animation = require('alloy/animation');
 $.homeWin.open();
 Alloy.Globals.contentview = $.ds.contentview;
 Alloy.Globals.title = $.ds.title;
+Alloy.Globals.navView = $.ds.navview;
 
 
 function rowSelect(e) {

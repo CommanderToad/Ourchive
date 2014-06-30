@@ -1,5 +1,6 @@
 var cameraTransform = Ti.UI.create2DMatrix();
 cameraTransform = cameraTransform.scale(1.325);
+Alloy.Globals.selectedPics = [];
 var pics = [];
 var thumbnails =[];
 var topOverlay = Titanium.UI.createView({
@@ -38,7 +39,6 @@ var cancelBtn = Titanium.UI.createButton({
 	backgroundColor:"gray",
 	title:"Cancel"
 });
-
 /*
 var flashBtn = Titanium.UI.createButton({
 	height:"70%",
@@ -149,6 +149,9 @@ Titanium.Media.showCamera({
 					top:"20px",
 					image:pics[pics.length-1],
 					});
+				picture.addEventListener('click', function select(e) {
+					selectPictures(e);
+				});
 				$.photoSelection.add(picture);
 				
 	},
@@ -173,3 +176,36 @@ Titanium.Media.showCamera({
 	autohide : false // tell the system not to auto-hide and we'll do it ourself
 });
 
+var doneBtn = Titanium.UI.createButton({
+	color:"black",
+	top:"55px",
+	right:"15px",
+	width:"120px",
+	height:"65px",
+	borderRadius:"15px",
+	backgroundColor:"red",
+	title:"done"
+});
+doneBtn.addEventListener('click', function() {
+	Alloy.Globals.navView.remove(doneBtn);
+	Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
+	var currentView = Alloy.createController("addPhoto").getView();
+	Alloy.Globals.currentView = currentView;
+	Alloy.Globals.contentview.add(currentView);
+	Alloy.Globals.title.setText("Edit Details");
+});
+function selectPictures(e){
+	var obj = e.source;
+	if (obj.hasChild) {
+		obj.remove(selectedIcon);
+	} else {
+			var selectedIcon = Titanium.UI.createView({
+			height:"100px",
+			width:"100px",
+			backgroundColor:"red",
+			touchEnabled:false,
+		});
+		obj.add(selectedIcon);
+		Alloy.Globals.navView.add(doneBtn);
+	}
+}
