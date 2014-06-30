@@ -3,8 +3,10 @@ cameraTransform = cameraTransform.scale(1.325);
 Alloy.Globals.selectedPics = [];
 var pics = [];
 var thumbnails =[];
-var topOverlay = Titanium.UI.createView({
+var topOverlay = Titanium.UI.createScrollView({
 	width:"100%",
+	contentWidth: 'auto',
+	showHorizontalScrollIndicator: true,
 	height:"110px",
 	top:0,
 	layout:"horizontal",
@@ -89,10 +91,7 @@ galleryBtn.addEventListener('click', function(e) {
 });
 cancelBtn.addEventListener('click', function() {
 	Ti.Media.hideCamera();
-	Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
-	var currentView = Alloy.createController("homeView").getView();
-	Alloy.Globals.currentView = currentView;
-	Alloy.Globals.contentview.add(currentView);
+	Alloy.Globals.transition("homeView");
 	Alloy.Globals.title.setText("Add a Moment");
 });
 /*flashBtn.addEventListener('click', function() {

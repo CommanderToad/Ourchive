@@ -50,10 +50,7 @@ button.addEventListener('click', function() {
 });
 cancelBtn.addEventListener('click', function() {
 	Ti.Media.hideCamera();
-	Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
-	var currentView = Alloy.createController("homeView").getView();
-	Alloy.Globals.currentView = currentView;
-	Alloy.Globals.contentview.add(currentView);
+	Alloy.Globals.transition("homeView");
 	Alloy.Globals.title.setText("Add a Moment");
 });
 
@@ -115,9 +112,6 @@ $.textAreaHint.addEventListener('click', function(e){
 
 // Edit Details Buttons
 $.cancelBtn.addEventListener('click', function(e){
-	Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
-	var currentView = Alloy.createController("homeView").getView();
-	Alloy.Globals.currentView = currentView;
-	Alloy.Globals.contentview.add(currentView);
+	Alloy.Globals.transition("homeView");
 	Alloy.Globals.title.setText("Add a Moment");
 });

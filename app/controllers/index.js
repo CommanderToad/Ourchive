@@ -4,6 +4,17 @@ $.homeWin.open();
 Alloy.Globals.contentview = $.ds.contentview;
 Alloy.Globals.title = $.ds.title;
 Alloy.Globals.navView = $.ds.navview;
+Alloy.Globals.transition = function(next) {
+	var currentView = Alloy.createController(next).getView();
+	animation.fadeAndRemove(Alloy.Globals.currentView,500,Alloy.Globals.contentview);
+	Alloy.Globals.currentView = currentView;
+	setTimeout(function(){Alloy.Globals.contentview.add(currentView);
+		Alloy.Globals.contentview.setOpacity(0);
+		Alloy.Globals.contentview.animate({
+		opacity:1,
+		duation:500
+	});},501);
+};
 
 
 function rowSelect(e) {
