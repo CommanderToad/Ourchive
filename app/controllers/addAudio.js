@@ -45,7 +45,7 @@ $.record.addEventListener('click', function(e) {
     Ti.Media.startMicrophoneMonitor();
     $.record.setText("Recording");
 });
-
+var playing = false;
 $.play.addEventListener('click', function(e) {
 	Titanium.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAYBACK;
    	var sounds = Titanium.App.Properties.getObject("sounds");
@@ -55,12 +55,14 @@ $.play.addEventListener('click', function(e) {
 	var sound = Titanium.Media.createSound({
     	url : fileToPlay
 	});
-	if (e.source.image = "images/record-play.png") {
+	if (!playing) {
 		e.source.image = "images/record-pause.png";
 		sound.play();
+		playing = true;
 	}
 	else {
 		e.source.image = "images/record-play.png";
 		sound.pause();
+		playing = false;
 	}
 });
