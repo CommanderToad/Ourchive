@@ -5,6 +5,7 @@
 	backgroundColor: "#EEEEEE",
 }
 
+<<<<<<< HEAD
 "#audioPlayback": {
 	layout: "absolute",
 	width: "100%",
@@ -37,6 +38,18 @@
 	height: "100px",
 	left: "15%",
 	bottom: "10px",
+=======
+
+
+"#playBtn":{
+	title:'Pause recording',
+}
+"#play":{
+
+	width:"200px",
+	height:"40px",
+	top:"160px",
+>>>>>>> FETCH_HEAD
 }
 
 "#bottomBar": {

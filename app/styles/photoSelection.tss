@@ -1,0 +1,7 @@
+
+"#photoSelection" : {
+	backgroundColor:"#EEEEEE",
+ 	layout:"vertical",
+  	contentHeight:'auto',
+  	showVerticalScrollIndicator:true,
+}

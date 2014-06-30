@@ -2,7 +2,7 @@
 	<View id="homeView">
 		<View id="addView">
 			<View class="buttonRow" id="row1">
-				<ImageView class="leftBtn" image="images/icon-photos.png" id="addPhoto"></ImageView>
+				<ImageView class="leftBtn" image="images/icon-photos.png" id="photoSelection"></ImageView>
 				<ImageView class="rightBtn" image="images/icon-video.png" id="addVideo"></ImageView>
 			</View>
 			<View class="buttonRow" id="row2">

@@ -1,3 +1,4 @@
+
 var animateRight = Ti.UI.createAnimation({
 	left : 270,
 	curve : Ti.UI.ANIMATION_CURVE_EASE_OUT,
