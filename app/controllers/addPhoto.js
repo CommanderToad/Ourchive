@@ -1,3 +1,14 @@
+for (var i=0; i<Alloy.Globals.selectedPics.length;i++){
+	var view = Titanium.UI.createImageView({
+		width:"73px",
+		height:"73px",
+		left:"10px",
+		top:"10px",
+		image: Alloy.Globals.selectedPics[i]
+	    });
+	 $.photo.add(view);
+}
+
 $.cancelBtn.addEventListener('click', function() {
 	Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
 	var currentView = Alloy.createController("homeView").getView();

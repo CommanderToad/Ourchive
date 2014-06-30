@@ -1,7 +1,7 @@
 <Alloy>
 	<View id="addPhoto">
 		<View id="addPhotoView">
-			<ImageView id="photo"></ImageView>
+			<View id="photo"></View>
 			<View id="photoEdit">
 				<TextField class="singleLineText" hintText="Name"></TextField>
 				<TextField class="singleLineText" hintText="Location"></TextField>

@@ -148,6 +148,7 @@ Titanium.Media.showCamera({
 					height:"900px",
 					top:"20px",
 					image:pics[pics.length-1],
+					id:"0",
 					});
 				picture.addEventListener('click', function select(e) {
 					selectPictures(e);
@@ -187,17 +188,29 @@ var doneBtn = Titanium.UI.createButton({
 	title:"done"
 });
 doneBtn.addEventListener('click', function() {
-	Alloy.Globals.navView.remove(doneBtn);
-	Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
-	var currentView = Alloy.createController("addPhoto").getView();
-	Alloy.Globals.currentView = currentView;
-	Alloy.Globals.contentview.add(currentView);
-	Alloy.Globals.title.setText("Edit Details");
+	for (var i=0; i<$.photoSelection.children.length;i++) {
+		if ($.photoSelection.children[i].id === "1") {
+			Alloy.Globals.selectedPics.push($.photoSelection.children[i].image);
+		}
+	}
+	if (Alloy.Globals.selectedPics.length>0){
+			Alloy.Globals.navView.remove(doneBtn);
+			Alloy.Globals.contentview.remove(Alloy.Globals.currentView);
+			var currentView = Alloy.createController("addPhoto").getView();
+			Alloy.Globals.currentView = currentView;
+			Alloy.Globals.contentview.add(currentView);
+			Alloy.Globals.title.setText("Edit Details");
+			return;
+		}
+	alert("No Photos Selected");
 });
 function selectPictures(e){
 	var obj = e.source;
-	if (obj.hasChild) {
-		obj.remove(selectedIcon);
+	if (obj.id=== "1") {
+		for(var c=obj.children.length-1;c >= 0; c-- ) {
+        obj.remove( obj.children[c] );
+        obj.id = "0";
+    }
 	} else {
 			var selectedIcon = Titanium.UI.createView({
 			height:"100px",
@@ -205,6 +218,7 @@ function selectPictures(e){
 			backgroundColor:"red",
 			touchEnabled:false,
 		});
+		obj.id = "1";
 		obj.add(selectedIcon);
 		Alloy.Globals.navView.add(doneBtn);
 	}
