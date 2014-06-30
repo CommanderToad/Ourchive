@@ -1,12 +1,13 @@
 <Alloy>
 	<View id="addAudio">
-<<<<<<< HEAD
-		<Button id="recordStartBtn"></Button>
-		<Button id="playBtn"></Button>
-=======
-		<Button id="record">Record</Button>
-		<Button id="stop">Stop Recording</Button>
-		<Button id="play">Play</Button>
->>>>>>> FETCH_HEAD
+		<View id="audioPlayback">
+			<View id="progressBar"></View>
+			<ImageView id="skipBackward" image = "images/record-skipBackward.png"></ImageView>
+			<ImageView id="play" image = "images/record-play.png"></ImageView>
+			<ImageView id="skipForward" image = "images/record-skipForward.png"></ImageView>
+		</View>
+		<View id="bottomBar">
+			<ImageView id="record" image = "images/record-start.png"></ImageView>
+		</View>
 	</View>
 </Alloy>

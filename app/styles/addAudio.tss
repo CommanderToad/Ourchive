@@ -1,29 +1,53 @@
 "#addAudio":{
-	layout:"vertical",
+	layout:"absolute",
 	width: "100%",
 	height: "100%",
 	backgroundColor: "#EEEEEE",
 }
 
-"#record": {
-	width:"200px",
-	height:"40px",
-	top:"100px",
+"#audioPlayback": {
+	layout: "absolute",
+	width: "100%",
+	height: "260px",
+	top: "160px",
 }
 
-"#stop": {
-	width:"200px",
-	height:"40px",
-	top:"160px",
+"#progressBar": {
+	width: "86%",
+	height: "50px",
+	top: "50px",
+	backgroundColor: "#929398",
 }
 
-<<<<<<< HEAD
-"#playBtn": {
-	title:'Pause recording',
-=======
 "#play": {
->>>>>>> FETCH_HEAD
-	width:"200px",
-	height:"40px",
-	top:"160px",
+	width: "100px",
+	height: "100px",
+	bottom: "10px",
+}
+
+"#skipForward": {
+	width: "100px",
+	height: "100px",
+	right: "15%",
+	bottom: "10px",
+}
+
+"#skipBackward": {
+	width: "100px",
+	height: "100px",
+	left: "15%",
+	bottom: "10px",
+}
+
+"#bottomBar": {
+	layout: "absolute",
+	width: "100%",
+	height: "260px",
+	bottom: "0px",
+	backgroundColor: "#DBDBDB",
+}
+
+"#record": {
+	width:"176px",
+	height:"176px",
 }
