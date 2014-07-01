@@ -4,7 +4,10 @@ function focusTextField() {
 }
 focusTextField();
 
-
+$.cancelBtn.addEventListener('click', function(e){
+	Alloy.Globals.title.setText("Add a Moment");
+	Alloy.Globals.transition("homeView");
+});
 //HintText for the TextArea field.
 if ($.textDesc.value.length > 0) {
 	$.textAreaHint.hide();

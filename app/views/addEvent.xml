@@ -19,7 +19,7 @@
 			</View>
 			<View class="btnRow">
 				<ImageView class="leftBtn" image = "images/icon-check.png"></ImageView>
-				<ImageView class="rightBtn" image = "images/icon-x.png"></ImageView>
+				<ImageView class="rightBtn" id="cancelBtn" image = "images/icon-x.png"></ImageView>
 			</View>
 		</View>
 	</View>

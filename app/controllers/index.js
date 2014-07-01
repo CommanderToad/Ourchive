@@ -27,7 +27,7 @@ function rowSelect(e) {
 				currentView = Alloy.createController(obj.id).getView();
 				
 				// if homescreen icon then animate else menu and don't animate
-				if (obj.parent.id == "row1" || obj.parent.id =="row2") {
+				if (obj.parent.id == "row1" || obj.parent.id =="row2" || obj.parent.id =="tableHeader") {
 					animation.fadeAndRemove(Alloy.Globals.currentView,500,$.ds.contentview);
 					setTimeout(function(){$.ds.contentview.add(currentView);
 						$.ds.contentview.setOpacity(0);

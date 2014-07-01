@@ -1,16 +1,7 @@
-Alloy.Globals.previous = $.addEventWin;
-function openMenu() {
-	Alloy.createController("menu").getView().open();
-	$.addEventWin.close();
-}
-function focusTextField() {
-	$.eventTitle.focus();
-}
-function closeWindow() {
-	Alloy.Globals.homeWin.open();
-	$.addEventWin.close();
-}
-
+$.cancelBtn.addEventListener('click', function(e){
+	Alloy.Globals.transition("homeView");
+	Alloy.Globals.title.setText("Add a Moment");
+});
 
 //HintText for the TextArea field.
 if ($.eventDescription.value.length > 0) {
