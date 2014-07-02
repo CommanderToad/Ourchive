@@ -1,9 +1,9 @@
 
-"#loginWin":{
+"#registerWin":{
 	height:"100%",
 	width:"100%",
 }
-"#loginView":{
+"#registerView":{
 	height:"100%",
 	width:"100%",
 	layout:"vertical",
@@ -20,7 +20,8 @@
 		fontSize: '18dp',
 	},
 }
-"#loginBtn":{
+".instruct":{
+	color:"white",
 	width:"86%",
 	height:"90px",
 	backgroundColor:"#555555",
@@ -47,10 +48,5 @@
 	height:"40%",
 	width:"100%",
 	layout:"vertical",
-}
-"#registerView":{
-	height:"40%",
-	width:"70%%",
-	layout:"horizontal"
 }
 

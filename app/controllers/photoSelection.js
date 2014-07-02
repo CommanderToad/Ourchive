@@ -26,6 +26,7 @@ var button = Titanium.UI.createButton({
 	backgroundColor:"#555555",
 });
 var galleryBtn = Titanium.UI.createButton({
+	color:"white",
 	left:"5%",
 	height:"70%",
 	borderRadius:"30px",
@@ -34,10 +35,11 @@ var galleryBtn = Titanium.UI.createButton({
 	title:"Gallery"
 });
 var cancelBtn = Titanium.UI.createButton({
+	color:"white",
 	right:"5%",
-	height:"90%",
+	height:"70%",
 	borderRadius:"30px",
-	width:"30%",
+	width:"20%",
 	backgroundColor:"gray",
 	title:"Cancel"
 });
@@ -61,16 +63,20 @@ button.addEventListener('click', function() {
 });
 galleryBtn.addEventListener('click', function(e) {
 	Titanium.Media.openPhotoGallery({
+		overlay : overlay,
+		mediaTypes:Titanium.Media.MEDIA_TYPE_PHOTO,
 		success:function(event) {
 			// called when media returned from the camera
 			var image = event.media;
 			if(event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {
 				var imageView = Titanium.UI.createImageView({
-					height:"100%",
-					width:"100%",
-					image: image
+					width:"90%",
+					height:"900px",
+					top:"20px",
+					image: image,
+					id:"0",
 				});
-				$.photo.add(imageView);
+				$.photoSelection.add(imageView);
 			}
 		},
 		cancel:function() {

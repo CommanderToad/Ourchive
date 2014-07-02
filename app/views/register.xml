@@ -1,0 +1,14 @@
+<Alloy>
+	<Window id="registerWin">
+		<View id="registerView">
+			<View id="headerView">
+				<Label id="title">Ourchive</Label>
+			</View>
+			<View id="inputView">
+				<TextField class="singleLineText" hintText="Username"></TextField>
+				<TextField class="singleLineText" passwordMask="true" hintText="Password"></TextField>
+				<Button id="createAccountBtn">Create Account</Button>
+			</View>
+		</View>
+	</Window>
+</Alloy>
