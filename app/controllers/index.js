@@ -2,8 +2,8 @@ $.welcomeWin.open();
 
 $.loginBtn.addEventListener('click', function(e){
 	$.welcomeWin.close();
-	var main=Alloy.createController('login').getView();
-      main.open(); 
+	var login = Alloy.createController('login').getView();
+      login.open(); 
 });
 $.registerBtn.addEventListener('click', function(e){
 	$.welcomeWin.close();
