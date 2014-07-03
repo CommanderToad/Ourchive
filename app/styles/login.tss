@@ -1,5 +1,5 @@
 
-"#welcomeWin":{
+"#loginWin":{
 	height:"100%",
 	width:"100%",
 }
@@ -20,7 +20,7 @@
 		fontSize: '18dp',
 	},
 }
-".btn":{
+"#loginBtn":{
 	width:"86%",
 	height:"90px",
 	backgroundColor:"#555555",
@@ -42,31 +42,15 @@
         fontWeight: 'normal',
     },	
 }
-"#welcome":{
-	textAlign: "center",
-	color: "#555555",
-	top:"60px",
-	font: {
-        fontFamily:'Helvetica',
-        fontSize: '14dp',
-        fontStyle: 'italic',
-        fontWeight: 'normal',
-    },	
-}
-"#text":{
-	textAlign: "center",
-	color: "#555555",
-	top:"20px",
-	font: {
-        fontFamily:'Helvetica',
-        fontSize: '8dp',
-        fontStyle: 'italic',
-        fontWeight: 'normal',
-    },	
-}
+
 "#inputView":{
-	height:"90%",
+	height:"40%",
 	width:"100%",
 	layout:"vertical",
+}
+"#registerView":{
+	height:"40%",
+	width:"70%%",
+	layout:"horizontal"
 }
 

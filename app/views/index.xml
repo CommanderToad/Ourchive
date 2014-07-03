@@ -1,0 +1,15 @@
+<Alloy>
+	<Window id="welcomeWin">
+		<View id="loginView">
+			<View id="headerView">
+				<Label id="title">Ourchive</Label>
+			</View>
+			<View id="inputView">
+				<Label id="welcome">Welcome to Ourchive</Label>
+				<Label id="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodoligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</Label>
+				<Button class="btn" id="loginBtn">Login</Button>
+				<Button class="btn" id="registerBtn">Register</Button>
+			</View>
+		</View>
+	</Window>
+</Alloy>
