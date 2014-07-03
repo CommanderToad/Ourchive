@@ -13,10 +13,13 @@
 }
 
 "#progressBar": {
-	width: "86%",
-	height: "50px",
 	top: "50px",
-	backgroundColor: "#929398",
+	width: "86%",
+	height: "auto",
+	min: "0",
+	max: "10",
+	value: "4",
+	color: "#ffffff",
 }
 
 "#play": {
@@ -38,6 +41,23 @@
 	left: "15%",
 	bottom: "10px",
 }
+
+"#recordInfo": {
+	layout: "absolute",
+	width: "100%",
+	height: "180px",
+	top: "400px",
+}
+
+"#durationLabel": {
+	top: "30px",
+	color:"#929398",
+	font: {
+        fontFamily:'Helvetica',
+        fontSize: '16dp',
+        fontWeight: 'normal',
+    },	
+} 
 
 "#bottomBar": {
 	layout: "absolute",
